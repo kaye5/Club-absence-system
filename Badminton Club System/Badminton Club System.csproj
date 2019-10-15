@@ -89,11 +89,11 @@
     <Compile Include="Absence_summary.Designer.cs">
       <DependentUpon>Absence_summary.cs</DependentUpon>
     </Compile>
-    <Compile Include="Absence_new.cs">
+    <Compile Include="addMember.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Absence_new.Designer.cs">
-      <DependentUpon>Absence_new.cs</DependentUpon>
+    <Compile Include="addMember.Designer.cs">
+      <DependentUpon>addMember.cs</DependentUpon>
     </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
@@ -107,19 +107,34 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="memberPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="memberPayment.Designer.cs">
+      <DependentUpon>memberPayment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="viewMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewMember.Designer.cs">
+      <DependentUpon>viewMember.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Absence_summary.resx">
       <DependentUpon>Absence_summary.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Absence_new.resx">
-      <DependentUpon>Absence_new.cs</DependentUpon>
+    <EmbeddedResource Include="addMember.resx">
+      <DependentUpon>addMember.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="memberPayment.resx">
+      <DependentUpon>memberPayment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -130,6 +145,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="viewMember.resx">
+      <DependentUpon>viewMember.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

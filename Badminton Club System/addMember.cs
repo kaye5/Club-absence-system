@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Badminton_Club_System
 {
-    public partial class Absence_new : Form
+    public partial class addMember : Form
     {
-        public Absence_new()
+        public addMember()
         {
             InitializeComponent();
         }

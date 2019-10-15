@@ -15,24 +15,32 @@ namespace Badminton_Club_System
         public Home()
         {
             InitializeComponent();
+        }     
+
+        void showContainer(Form container)
+        {
+            container.TopLevel = false;
+            memberContainerPanel.Controls.Clear();
+            memberContainerPanel.Controls.Add(container);
+            container.Show();
         }
 
-        private void AbsenceSummaryButton_Click(object sender, EventArgs e)
+        private void containerPaymentButton_Click(object sender, EventArgs e)
         {
-            Absence_summary absenceSumm = new Absence_summary();
-            absenceSumm.TopLevel = false;
-            absenceContentPanel.Controls.Clear();
-            absenceContentPanel.Controls.Add(absenceSumm);
-            absenceSumm.Show();
+            memberPayment container = new memberPayment();
+            showContainer(container);
         }
 
-        private void AbsenceNewButton_Click(object sender, EventArgs e)
+        private void containerMemberButton_Click(object sender, EventArgs e)
         {
-            Absence_new newAbsence = new Absence_new();
-            newAbsence.TopLevel = false;
-            absenceContentPanel.Controls.Clear();
-            absenceContentPanel.Controls.Add(newAbsence);
-            newAbsence.Show();
+            viewMember container = new viewMember();
+            showContainer(container);
+        }
+
+        private void memberAddButton_Click(object sender, EventArgs e)
+        {
+            addMember container = new addMember();
+            showContainer(container);
         }
     }
 }
