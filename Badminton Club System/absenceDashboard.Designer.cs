@@ -54,7 +54,7 @@
             listViewItem1});
             this.absenceDashboardListView.Location = new System.Drawing.Point(12, 62);
             this.absenceDashboardListView.Name = "absenceDashboardListView";
-            this.absenceDashboardListView.Size = new System.Drawing.Size(776, 301);
+            this.absenceDashboardListView.Size = new System.Drawing.Size(776, 314);
             this.absenceDashboardListView.TabIndex = 0;
             this.absenceDashboardListView.UseCompatibleStateImageBehavior = false;
             this.absenceDashboardListView.View = System.Windows.Forms.View.Details;
@@ -63,7 +63,7 @@
             // absenceMonthHeader
             // 
             this.absenceMonthHeader.Text = "Month";
-            this.absenceMonthHeader.Width = 107;
+            this.absenceMonthHeader.Width = 146;
             // 
             // absenceMeetingHeader
             // 
@@ -93,13 +93,14 @@
             this.dashboardListViewCMS.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.detailsToolStripMenuItem});
             this.dashboardListViewCMS.Name = "dashboardListViewCMS";
-            this.dashboardListViewCMS.Size = new System.Drawing.Size(100, 26);
+            this.dashboardListViewCMS.Size = new System.Drawing.Size(127, 26);
             // 
             // detailsToolStripMenuItem
             // 
             this.detailsToolStripMenuItem.Name = "detailsToolStripMenuItem";
-            this.detailsToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
-            this.detailsToolStripMenuItem.Text = "View";
+            this.detailsToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.detailsToolStripMenuItem.Text = "View Detail";
+            this.detailsToolStripMenuItem.Click += new System.EventHandler(this.detailsToolStripMenuItem_Click);
             // 
             // absenceDashboard
             // 

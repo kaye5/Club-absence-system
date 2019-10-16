@@ -97,25 +97,21 @@
             // 
             // expenseDateHeader
             // 
-            this.expenseDateHeader.DisplayIndex = 3;
             this.expenseDateHeader.Text = "Transaction Date";
-            this.expenseDateHeader.Width = 105;
+            this.expenseDateHeader.Width = 147;
             // 
             // expenseTransactionHeader
             // 
-            this.expenseTransactionHeader.DisplayIndex = 0;
             this.expenseTransactionHeader.Text = "Transaction";
             this.expenseTransactionHeader.Width = 172;
             // 
             // expensePriceHeader
             // 
-            this.expensePriceHeader.DisplayIndex = 1;
             this.expensePriceHeader.Text = "Price";
             this.expensePriceHeader.Width = 144;
             // 
             // expenseCommentHeader
             // 
-            this.expenseCommentHeader.DisplayIndex = 2;
             this.expenseCommentHeader.Text = "Comment";
             this.expenseCommentHeader.Width = 119;
             // 

@@ -89,11 +89,17 @@
     <Compile Include="absenceDashboard.Designer.cs">
       <DependentUpon>absenceDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Absence_summary.cs">
+    <Compile Include="absenceDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Absence_summary.Designer.cs">
-      <DependentUpon>Absence_summary.cs</DependentUpon>
+    <Compile Include="absenceDetail.Designer.cs">
+      <DependentUpon>absenceDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inventoryAction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inventoryAction.Designer.cs">
+      <DependentUpon>inventoryAction.cs</DependentUpon>
     </Compile>
     <Compile Include="addMember.cs">
       <SubType>Form</SubType>
@@ -131,6 +137,24 @@
     <Compile Include="cashDetail.Designer.cs">
       <DependentUpon>cashDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="inventoryDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inventoryDashboard.Designer.cs">
+      <DependentUpon>inventoryDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inventoryHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inventoryHistory.Designer.cs">
+      <DependentUpon>inventoryHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inventoryNewItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inventoryNewItem.Designer.cs">
+      <DependentUpon>inventoryNewItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,8 +190,11 @@
     <EmbeddedResource Include="absenceDashboard.resx">
       <DependentUpon>absenceDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Absence_summary.resx">
-      <DependentUpon>Absence_summary.cs</DependentUpon>
+    <EmbeddedResource Include="absenceDetail.resx">
+      <DependentUpon>absenceDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inventoryAction.resx">
+      <DependentUpon>inventoryAction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="addMember.resx">
       <DependentUpon>addMember.cs</DependentUpon>
@@ -186,6 +213,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="cashDetail.resx">
       <DependentUpon>cashDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inventoryDashboard.resx">
+      <DependentUpon>inventoryDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inventoryHistory.resx">
+      <DependentUpon>inventoryHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inventoryNewItem.resx">
+      <DependentUpon>inventoryNewItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

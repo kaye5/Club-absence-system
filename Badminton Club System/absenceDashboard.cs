@@ -24,5 +24,11 @@ namespace Badminton_Club_System
             }
         }
 
+        private void detailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            absenceDetail detailForm = new absenceDetail();
+            this.Hide();
+            detailForm.Show();
+        }
     }
 }

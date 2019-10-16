@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace Badminton_Club_System
 {
-    public partial class Absence_summary : Form
+    public partial class inventoryAction : Form
     {
-        public Absence_summary()
+        public inventoryAction()
         {
             InitializeComponent();
         }
-
-        
     }
 }

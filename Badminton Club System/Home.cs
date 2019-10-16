@@ -15,10 +15,11 @@ namespace Badminton_Club_System
         public Home()
         {
             InitializeComponent();
-            absenceDashboard dashboard = new absenceDashboard();
-            showAbsenceContainer(dashboard);
-            viewMember container = new viewMember();
-            showMemberContainer(container);
+            showAbsenceContainer(new absenceDashboard());
+            showMemberContainer(new viewMember());
+            showExpenseContainer(new expenseDashboard());
+            showIncomeContainer(new incomeDashboard());
+            showInventoryContainer(new inventoryDashboard());
         }     
 
         void showMemberContainer(Form container)
@@ -49,6 +50,13 @@ namespace Badminton_Club_System
             container.TopLevel = false;
             incomeContainerPanel.Controls.Clear();
             incomeContainerPanel.Controls.Add(container);
+            container.Show();
+        }
+        void showInventoryContainer(Form container)
+        {
+            container.TopLevel = false;
+            inventoryContainerPanel.Controls.Clear();
+            inventoryContainerPanel.Controls.Add(container);
             container.Show();
         }
 
@@ -103,6 +111,35 @@ namespace Badminton_Club_System
         {
             newCash newForm = new newCash();
             showIncomeContainer(newForm);
+        }
+
+        private void inventoryDashboardButton_Click(object sender, EventArgs e)
+        {
+            inventoryDashboard dashboardForm = new inventoryDashboard();
+            showInventoryContainer(dashboardForm);
+        }
+
+        private void inventoryHistoryButton_Click(object sender, EventArgs e)
+        {
+            inventoryHistory historyForm = new inventoryHistory();
+            showInventoryContainer(historyForm);
+        }
+
+        private void inventoryNewItemButton_Click(object sender, EventArgs e)
+        {
+            
+            showInventoryContainer(new inventoryNewItem());
+        }
+
+        private void inventoryAddButton_Click(object sender, EventArgs e)
+        {
+            
+            showInventoryContainer(new inventoryAction());
+        }
+
+        private void homeViewKasButton_Click(object sender, EventArgs e)
+        {
+            profileCashTextBox.Text = Convert.ToString(this.Width);
         }
     }
 }

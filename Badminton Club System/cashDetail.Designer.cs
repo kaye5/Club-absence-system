@@ -55,6 +55,7 @@
             this.IncomeTransactionHeader,
             this.expensePriceHeader,
             this.expenseCommentHeader});
+            this.cashDetailListView.GridLines = true;
             this.cashDetailListView.Location = new System.Drawing.Point(14, 81);
             this.cashDetailListView.Name = "cashDetailListView";
             this.cashDetailListView.Size = new System.Drawing.Size(773, 316);
@@ -64,25 +65,21 @@
             // 
             // IncomeDateHeader
             // 
-            this.IncomeDateHeader.DisplayIndex = 3;
             this.IncomeDateHeader.Text = "Transaction Date";
             this.IncomeDateHeader.Width = 137;
             // 
             // IncomeTransactionHeader
             // 
-            this.IncomeTransactionHeader.DisplayIndex = 0;
             this.IncomeTransactionHeader.Text = "Transaction";
             this.IncomeTransactionHeader.Width = 172;
             // 
             // expensePriceHeader
             // 
-            this.expensePriceHeader.DisplayIndex = 1;
             this.expensePriceHeader.Text = "Price";
             this.expensePriceHeader.Width = 144;
             // 
             // expenseCommentHeader
             // 
-            this.expenseCommentHeader.DisplayIndex = 2;
             this.expenseCommentHeader.Text = "Comment";
             this.expenseCommentHeader.Width = 119;
             // 

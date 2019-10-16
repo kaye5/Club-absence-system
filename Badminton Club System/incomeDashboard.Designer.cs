@@ -28,39 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.totalExpenselbl = new System.Windows.Forms.Label();
-            this.thisIncomelbl = new System.Windows.Forms.Label();
             this.expenseDashboardExpenseListView = new System.Windows.Forms.ListView();
             this.incomeMonthHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.incomeTotalHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.incomeTransactiontHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.incomeCashHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.incomeDashboardTotalTbox = new System.Windows.Forms.TextBox();
+            this.incomeDashboardMonthExpense = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // totalExpenselbl
-            // 
-            this.totalExpenselbl.AutoSize = true;
-            this.totalExpenselbl.Location = new System.Drawing.Point(12, 56);
-            this.totalExpenselbl.Name = "totalExpenselbl";
-            this.totalExpenselbl.Size = new System.Drawing.Size(78, 13);
-            this.totalExpenselbl.TabIndex = 4;
-            this.totalExpenselbl.Text = "Total  Income :";
-            // 
-            // thisIncomelbl
-            // 
-            this.thisIncomelbl.AutoSize = true;
-            this.thisIncomelbl.Location = new System.Drawing.Point(12, 25);
-            this.thisIncomelbl.Name = "thisIncomelbl";
-            this.thisIncomelbl.Size = new System.Drawing.Size(104, 13);
-            this.thisIncomelbl.TabIndex = 3;
-            this.thisIncomelbl.Text = "This Month Income :";
             // 
             // expenseDashboardExpenseListView
             // 
             this.expenseDashboardExpenseListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.incomeMonthHeader,
             this.incomeTransactiontHeader,
-            this.incomeTotalHeader,
             this.incomeCashHeader});
             this.expenseDashboardExpenseListView.Location = new System.Drawing.Point(12, 95);
             this.expenseDashboardExpenseListView.Name = "expenseDashboardExpenseListView";
@@ -74,21 +56,47 @@
             this.incomeMonthHeader.Text = "Month";
             this.incomeMonthHeader.Width = 119;
             // 
-            // incomeTotalHeader
-            // 
-            this.incomeTotalHeader.DisplayIndex = 1;
-            this.incomeTotalHeader.Text = "Total";
-            this.incomeTotalHeader.Width = 127;
-            // 
             // incomeTransactiontHeader
             // 
-            this.incomeTransactiontHeader.DisplayIndex = 2;
-            this.incomeTransactiontHeader.Text = "Participant";
+            this.incomeTransactiontHeader.Text = "Total Transaction";
             this.incomeTransactiontHeader.Width = 131;
             // 
             // incomeCashHeader
             // 
-            this.incomeCashHeader.Text = "Cash";
+            this.incomeCashHeader.Text = "Income";
+            this.incomeCashHeader.Width = 102;
+            // 
+            // incomeDashboardTotalTbox
+            // 
+            this.incomeDashboardTotalTbox.Location = new System.Drawing.Point(140, 53);
+            this.incomeDashboardTotalTbox.Name = "incomeDashboardTotalTbox";
+            this.incomeDashboardTotalTbox.Size = new System.Drawing.Size(148, 20);
+            this.incomeDashboardTotalTbox.TabIndex = 10;
+            // 
+            // incomeDashboardMonthExpense
+            // 
+            this.incomeDashboardMonthExpense.Location = new System.Drawing.Point(140, 22);
+            this.incomeDashboardMonthExpense.Name = "incomeDashboardMonthExpense";
+            this.incomeDashboardMonthExpense.Size = new System.Drawing.Size(148, 20);
+            this.incomeDashboardMonthExpense.TabIndex = 9;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 56);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 13);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Total  Income";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(98, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "This Month Income";
             // 
             // incomeDashboard
             // 
@@ -96,9 +104,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.incomeDashboardTotalTbox);
+            this.Controls.Add(this.incomeDashboardMonthExpense);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.expenseDashboardExpenseListView);
-            this.Controls.Add(this.totalExpenselbl);
-            this.Controls.Add(this.thisIncomelbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "incomeDashboard";
             this.Text = "incomeDashboard";
@@ -108,13 +118,13 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label totalExpenselbl;
-        private System.Windows.Forms.Label thisIncomelbl;
         private System.Windows.Forms.ListView expenseDashboardExpenseListView;
         private System.Windows.Forms.ColumnHeader incomeMonthHeader;
         private System.Windows.Forms.ColumnHeader incomeTransactiontHeader;
-        private System.Windows.Forms.ColumnHeader incomeTotalHeader;
         private System.Windows.Forms.ColumnHeader incomeCashHeader;
+        private System.Windows.Forms.TextBox incomeDashboardTotalTbox;
+        private System.Windows.Forms.TextBox incomeDashboardMonthExpense;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
