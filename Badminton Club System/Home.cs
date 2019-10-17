@@ -20,6 +20,8 @@ namespace Badminton_Club_System
             showExpenseContainer(new expenseDashboard());
             showIncomeContainer(new incomeDashboard());
             showInventoryContainer(new inventoryDashboard());
+            showProfileContainer(new profileDashboard());
+
         }     
 
         void showMemberContainer(Form container)
@@ -57,6 +59,14 @@ namespace Badminton_Club_System
             container.TopLevel = false;
             inventoryContainerPanel.Controls.Clear();
             inventoryContainerPanel.Controls.Add(container);
+            container.Show();
+        }
+
+        void showProfileContainer(Form container)
+        {
+            container.TopLevel = false;
+            profileContainerPanel.Controls.Clear();
+            profileContainerPanel.Controls.Add(container);
             container.Show();
         }
 
@@ -137,9 +147,6 @@ namespace Badminton_Club_System
             showInventoryContainer(new inventoryAction());
         }
 
-        private void homeViewKasButton_Click(object sender, EventArgs e)
-        {
-            profileCashTextBox.Text = Convert.ToString(this.Width);
-        }
+        
     }
 }

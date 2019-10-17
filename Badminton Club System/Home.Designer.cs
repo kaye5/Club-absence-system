@@ -31,10 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.homeTabControl = new System.Windows.Forms.TabControl();
             this.profileTab = new System.Windows.Forms.TabPage();
-            this.profileInventoryBtn = new System.Windows.Forms.Button();
-            this.profileViewIncomeButton = new System.Windows.Forms.Button();
-            this.profileCashTextBox = new System.Windows.Forms.TextBox();
-            this.profileKasLabel = new System.Windows.Forms.Label();
+            this.profileContainerPanel = new System.Windows.Forms.Panel();
             this.absenceTab = new System.Windows.Forms.TabPage();
             this.absenceContainerPanel = new System.Windows.Forms.Panel();
             this.absenceNavBarPanel = new System.Windows.Forms.Panel();
@@ -69,43 +66,10 @@
             this.inventoryNewItemButton = new System.Windows.Forms.Button();
             this.inventoryHistoryButton = new System.Windows.Forms.Button();
             this.inventoryDashboardButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.profileFeeTbox = new System.Windows.Forms.TextBox();
-            this.profileMonthLbl = new System.Windows.Forms.Label();
-            this.profileListView = new System.Windows.Forms.ListView();
-            this.profileNimHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.profileNameHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.profileClassHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.profilePositionHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.profilePassHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.profileNimTBox = new System.Windows.Forms.TextBox();
-            this.profileNameTbox = new System.Windows.Forms.TextBox();
-            this.profileClassTbox = new System.Windows.Forms.TextBox();
-            this.profilePositionTbox = new System.Windows.Forms.TextBox();
-            this.profilePassTbox = new System.Windows.Forms.TextBox();
-            this.profileUpdateCoorBtn = new System.Windows.Forms.Button();
-            this.profileAddCoorBtn = new System.Windows.Forms.Button();
-            this.profileActionPanel = new System.Windows.Forms.Panel();
             this.profileListViewCMS = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.profileNewCoorBtn = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.profileChangeFeeBtn = new System.Windows.Forms.Button();
-            this.profileUpdateFeeBtn = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.profileIncomeTbox = new System.Windows.Forms.TextBox();
-            this.profileExpenseTbox = new System.Windows.Forms.TextBox();
-            this.profileMemberBtn = new System.Windows.Forms.Button();
-            this.profileExpenseBtn = new System.Windows.Forms.Button();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.homeTabControl.SuspendLayout();
             this.profileTab.SuspendLayout();
             this.absenceTab.SuspendLayout();
@@ -117,7 +81,6 @@
             this.incomeNavBarPanel.SuspendLayout();
             this.inventoryTab.SuspendLayout();
             this.inventoryNavBarPanel.SuspendLayout();
-            this.profileActionPanel.SuspendLayout();
             this.profileListViewCMS.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -133,74 +96,27 @@
             this.homeTabControl.Location = new System.Drawing.Point(0, 0);
             this.homeTabControl.Name = "homeTabControl";
             this.homeTabControl.SelectedIndex = 0;
-            this.homeTabControl.Size = new System.Drawing.Size(932, 572);
+            this.homeTabControl.Size = new System.Drawing.Size(924, 562);
             this.homeTabControl.TabIndex = 0;
             // 
             // profileTab
             // 
-            this.profileTab.Controls.Add(this.monthCalendar1);
-            this.profileTab.Controls.Add(this.profileExpenseBtn);
-            this.profileTab.Controls.Add(this.profileMemberBtn);
-            this.profileTab.Controls.Add(this.profileExpenseTbox);
-            this.profileTab.Controls.Add(this.profileIncomeTbox);
-            this.profileTab.Controls.Add(this.label10);
-            this.profileTab.Controls.Add(this.label9);
-            this.profileTab.Controls.Add(this.profileUpdateFeeBtn);
-            this.profileTab.Controls.Add(this.profileChangeFeeBtn);
-            this.profileTab.Controls.Add(this.label8);
-            this.profileTab.Controls.Add(this.profileNewCoorBtn);
-            this.profileTab.Controls.Add(this.profileActionPanel);
-            this.profileTab.Controls.Add(this.profileListView);
-            this.profileTab.Controls.Add(this.profileMonthLbl);
-            this.profileTab.Controls.Add(this.profileFeeTbox);
-            this.profileTab.Controls.Add(this.label1);
-            this.profileTab.Controls.Add(this.profileInventoryBtn);
-            this.profileTab.Controls.Add(this.profileViewIncomeButton);
-            this.profileTab.Controls.Add(this.profileCashTextBox);
-            this.profileTab.Controls.Add(this.profileKasLabel);
+            this.profileTab.Controls.Add(this.profileContainerPanel);
             this.profileTab.Location = new System.Drawing.Point(4, 22);
             this.profileTab.Name = "profileTab";
             this.profileTab.Padding = new System.Windows.Forms.Padding(3);
-            this.profileTab.Size = new System.Drawing.Size(924, 546);
+            this.profileTab.Size = new System.Drawing.Size(916, 536);
             this.profileTab.TabIndex = 0;
             this.profileTab.Text = "Profile";
             this.profileTab.UseVisualStyleBackColor = true;
             // 
-            // profileInventoryBtn
+            // profileContainerPanel
             // 
-            this.profileInventoryBtn.Location = new System.Drawing.Point(154, 339);
-            this.profileInventoryBtn.Name = "profileInventoryBtn";
-            this.profileInventoryBtn.Size = new System.Drawing.Size(124, 23);
-            this.profileInventoryBtn.TabIndex = 3;
-            this.profileInventoryBtn.Text = "View Inventory";
-            this.profileInventoryBtn.UseVisualStyleBackColor = true;
-            // 
-            // profileViewIncomeButton
-            // 
-            this.profileViewIncomeButton.Location = new System.Drawing.Point(121, 216);
-            this.profileViewIncomeButton.Name = "profileViewIncomeButton";
-            this.profileViewIncomeButton.Size = new System.Drawing.Size(131, 23);
-            this.profileViewIncomeButton.TabIndex = 2;
-            this.profileViewIncomeButton.Text = "View Income";
-            this.profileViewIncomeButton.UseVisualStyleBackColor = true;
-            this.profileViewIncomeButton.Click += new System.EventHandler(this.homeViewKasButton_Click);
-            // 
-            // profileCashTextBox
-            // 
-            this.profileCashTextBox.Location = new System.Drawing.Point(121, 53);
-            this.profileCashTextBox.Name = "profileCashTextBox";
-            this.profileCashTextBox.ReadOnly = true;
-            this.profileCashTextBox.Size = new System.Drawing.Size(131, 20);
-            this.profileCashTextBox.TabIndex = 1;
-            // 
-            // profileKasLabel
-            // 
-            this.profileKasLabel.AutoSize = true;
-            this.profileKasLabel.Location = new System.Drawing.Point(6, 56);
-            this.profileKasLabel.Name = "profileKasLabel";
-            this.profileKasLabel.Size = new System.Drawing.Size(68, 13);
-            this.profileKasLabel.TabIndex = 0;
-            this.profileKasLabel.Text = "Current Cash";
+            this.profileContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.profileContainerPanel.Location = new System.Drawing.Point(3, 3);
+            this.profileContainerPanel.Name = "profileContainerPanel";
+            this.profileContainerPanel.Size = new System.Drawing.Size(910, 530);
+            this.profileContainerPanel.TabIndex = 0;
             // 
             // absenceTab
             // 
@@ -209,7 +125,7 @@
             this.absenceTab.Controls.Add(this.absenceNavBarPanel);
             this.absenceTab.Location = new System.Drawing.Point(4, 22);
             this.absenceTab.Name = "absenceTab";
-            this.absenceTab.Size = new System.Drawing.Size(924, 546);
+            this.absenceTab.Size = new System.Drawing.Size(916, 536);
             this.absenceTab.TabIndex = 1;
             this.absenceTab.Text = "Absence";
             this.absenceTab.UseVisualStyleBackColor = true;
@@ -220,16 +136,16 @@
             this.absenceContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.absenceContainerPanel.Location = new System.Drawing.Point(127, 0);
             this.absenceContainerPanel.Name = "absenceContainerPanel";
-            this.absenceContainerPanel.Size = new System.Drawing.Size(797, 546);
+            this.absenceContainerPanel.Size = new System.Drawing.Size(789, 536);
             this.absenceContainerPanel.TabIndex = 2;
             // 
             // absenceNavBarPanel
             // 
-            this.absenceNavBarPanel.BackColor = System.Drawing.Color.Gray;
+            this.absenceNavBarPanel.BackColor = System.Drawing.Color.LightGray;
             this.absenceNavBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.absenceNavBarPanel.Location = new System.Drawing.Point(0, 0);
             this.absenceNavBarPanel.Name = "absenceNavBarPanel";
-            this.absenceNavBarPanel.Size = new System.Drawing.Size(127, 546);
+            this.absenceNavBarPanel.Size = new System.Drawing.Size(127, 536);
             this.absenceNavBarPanel.TabIndex = 1;
             // 
             // memberTab
@@ -238,7 +154,7 @@
             this.memberTab.Controls.Add(this.memberNavBarPanel);
             this.memberTab.Location = new System.Drawing.Point(4, 22);
             this.memberTab.Name = "memberTab";
-            this.memberTab.Size = new System.Drawing.Size(924, 546);
+            this.memberTab.Size = new System.Drawing.Size(916, 536);
             this.memberTab.TabIndex = 3;
             this.memberTab.Text = "Member";
             this.memberTab.UseVisualStyleBackColor = true;
@@ -249,19 +165,19 @@
             this.memberContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.memberContainerPanel.Location = new System.Drawing.Point(127, 0);
             this.memberContainerPanel.Name = "memberContainerPanel";
-            this.memberContainerPanel.Size = new System.Drawing.Size(797, 546);
+            this.memberContainerPanel.Size = new System.Drawing.Size(789, 536);
             this.memberContainerPanel.TabIndex = 2;
             // 
             // memberNavBarPanel
             // 
-            this.memberNavBarPanel.BackColor = System.Drawing.Color.Gray;
+            this.memberNavBarPanel.BackColor = System.Drawing.Color.LightGray;
             this.memberNavBarPanel.Controls.Add(this.memberPaymentButton);
             this.memberNavBarPanel.Controls.Add(this.memberAddButton);
             this.memberNavBarPanel.Controls.Add(this.memberMemberButton);
             this.memberNavBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.memberNavBarPanel.Location = new System.Drawing.Point(0, 0);
             this.memberNavBarPanel.Name = "memberNavBarPanel";
-            this.memberNavBarPanel.Size = new System.Drawing.Size(127, 546);
+            this.memberNavBarPanel.Size = new System.Drawing.Size(127, 536);
             this.memberNavBarPanel.TabIndex = 1;
             // 
             // memberPaymentButton
@@ -300,7 +216,7 @@
             this.expenseTab.Controls.Add(this.expenseNavBarPanel);
             this.expenseTab.Location = new System.Drawing.Point(4, 22);
             this.expenseTab.Name = "expenseTab";
-            this.expenseTab.Size = new System.Drawing.Size(924, 546);
+            this.expenseTab.Size = new System.Drawing.Size(916, 536);
             this.expenseTab.TabIndex = 2;
             this.expenseTab.Text = "Expense";
             this.expenseTab.UseVisualStyleBackColor = true;
@@ -311,7 +227,7 @@
             this.expenseContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.expenseContainerPanel.Location = new System.Drawing.Point(127, 0);
             this.expenseContainerPanel.Name = "expenseContainerPanel";
-            this.expenseContainerPanel.Size = new System.Drawing.Size(797, 546);
+            this.expenseContainerPanel.Size = new System.Drawing.Size(789, 536);
             this.expenseContainerPanel.TabIndex = 1;
             // 
             // expenseNavBarPanel
@@ -326,7 +242,7 @@
             this.expenseNavBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.expenseNavBarPanel.Location = new System.Drawing.Point(0, 0);
             this.expenseNavBarPanel.Name = "expenseNavBarPanel";
-            this.expenseNavBarPanel.Size = new System.Drawing.Size(127, 546);
+            this.expenseNavBarPanel.Size = new System.Drawing.Size(127, 536);
             this.expenseNavBarPanel.TabIndex = 0;
             // 
             // expenseDatePicker
@@ -390,7 +306,7 @@
             this.incomeTab.Controls.Add(this.incomeNavBarPanel);
             this.incomeTab.Location = new System.Drawing.Point(4, 22);
             this.incomeTab.Name = "incomeTab";
-            this.incomeTab.Size = new System.Drawing.Size(924, 546);
+            this.incomeTab.Size = new System.Drawing.Size(916, 536);
             this.incomeTab.TabIndex = 4;
             this.incomeTab.Text = "Income";
             this.incomeTab.UseVisualStyleBackColor = true;
@@ -401,12 +317,12 @@
             this.incomeContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.incomeContainerPanel.Location = new System.Drawing.Point(127, 0);
             this.incomeContainerPanel.Name = "incomeContainerPanel";
-            this.incomeContainerPanel.Size = new System.Drawing.Size(797, 546);
+            this.incomeContainerPanel.Size = new System.Drawing.Size(789, 536);
             this.incomeContainerPanel.TabIndex = 2;
             // 
             // incomeNavBarPanel
             // 
-            this.incomeNavBarPanel.BackColor = System.Drawing.Color.Gray;
+            this.incomeNavBarPanel.BackColor = System.Drawing.SystemColors.Menu;
             this.incomeNavBarPanel.Controls.Add(this.incomeAddBtn);
             this.incomeNavBarPanel.Controls.Add(this.incomeDatePicker);
             this.incomeNavBarPanel.Controls.Add(this.incomeLastMonthBtn);
@@ -416,7 +332,7 @@
             this.incomeNavBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.incomeNavBarPanel.Location = new System.Drawing.Point(0, 0);
             this.incomeNavBarPanel.Name = "incomeNavBarPanel";
-            this.incomeNavBarPanel.Size = new System.Drawing.Size(127, 546);
+            this.incomeNavBarPanel.Size = new System.Drawing.Size(127, 536);
             this.incomeNavBarPanel.TabIndex = 1;
             // 
             // incomeAddBtn
@@ -480,7 +396,7 @@
             this.inventoryTab.Controls.Add(this.inventoryNavBarPanel);
             this.inventoryTab.Location = new System.Drawing.Point(4, 22);
             this.inventoryTab.Name = "inventoryTab";
-            this.inventoryTab.Size = new System.Drawing.Size(924, 546);
+            this.inventoryTab.Size = new System.Drawing.Size(916, 536);
             this.inventoryTab.TabIndex = 5;
             this.inventoryTab.Text = "Inventory";
             this.inventoryTab.UseVisualStyleBackColor = true;
@@ -491,7 +407,7 @@
             this.inventoryContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.inventoryContainerPanel.Location = new System.Drawing.Point(127, 0);
             this.inventoryContainerPanel.Name = "inventoryContainerPanel";
-            this.inventoryContainerPanel.Size = new System.Drawing.Size(797, 546);
+            this.inventoryContainerPanel.Size = new System.Drawing.Size(789, 536);
             this.inventoryContainerPanel.TabIndex = 2;
             // 
             // inventoryNavBarPanel
@@ -504,7 +420,7 @@
             this.inventoryNavBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.inventoryNavBarPanel.Location = new System.Drawing.Point(0, 0);
             this.inventoryNavBarPanel.Name = "inventoryNavBarPanel";
-            this.inventoryNavBarPanel.Size = new System.Drawing.Size(127, 546);
+            this.inventoryNavBarPanel.Size = new System.Drawing.Size(127, 536);
             this.inventoryNavBarPanel.TabIndex = 1;
             // 
             // inventoryAddButton
@@ -547,192 +463,6 @@
             this.inventoryDashboardButton.UseVisualStyleBackColor = true;
             this.inventoryDashboardButton.Click += new System.EventHandler(this.inventoryDashboardButton_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 98);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Membership Fee";
-            // 
-            // profileFeeTbox
-            // 
-            this.profileFeeTbox.Location = new System.Drawing.Point(121, 95);
-            this.profileFeeTbox.Name = "profileFeeTbox";
-            this.profileFeeTbox.ReadOnly = true;
-            this.profileFeeTbox.Size = new System.Drawing.Size(131, 20);
-            this.profileFeeTbox.TabIndex = 5;
-            // 
-            // profileMonthLbl
-            // 
-            this.profileMonthLbl.AutoSize = true;
-            this.profileMonthLbl.Location = new System.Drawing.Point(9, 18);
-            this.profileMonthLbl.Name = "profileMonthLbl";
-            this.profileMonthLbl.Size = new System.Drawing.Size(46, 13);
-            this.profileMonthLbl.TabIndex = 6;
-            this.profileMonthLbl.Text = "Month : ";
-            // 
-            // profileListView
-            // 
-            this.profileListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.profileNimHeader,
-            this.profileNameHeader,
-            this.profileClassHeader,
-            this.profilePositionHeader,
-            this.profilePassHeader});
-            this.profileListView.GridLines = true;
-            this.profileListView.Location = new System.Drawing.Point(372, 53);
-            this.profileListView.Name = "profileListView";
-            this.profileListView.Size = new System.Drawing.Size(544, 276);
-            this.profileListView.TabIndex = 7;
-            this.profileListView.UseCompatibleStateImageBehavior = false;
-            this.profileListView.View = System.Windows.Forms.View.Details;
-            // 
-            // profileNimHeader
-            // 
-            this.profileNimHeader.Text = "NIM";
-            this.profileNimHeader.Width = 117;
-            // 
-            // profileNameHeader
-            // 
-            this.profileNameHeader.Text = "Name";
-            this.profileNameHeader.Width = 138;
-            // 
-            // profileClassHeader
-            // 
-            this.profileClassHeader.Text = "Class";
-            this.profileClassHeader.Width = 99;
-            // 
-            // profilePositionHeader
-            // 
-            this.profilePositionHeader.Text = "Position";
-            this.profilePositionHeader.Width = 73;
-            // 
-            // profilePassHeader
-            // 
-            this.profilePassHeader.Text = "Password";
-            this.profilePassHeader.Width = 113;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(27, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "NIM";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 48);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Name";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 74);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 13);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Class";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 100);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 13);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Position";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(9, 126);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 13);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Password";
-            // 
-            // profileNimTBox
-            // 
-            this.profileNimTBox.Location = new System.Drawing.Point(77, 19);
-            this.profileNimTBox.Name = "profileNimTBox";
-            this.profileNimTBox.Size = new System.Drawing.Size(192, 20);
-            this.profileNimTBox.TabIndex = 13;
-            // 
-            // profileNameTbox
-            // 
-            this.profileNameTbox.Location = new System.Drawing.Point(77, 45);
-            this.profileNameTbox.Name = "profileNameTbox";
-            this.profileNameTbox.Size = new System.Drawing.Size(192, 20);
-            this.profileNameTbox.TabIndex = 14;
-            // 
-            // profileClassTbox
-            // 
-            this.profileClassTbox.Location = new System.Drawing.Point(77, 71);
-            this.profileClassTbox.Name = "profileClassTbox";
-            this.profileClassTbox.Size = new System.Drawing.Size(192, 20);
-            this.profileClassTbox.TabIndex = 15;
-            // 
-            // profilePositionTbox
-            // 
-            this.profilePositionTbox.Location = new System.Drawing.Point(77, 97);
-            this.profilePositionTbox.Name = "profilePositionTbox";
-            this.profilePositionTbox.Size = new System.Drawing.Size(192, 20);
-            this.profilePositionTbox.TabIndex = 16;
-            // 
-            // profilePassTbox
-            // 
-            this.profilePassTbox.Location = new System.Drawing.Point(77, 123);
-            this.profilePassTbox.Name = "profilePassTbox";
-            this.profilePassTbox.Size = new System.Drawing.Size(192, 20);
-            this.profilePassTbox.TabIndex = 17;
-            // 
-            // profileUpdateCoorBtn
-            // 
-            this.profileUpdateCoorBtn.Location = new System.Drawing.Point(275, 97);
-            this.profileUpdateCoorBtn.Name = "profileUpdateCoorBtn";
-            this.profileUpdateCoorBtn.Size = new System.Drawing.Size(85, 46);
-            this.profileUpdateCoorBtn.TabIndex = 18;
-            this.profileUpdateCoorBtn.Text = "Update";
-            this.profileUpdateCoorBtn.UseVisualStyleBackColor = true;
-            this.profileUpdateCoorBtn.Visible = false;
-            // 
-            // profileAddCoorBtn
-            // 
-            this.profileAddCoorBtn.Location = new System.Drawing.Point(275, 45);
-            this.profileAddCoorBtn.Name = "profileAddCoorBtn";
-            this.profileAddCoorBtn.Size = new System.Drawing.Size(85, 46);
-            this.profileAddCoorBtn.TabIndex = 19;
-            this.profileAddCoorBtn.Text = "Add";
-            this.profileAddCoorBtn.UseVisualStyleBackColor = true;
-            // 
-            // profileActionPanel
-            // 
-            this.profileActionPanel.Controls.Add(this.label3);
-            this.profileActionPanel.Controls.Add(this.profileAddCoorBtn);
-            this.profileActionPanel.Controls.Add(this.label4);
-            this.profileActionPanel.Controls.Add(this.profileUpdateCoorBtn);
-            this.profileActionPanel.Controls.Add(this.label5);
-            this.profileActionPanel.Controls.Add(this.profilePassTbox);
-            this.profileActionPanel.Controls.Add(this.label6);
-            this.profileActionPanel.Controls.Add(this.profilePositionTbox);
-            this.profileActionPanel.Controls.Add(this.label7);
-            this.profileActionPanel.Controls.Add(this.profileClassTbox);
-            this.profileActionPanel.Controls.Add(this.profileNimTBox);
-            this.profileActionPanel.Controls.Add(this.profileNameTbox);
-            this.profileActionPanel.Location = new System.Drawing.Point(372, 378);
-            this.profileActionPanel.Name = "profileActionPanel";
-            this.profileActionPanel.Size = new System.Drawing.Size(546, 160);
-            this.profileActionPanel.TabIndex = 20;
-            this.profileActionPanel.Visible = false;
-            // 
             // profileListViewCMS
             // 
             this.profileListViewCMS.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -740,133 +470,37 @@
             this.deleteToolStripMenuItem,
             this.addToolStripMenuItem});
             this.profileListViewCMS.Name = "profileListViewCMS";
-            this.profileListViewCMS.Size = new System.Drawing.Size(106, 70);
+            this.profileListViewCMS.Size = new System.Drawing.Size(108, 70);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.editToolStripMenuItem.Text = "Edit";
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
             // 
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.addToolStripMenuItem.Text = "Add";
-            // 
-            // profileNewCoorBtn
-            // 
-            this.profileNewCoorBtn.Location = new System.Drawing.Point(372, 335);
-            this.profileNewCoorBtn.Name = "profileNewCoorBtn";
-            this.profileNewCoorBtn.Size = new System.Drawing.Size(120, 37);
-            this.profileNewCoorBtn.TabIndex = 21;
-            this.profileNewCoorBtn.Text = "New Coordinator";
-            this.profileNewCoorBtn.UseVisualStyleBackColor = true;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(603, 29);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(61, 13);
-            this.label8.TabIndex = 22;
-            this.label8.Text = "Coordinator";
-            // 
-            // profileChangeFeeBtn
-            // 
-            this.profileChangeFeeBtn.Location = new System.Drawing.Point(121, 131);
-            this.profileChangeFeeBtn.Name = "profileChangeFeeBtn";
-            this.profileChangeFeeBtn.Size = new System.Drawing.Size(131, 22);
-            this.profileChangeFeeBtn.TabIndex = 23;
-            this.profileChangeFeeBtn.Text = "change";
-            this.profileChangeFeeBtn.UseVisualStyleBackColor = true;
-            // 
-            // profileUpdateFeeBtn
-            // 
-            this.profileUpdateFeeBtn.Location = new System.Drawing.Point(258, 131);
-            this.profileUpdateFeeBtn.Name = "profileUpdateFeeBtn";
-            this.profileUpdateFeeBtn.Size = new System.Drawing.Size(94, 23);
-            this.profileUpdateFeeBtn.TabIndex = 24;
-            this.profileUpdateFeeBtn.Text = "Update";
-            this.profileUpdateFeeBtn.UseVisualStyleBackColor = true;
-            this.profileUpdateFeeBtn.Visible = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 183);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(98, 13);
-            this.label9.TabIndex = 25;
-            this.label9.Text = "This Month Income";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 262);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(104, 13);
-            this.label10.TabIndex = 26;
-            this.label10.Text = "This Month Expense";
-            // 
-            // profileIncomeTbox
-            // 
-            this.profileIncomeTbox.Location = new System.Drawing.Point(121, 180);
-            this.profileIncomeTbox.Name = "profileIncomeTbox";
-            this.profileIncomeTbox.ReadOnly = true;
-            this.profileIncomeTbox.Size = new System.Drawing.Size(131, 20);
-            this.profileIncomeTbox.TabIndex = 27;
-            // 
-            // profileExpenseTbox
-            // 
-            this.profileExpenseTbox.Location = new System.Drawing.Point(121, 259);
-            this.profileExpenseTbox.Name = "profileExpenseTbox";
-            this.profileExpenseTbox.ReadOnly = true;
-            this.profileExpenseTbox.Size = new System.Drawing.Size(131, 20);
-            this.profileExpenseTbox.TabIndex = 28;
-            // 
-            // profileMemberBtn
-            // 
-            this.profileMemberBtn.Location = new System.Drawing.Point(14, 339);
-            this.profileMemberBtn.Name = "profileMemberBtn";
-            this.profileMemberBtn.Size = new System.Drawing.Size(124, 23);
-            this.profileMemberBtn.TabIndex = 29;
-            this.profileMemberBtn.Text = "View Member";
-            this.profileMemberBtn.UseVisualStyleBackColor = true;
-            // 
-            // profileExpenseBtn
-            // 
-            this.profileExpenseBtn.Location = new System.Drawing.Point(121, 294);
-            this.profileExpenseBtn.Name = "profileExpenseBtn";
-            this.profileExpenseBtn.Size = new System.Drawing.Size(131, 23);
-            this.profileExpenseBtn.TabIndex = 30;
-            this.profileExpenseBtn.Text = "View Expense";
-            this.profileExpenseBtn.UseVisualStyleBackColor = true;
-            // 
-            // monthCalendar1
-            // 
-            this.monthCalendar1.Location = new System.Drawing.Point(53, 369);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 31;
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(932, 572);
+            this.ClientSize = new System.Drawing.Size(924, 562);
             this.Controls.Add(this.homeTabControl);
-            this.MinimumSize = new System.Drawing.Size(800, 420);
+            this.MinimumSize = new System.Drawing.Size(940, 600);
             this.Name = "Home";
             this.Text = "Home";
             this.homeTabControl.ResumeLayout(false);
             this.profileTab.ResumeLayout(false);
-            this.profileTab.PerformLayout();
             this.absenceTab.ResumeLayout(false);
             this.memberTab.ResumeLayout(false);
             this.memberNavBarPanel.ResumeLayout(false);
@@ -876,8 +510,6 @@
             this.incomeNavBarPanel.ResumeLayout(false);
             this.inventoryTab.ResumeLayout(false);
             this.inventoryNavBarPanel.ResumeLayout(false);
-            this.profileActionPanel.ResumeLayout(false);
-            this.profileActionPanel.PerformLayout();
             this.profileListViewCMS.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -887,11 +519,7 @@
 
         private System.Windows.Forms.TabControl homeTabControl;
         private System.Windows.Forms.TabPage profileTab;
-        private System.Windows.Forms.Label profileKasLabel;
         private System.Windows.Forms.TabPage absenceTab;
-        private System.Windows.Forms.TextBox profileCashTextBox;
-        private System.Windows.Forms.Button profileInventoryBtn;
-        private System.Windows.Forms.Button profileViewIncomeButton;
         private System.Windows.Forms.TabPage expenseTab;
         private System.Windows.Forms.TabPage memberTab;
         private System.Windows.Forms.Panel expenseContainerPanel;
@@ -925,42 +553,10 @@
         private System.Windows.Forms.Button inventoryDashboardButton;
         private System.Windows.Forms.Panel absenceNavBarPanel;
         private System.Windows.Forms.Button incomeAddBtn;
-        private System.Windows.Forms.Panel profileActionPanel;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button profileAddCoorBtn;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button profileUpdateCoorBtn;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox profilePassTbox;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox profilePositionTbox;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox profileClassTbox;
-        private System.Windows.Forms.TextBox profileNimTBox;
-        private System.Windows.Forms.TextBox profileNameTbox;
-        private System.Windows.Forms.ListView profileListView;
-        private System.Windows.Forms.ColumnHeader profileNimHeader;
-        private System.Windows.Forms.ColumnHeader profileNameHeader;
-        private System.Windows.Forms.ColumnHeader profileClassHeader;
-        private System.Windows.Forms.ColumnHeader profilePositionHeader;
-        private System.Windows.Forms.ColumnHeader profilePassHeader;
-        private System.Windows.Forms.Label profileMonthLbl;
-        private System.Windows.Forms.TextBox profileFeeTbox;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ContextMenuStrip profileListViewCMS;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button profileNewCoorBtn;
-        private System.Windows.Forms.Button profileUpdateFeeBtn;
-        private System.Windows.Forms.Button profileChangeFeeBtn;
-        private System.Windows.Forms.Button profileMemberBtn;
-        private System.Windows.Forms.TextBox profileExpenseTbox;
-        private System.Windows.Forms.TextBox profileIncomeTbox;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button profileExpenseBtn;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.Panel profileContainerPanel;
     }
 }
