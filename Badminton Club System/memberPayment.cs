@@ -15,6 +15,7 @@ namespace Badminton_Club_System
         public memberPayment()
         {
             InitializeComponent();
+            memberIntakeComboBox.SelectedIndex = 0;
         }
     }
 }

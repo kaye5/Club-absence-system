@@ -12,18 +12,38 @@ namespace Badminton_Club_System
 {
     public partial class Home : Form
     {
+        
         public Home()
         {
             InitializeComponent();
-            showAbsenceContainer(new absenceDashboard());
-            showMemberContainer(new viewMember());
-            showExpenseContainer(new expenseDashboard());
-            showIncomeContainer(new incomeDashboard());
-            showInventoryContainer(new inventoryDashboard());
             showProfileContainer(new profileDashboard());
+        }
 
-        }     
+        public Home(int tabIndex)
+        {
+            InitializeComponent();
+            homeTabControl.SelectTab(tabIndex);
+        }
 
+        //TAB CONTROL
+        private void homeTabControl_TabIndexChanged(object sender, EventArgs e)
+        {
+            String tabName = homeTabControl.SelectedTab.Text;
+            if (tabName == "Profile")
+                showProfileContainer(new profileDashboard());
+            else if (tabName == "Absence")
+                showAbsenceContainer(new absenceDashboard());
+            else if (tabName == "Member")
+                memberMemberButton.PerformClick();
+            else if (tabName == "Expense")
+                expenseDashboardButton.PerformClick();
+            else if (tabName == "Income")
+                incomeDashboardBtn.PerformClick();
+            else if (tabName == "Inventory")
+                inventoryDashboardButton.PerformClick();
+        }
+
+        //SHOW ITEM PART
         void showMemberContainer(Form container)
         {
             container.TopLevel = false;
@@ -54,6 +74,8 @@ namespace Badminton_Club_System
             incomeContainerPanel.Controls.Add(container);
             container.Show();
         }
+
+
         void showInventoryContainer(Form container)
         {
             container.TopLevel = false;
@@ -70,10 +92,12 @@ namespace Badminton_Club_System
             container.Show();
         }
 
+        //MEMBER TAB
         private void containerMemberButton_Click(object sender, EventArgs e)
         {
             viewMember container = new viewMember();
             showMemberContainer(container);
+            
         }
         private void containerPaymentButton_Click(object sender, EventArgs e)
         {
@@ -87,6 +111,7 @@ namespace Badminton_Club_System
             showMemberContainer(container);
         }
 
+        //EXPENSE TAB
         private void ExpenseDashboardButton_Click(object sender, EventArgs e)
         {
             expenseDashboard dashboard = new expenseDashboard();
@@ -98,13 +123,31 @@ namespace Badminton_Club_System
             expenseDetail historyForm = new expenseDetail();
             showExpenseContainer(historyForm);
         }
+        private void expenseThisMonthButton_Click(object sender, EventArgs e)
+        {
+            expenseDetail historyForm = new expenseDetail();
+            showExpenseContainer(historyForm);
+        }
 
+        private void expenseLastMonthButton_Click(object sender, EventArgs e)
+        {
+            expenseDetail historyForm = new expenseDetail();
+            showExpenseContainer(historyForm);
+        }
+
+        private void expenseDatePicker_ValueChanged(object sender, EventArgs e)
+        {
+            expenseDetail historyForm = new expenseDetail();
+            showExpenseContainer(historyForm);
+        }
         private void ExpenseAddButton_Click(object sender, EventArgs e)
         {
             newExpense addExpenseForm = new newExpense();
             showExpenseContainer(addExpenseForm);
         }
 
+
+        //INCOME TAB
         private void IncomeDashboardButton_Click(object sender, EventArgs e)
         {
             incomeDashboard dashboardForm = new incomeDashboard();
@@ -117,12 +160,29 @@ namespace Badminton_Club_System
             showIncomeContainer(detailForm);
         }
 
+        private void incomeThisMonthBtn_Click(object sender, EventArgs e)
+        {
+            cashDetail detailForm = new cashDetail();
+            showIncomeContainer(detailForm);
+        }
+        private void incomeLastMonthBtn_Click(object sender, EventArgs e)
+        {
+            cashDetail detailForm = new cashDetail();
+            showIncomeContainer(detailForm);
+        }
+        private void incomePickDate_Click(object sender, EventArgs e)
+        {
+            cashDetail detailForm = new cashDetail();
+            showIncomeContainer(detailForm);
+        }
         private void IncomeAddBtn_Click(object sender, EventArgs e)
         {
             newCash newForm = new newCash();
             showIncomeContainer(newForm);
         }
 
+
+        //INVENTORY TAB
         private void inventoryDashboardButton_Click(object sender, EventArgs e)
         {
             inventoryDashboard dashboardForm = new inventoryDashboard();
@@ -143,7 +203,6 @@ namespace Badminton_Club_System
 
         private void inventoryAddButton_Click(object sender, EventArgs e)
         {
-            
             showInventoryContainer(new inventoryAction());
         }
 

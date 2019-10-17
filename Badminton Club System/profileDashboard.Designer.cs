@@ -65,32 +65,37 @@
             this.profileViewIncomeButton = new System.Windows.Forms.Button();
             this.profileCashTextBox = new System.Windows.Forms.TextBox();
             this.profileKasLabel = new System.Windows.Forms.Label();
+            this.profileAbsenceBtn = new System.Windows.Forms.Button();
             this.profileActionPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(53, 364);
+            this.monthCalendar1.Location = new System.Drawing.Point(133, 330);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 51;
             // 
             // profileExpenseBtn
             // 
+            this.profileExpenseBtn.AccessibleDescription = "3";
             this.profileExpenseBtn.Location = new System.Drawing.Point(121, 289);
             this.profileExpenseBtn.Name = "profileExpenseBtn";
             this.profileExpenseBtn.Size = new System.Drawing.Size(131, 23);
             this.profileExpenseBtn.TabIndex = 50;
             this.profileExpenseBtn.Text = "View Expense";
             this.profileExpenseBtn.UseVisualStyleBackColor = true;
+            this.profileExpenseBtn.Click += new System.EventHandler(this.profileChangeTabBtn_Click);
             // 
             // profileMemberBtn
             // 
-            this.profileMemberBtn.Location = new System.Drawing.Point(14, 334);
+            this.profileMemberBtn.AccessibleDescription = "2";
+            this.profileMemberBtn.Location = new System.Drawing.Point(9, 330);
             this.profileMemberBtn.Name = "profileMemberBtn";
-            this.profileMemberBtn.Size = new System.Drawing.Size(124, 23);
+            this.profileMemberBtn.Size = new System.Drawing.Size(109, 23);
             this.profileMemberBtn.TabIndex = 49;
             this.profileMemberBtn.Text = "View Member";
             this.profileMemberBtn.UseVisualStyleBackColor = true;
+            this.profileMemberBtn.Click += new System.EventHandler(this.profileChangeTabBtn_Click);
             // 
             // profileExpenseTbox
             // 
@@ -135,6 +140,7 @@
             this.profileUpdateFeeBtn.Text = "Update";
             this.profileUpdateFeeBtn.UseVisualStyleBackColor = true;
             this.profileUpdateFeeBtn.Visible = false;
+            this.profileUpdateFeeBtn.Click += new System.EventHandler(this.profileUpdateFeeBtn_Click);
             // 
             // profileChangeFeeBtn
             // 
@@ -144,6 +150,7 @@
             this.profileChangeFeeBtn.TabIndex = 43;
             this.profileChangeFeeBtn.Text = "change";
             this.profileChangeFeeBtn.UseVisualStyleBackColor = true;
+            this.profileChangeFeeBtn.Click += new System.EventHandler(this.profileChangeFeeBtn_Click);
             // 
             // label8
             // 
@@ -162,6 +169,7 @@
             this.profileNewCoorBtn.TabIndex = 41;
             this.profileNewCoorBtn.Text = "New Coordinator";
             this.profileNewCoorBtn.UseVisualStyleBackColor = true;
+            this.profileNewCoorBtn.Click += new System.EventHandler(this.profileNewCoorBtn_Click);
             // 
             // profileActionPanel
             // 
@@ -200,6 +208,7 @@
             this.profileAddCoorBtn.TabIndex = 19;
             this.profileAddCoorBtn.Text = "Add";
             this.profileAddCoorBtn.UseVisualStyleBackColor = true;
+            this.profileAddCoorBtn.Click += new System.EventHandler(this.profileAddCoorBtn_Click);
             // 
             // label4
             // 
@@ -351,21 +360,25 @@
             // 
             // profileInventoryBtn
             // 
-            this.profileInventoryBtn.Location = new System.Drawing.Point(154, 334);
+            this.profileInventoryBtn.AccessibleDescription = "5";
+            this.profileInventoryBtn.Location = new System.Drawing.Point(9, 441);
             this.profileInventoryBtn.Name = "profileInventoryBtn";
-            this.profileInventoryBtn.Size = new System.Drawing.Size(124, 23);
+            this.profileInventoryBtn.Size = new System.Drawing.Size(109, 23);
             this.profileInventoryBtn.TabIndex = 35;
             this.profileInventoryBtn.Text = "View Inventory";
             this.profileInventoryBtn.UseVisualStyleBackColor = true;
+            this.profileInventoryBtn.Click += new System.EventHandler(this.profileChangeTabBtn_Click);
             // 
             // profileViewIncomeButton
             // 
+            this.profileViewIncomeButton.AccessibleDescription = "4";
             this.profileViewIncomeButton.Location = new System.Drawing.Point(121, 211);
             this.profileViewIncomeButton.Name = "profileViewIncomeButton";
             this.profileViewIncomeButton.Size = new System.Drawing.Size(131, 23);
             this.profileViewIncomeButton.TabIndex = 34;
             this.profileViewIncomeButton.Text = "View Income";
             this.profileViewIncomeButton.UseVisualStyleBackColor = true;
+            this.profileViewIncomeButton.Click += new System.EventHandler(this.profileChangeTabBtn_Click);
             // 
             // profileCashTextBox
             // 
@@ -384,11 +397,23 @@
             this.profileKasLabel.TabIndex = 32;
             this.profileKasLabel.Text = "Current Cash";
             // 
+            // profileAbsenceBtn
+            // 
+            this.profileAbsenceBtn.AccessibleDescription = "1";
+            this.profileAbsenceBtn.Location = new System.Drawing.Point(9, 385);
+            this.profileAbsenceBtn.Name = "profileAbsenceBtn";
+            this.profileAbsenceBtn.Size = new System.Drawing.Size(109, 23);
+            this.profileAbsenceBtn.TabIndex = 52;
+            this.profileAbsenceBtn.Text = "View Absence";
+            this.profileAbsenceBtn.UseVisualStyleBackColor = true;
+            this.profileAbsenceBtn.Click += new System.EventHandler(this.profileChangeTabBtn_Click);
+            // 
             // profileDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(924, 546);
+            this.Controls.Add(this.profileAbsenceBtn);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.profileExpenseBtn);
             this.Controls.Add(this.profileMemberBtn);
@@ -458,5 +483,6 @@
         private System.Windows.Forms.Button profileViewIncomeButton;
         private System.Windows.Forms.TextBox profileCashTextBox;
         private System.Windows.Forms.Label profileKasLabel;
+        private System.Windows.Forms.Button profileAbsenceBtn;
     }
 }

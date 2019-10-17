@@ -34,7 +34,6 @@
             this.profileContainerPanel = new System.Windows.Forms.Panel();
             this.absenceTab = new System.Windows.Forms.TabPage();
             this.absenceContainerPanel = new System.Windows.Forms.Panel();
-            this.absenceNavBarPanel = new System.Windows.Forms.Panel();
             this.memberTab = new System.Windows.Forms.TabPage();
             this.memberContainerPanel = new System.Windows.Forms.Panel();
             this.memberNavBarPanel = new System.Windows.Forms.Panel();
@@ -98,6 +97,8 @@
             this.homeTabControl.SelectedIndex = 0;
             this.homeTabControl.Size = new System.Drawing.Size(924, 562);
             this.homeTabControl.TabIndex = 0;
+            this.homeTabControl.TabIndexChanged += new System.EventHandler(this.homeTabControl_TabIndexChanged);
+            this.homeTabControl.Click += new System.EventHandler(this.homeTabControl_TabIndexChanged);
             // 
             // profileTab
             // 
@@ -122,7 +123,6 @@
             // 
             this.absenceTab.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.absenceTab.Controls.Add(this.absenceContainerPanel);
-            this.absenceTab.Controls.Add(this.absenceNavBarPanel);
             this.absenceTab.Location = new System.Drawing.Point(4, 22);
             this.absenceTab.Name = "absenceTab";
             this.absenceTab.Size = new System.Drawing.Size(916, 536);
@@ -134,19 +134,10 @@
             // 
             this.absenceContainerPanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.absenceContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.absenceContainerPanel.Location = new System.Drawing.Point(127, 0);
+            this.absenceContainerPanel.Location = new System.Drawing.Point(0, 0);
             this.absenceContainerPanel.Name = "absenceContainerPanel";
-            this.absenceContainerPanel.Size = new System.Drawing.Size(789, 536);
+            this.absenceContainerPanel.Size = new System.Drawing.Size(916, 536);
             this.absenceContainerPanel.TabIndex = 2;
-            // 
-            // absenceNavBarPanel
-            // 
-            this.absenceNavBarPanel.BackColor = System.Drawing.Color.LightGray;
-            this.absenceNavBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.absenceNavBarPanel.Location = new System.Drawing.Point(0, 0);
-            this.absenceNavBarPanel.Name = "absenceNavBarPanel";
-            this.absenceNavBarPanel.Size = new System.Drawing.Size(127, 536);
-            this.absenceNavBarPanel.TabIndex = 1;
             // 
             // memberTab
             // 
@@ -170,7 +161,7 @@
             // 
             // memberNavBarPanel
             // 
-            this.memberNavBarPanel.BackColor = System.Drawing.Color.LightGray;
+            this.memberNavBarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.memberNavBarPanel.Controls.Add(this.memberPaymentButton);
             this.memberNavBarPanel.Controls.Add(this.memberAddButton);
             this.memberNavBarPanel.Controls.Add(this.memberMemberButton);
@@ -192,7 +183,7 @@
             // 
             // memberAddButton
             // 
-            this.memberAddButton.Location = new System.Drawing.Point(8, 293);
+            this.memberAddButton.Location = new System.Drawing.Point(8, 505);
             this.memberAddButton.Name = "memberAddButton";
             this.memberAddButton.Size = new System.Drawing.Size(113, 23);
             this.memberAddButton.TabIndex = 2;
@@ -232,7 +223,7 @@
             // 
             // expenseNavBarPanel
             // 
-            this.expenseNavBarPanel.BackColor = System.Drawing.Color.Gray;
+            this.expenseNavBarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.expenseNavBarPanel.Controls.Add(this.expenseDatePicker);
             this.expenseNavBarPanel.Controls.Add(this.expenseLastMonthButton);
             this.expenseNavBarPanel.Controls.Add(this.expenseThisMonthButton);
@@ -251,6 +242,7 @@
             this.expenseDatePicker.Name = "expenseDatePicker";
             this.expenseDatePicker.Size = new System.Drawing.Size(113, 20);
             this.expenseDatePicker.TabIndex = 5;
+            this.expenseDatePicker.ValueChanged += new System.EventHandler(this.expenseDatePicker_ValueChanged);
             // 
             // expenseLastMonthButton
             // 
@@ -260,6 +252,7 @@
             this.expenseLastMonthButton.TabIndex = 4;
             this.expenseLastMonthButton.Text = "Last Month";
             this.expenseLastMonthButton.UseVisualStyleBackColor = true;
+            this.expenseLastMonthButton.Click += new System.EventHandler(this.expenseLastMonthButton_Click);
             // 
             // expenseThisMonthButton
             // 
@@ -269,10 +262,11 @@
             this.expenseThisMonthButton.TabIndex = 3;
             this.expenseThisMonthButton.Text = "This Month";
             this.expenseThisMonthButton.UseVisualStyleBackColor = true;
+            this.expenseThisMonthButton.Click += new System.EventHandler(this.expenseThisMonthButton_Click);
             // 
             // expenseAddButton
             // 
-            this.expenseAddButton.Location = new System.Drawing.Point(8, 296);
+            this.expenseAddButton.Location = new System.Drawing.Point(8, 505);
             this.expenseAddButton.Name = "expenseAddButton";
             this.expenseAddButton.Size = new System.Drawing.Size(113, 23);
             this.expenseAddButton.TabIndex = 2;
@@ -322,7 +316,7 @@
             // 
             // incomeNavBarPanel
             // 
-            this.incomeNavBarPanel.BackColor = System.Drawing.SystemColors.Menu;
+            this.incomeNavBarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.incomeNavBarPanel.Controls.Add(this.incomeAddBtn);
             this.incomeNavBarPanel.Controls.Add(this.incomeDatePicker);
             this.incomeNavBarPanel.Controls.Add(this.incomeLastMonthBtn);
@@ -337,7 +331,7 @@
             // 
             // incomeAddBtn
             // 
-            this.incomeAddBtn.Location = new System.Drawing.Point(8, 399);
+            this.incomeAddBtn.Location = new System.Drawing.Point(8, 505);
             this.incomeAddBtn.Name = "incomeAddBtn";
             this.incomeAddBtn.Size = new System.Drawing.Size(113, 23);
             this.incomeAddBtn.TabIndex = 6;
@@ -351,6 +345,7 @@
             this.incomeDatePicker.Name = "incomeDatePicker";
             this.incomeDatePicker.Size = new System.Drawing.Size(113, 20);
             this.incomeDatePicker.TabIndex = 5;
+            this.incomeDatePicker.ValueChanged += new System.EventHandler(this.incomePickDate_Click);
             // 
             // incomeLastMonthBtn
             // 
@@ -360,6 +355,7 @@
             this.incomeLastMonthBtn.TabIndex = 4;
             this.incomeLastMonthBtn.Text = "Last Month";
             this.incomeLastMonthBtn.UseVisualStyleBackColor = true;
+            this.incomeLastMonthBtn.Click += new System.EventHandler(this.incomeLastMonthBtn_Click);
             // 
             // incomeThisMonthBtn
             // 
@@ -369,6 +365,7 @@
             this.incomeThisMonthBtn.TabIndex = 3;
             this.incomeThisMonthBtn.Text = "This Month";
             this.incomeThisMonthBtn.UseVisualStyleBackColor = true;
+            this.incomeThisMonthBtn.Click += new System.EventHandler(this.incomeThisMonthBtn_Click);
             // 
             // incomeHistoryBtn
             // 
@@ -412,7 +409,7 @@
             // 
             // inventoryNavBarPanel
             // 
-            this.inventoryNavBarPanel.BackColor = System.Drawing.Color.Gray;
+            this.inventoryNavBarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.inventoryNavBarPanel.Controls.Add(this.inventoryAddButton);
             this.inventoryNavBarPanel.Controls.Add(this.inventoryNewItemButton);
             this.inventoryNavBarPanel.Controls.Add(this.inventoryHistoryButton);
@@ -425,7 +422,7 @@
             // 
             // inventoryAddButton
             // 
-            this.inventoryAddButton.Location = new System.Drawing.Point(8, 254);
+            this.inventoryAddButton.Location = new System.Drawing.Point(8, 505);
             this.inventoryAddButton.Name = "inventoryAddButton";
             this.inventoryAddButton.Size = new System.Drawing.Size(113, 23);
             this.inventoryAddButton.TabIndex = 3;
@@ -435,7 +432,7 @@
             // 
             // inventoryNewItemButton
             // 
-            this.inventoryNewItemButton.Location = new System.Drawing.Point(8, 225);
+            this.inventoryNewItemButton.Location = new System.Drawing.Point(8, 476);
             this.inventoryNewItemButton.Name = "inventoryNewItemButton";
             this.inventoryNewItemButton.Size = new System.Drawing.Size(113, 23);
             this.inventoryNewItemButton.TabIndex = 2;
@@ -551,7 +548,6 @@
         private System.Windows.Forms.Button inventoryNewItemButton;
         private System.Windows.Forms.Button inventoryHistoryButton;
         private System.Windows.Forms.Button inventoryDashboardButton;
-        private System.Windows.Forms.Panel absenceNavBarPanel;
         private System.Windows.Forms.Button incomeAddBtn;
         private System.Windows.Forms.ContextMenuStrip profileListViewCMS;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
