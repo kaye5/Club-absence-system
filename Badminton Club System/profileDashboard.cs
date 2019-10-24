@@ -68,6 +68,7 @@ namespace Badminton_Club_System
            
             profileAddCoorBtn.Enabled = false;
             profileActionPanel.Hide();
+            profileListView.Clear();
             coordinatorTable();
         }
 
@@ -115,11 +116,23 @@ namespace Badminton_Club_System
 
         private void profileUpdateCoorBtn_Click(object sender, EventArgs e)
         {
-            
-            db.sql = "INSERT INTO mydb.coordinator " +
-                     "(email,pass,name,position,nim)" +
-                     $"values('{profileEmailTbox.Text}','{profilePassTbox.Text}','{profileNameTbox.Text}','{profilePositionTbox.Text}','{profileNimTBox.Text}')";
+
+            db.sql = "update coordinator " +
+                     $"pass = '{profilePassTbox.Text}' , name='{profileNameTbox.Text}' , position='{profilePositionTbox.Text}' , nim='{profileNimTBox.Text}' " +
+                     $"where email={profileEmailTbox.Text}";
+            Console.WriteLine(db.sql);
+            try
+            {
+                db.cmd = new MySqlCommand(db.sql, db.connection);
+                db.cmd.ExecuteNonQuery();
+                db.disposeCmd();
+            } catch(MySqlException err)
+            {
+                MessageBox.Show(err.Message, err.Code.ToString());
+            }
+
             profileUpdateCoorBtn.Visible = false;
+            
         }
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
@@ -132,7 +145,10 @@ namespace Badminton_Club_System
                 profileNameTbox.Text = selectedItem.SubItems[2].Text;
                 profilePositionTbox.Text = selectedItem.SubItems[3].Text;
                 profileNimTBox.Text = selectedItem.SubItems[4].Text;
+                profileActionPanel.Visible = true;
                 profileUpdateCoorBtn.Visible = true;
+                profileAddCoorBtn.Enabled = false;
+                profileUpdateCoorBtn.Enabled = false;
             } else
             {
                 MessageBox.Show("No item selected", "Warning");
