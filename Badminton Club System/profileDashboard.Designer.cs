@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.profileExpenseBtn = new System.Windows.Forms.Button();
             this.profileMemberBtn = new System.Windows.Forms.Button();
@@ -49,15 +50,15 @@
             this.label6 = new System.Windows.Forms.Label();
             this.profilePositionTbox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.profileClassTbox = new System.Windows.Forms.TextBox();
+            this.profileEmailTbox = new System.Windows.Forms.TextBox();
             this.profileNimTBox = new System.Windows.Forms.TextBox();
             this.profileNameTbox = new System.Windows.Forms.TextBox();
             this.profileListView = new System.Windows.Forms.ListView();
-            this.profileNimHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.profileNameHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.profileClassHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.profilePositionHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.profilePassHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.emailHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.passHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.nameHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.positionHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.NIMHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.profileMonthLbl = new System.Windows.Forms.Label();
             this.profileFeeTbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -66,7 +67,11 @@
             this.profileCashTextBox = new System.Windows.Forms.TextBox();
             this.profileKasLabel = new System.Windows.Forms.Label();
             this.profileAbsenceBtn = new System.Windows.Forms.Button();
+            this.coorCTMS = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.profileActionPanel.SuspendLayout();
+            this.coorCTMS.SuspendLayout();
             this.SuspendLayout();
             // 
             // monthCalendar1
@@ -182,7 +187,7 @@
             this.profileActionPanel.Controls.Add(this.label6);
             this.profileActionPanel.Controls.Add(this.profilePositionTbox);
             this.profileActionPanel.Controls.Add(this.label7);
-            this.profileActionPanel.Controls.Add(this.profileClassTbox);
+            this.profileActionPanel.Controls.Add(this.profileEmailTbox);
             this.profileActionPanel.Controls.Add(this.profileNimTBox);
             this.profileActionPanel.Controls.Add(this.profileNameTbox);
             this.profileActionPanel.Location = new System.Drawing.Point(372, 373);
@@ -190,6 +195,7 @@
             this.profileActionPanel.Size = new System.Drawing.Size(546, 160);
             this.profileActionPanel.TabIndex = 40;
             this.profileActionPanel.Visible = false;
+            this.profileActionPanel.Leave += new System.EventHandler(this.validation);
             // 
             // label3
             // 
@@ -202,6 +208,7 @@
             // 
             // profileAddCoorBtn
             // 
+            this.profileAddCoorBtn.Enabled = false;
             this.profileAddCoorBtn.Location = new System.Drawing.Point(275, 45);
             this.profileAddCoorBtn.Name = "profileAddCoorBtn";
             this.profileAddCoorBtn.Size = new System.Drawing.Size(85, 46);
@@ -228,6 +235,7 @@
             this.profileUpdateCoorBtn.Text = "Update";
             this.profileUpdateCoorBtn.UseVisualStyleBackColor = true;
             this.profileUpdateCoorBtn.Visible = false;
+            this.profileUpdateCoorBtn.Click += new System.EventHandler(this.profileUpdateCoorBtn_Click);
             // 
             // label5
             // 
@@ -236,7 +244,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(32, 13);
             this.label5.TabIndex = 10;
-            this.label5.Text = "Class";
+            this.label5.Text = "Email";
             // 
             // profilePassTbox
             // 
@@ -244,6 +252,7 @@
             this.profilePassTbox.Name = "profilePassTbox";
             this.profilePassTbox.Size = new System.Drawing.Size(192, 20);
             this.profilePassTbox.TabIndex = 17;
+            this.profilePassTbox.TextChanged += new System.EventHandler(this.validation);
             // 
             // label6
             // 
@@ -260,6 +269,7 @@
             this.profilePositionTbox.Name = "profilePositionTbox";
             this.profilePositionTbox.Size = new System.Drawing.Size(192, 20);
             this.profilePositionTbox.TabIndex = 16;
+            this.profilePositionTbox.TextChanged += new System.EventHandler(this.validation);
             // 
             // label7
             // 
@@ -270,12 +280,13 @@
             this.label7.TabIndex = 12;
             this.label7.Text = "Password";
             // 
-            // profileClassTbox
+            // profileEmailTbox
             // 
-            this.profileClassTbox.Location = new System.Drawing.Point(77, 71);
-            this.profileClassTbox.Name = "profileClassTbox";
-            this.profileClassTbox.Size = new System.Drawing.Size(192, 20);
-            this.profileClassTbox.TabIndex = 15;
+            this.profileEmailTbox.Location = new System.Drawing.Point(77, 71);
+            this.profileEmailTbox.Name = "profileEmailTbox";
+            this.profileEmailTbox.Size = new System.Drawing.Size(192, 20);
+            this.profileEmailTbox.TabIndex = 15;
+            this.profileEmailTbox.TextChanged += new System.EventHandler(this.validation);
             // 
             // profileNimTBox
             // 
@@ -283,6 +294,7 @@
             this.profileNimTBox.Name = "profileNimTBox";
             this.profileNimTBox.Size = new System.Drawing.Size(192, 20);
             this.profileNimTBox.TabIndex = 13;
+            this.profileNimTBox.TextChanged += new System.EventHandler(this.validation);
             // 
             // profileNameTbox
             // 
@@ -290,15 +302,17 @@
             this.profileNameTbox.Name = "profileNameTbox";
             this.profileNameTbox.Size = new System.Drawing.Size(192, 20);
             this.profileNameTbox.TabIndex = 14;
+            this.profileNameTbox.TextChanged += new System.EventHandler(this.validation);
             // 
             // profileListView
             // 
             this.profileListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.profileNimHeader,
-            this.profileNameHeader,
-            this.profileClassHeader,
-            this.profilePositionHeader,
-            this.profilePassHeader});
+            this.emailHeader,
+            this.passHeader,
+            this.nameHeader,
+            this.positionHeader,
+            this.NIMHeader});
+            this.profileListView.FullRowSelect = true;
             this.profileListView.GridLines = true;
             this.profileListView.Location = new System.Drawing.Point(372, 48);
             this.profileListView.Name = "profileListView";
@@ -306,31 +320,32 @@
             this.profileListView.TabIndex = 39;
             this.profileListView.UseCompatibleStateImageBehavior = false;
             this.profileListView.View = System.Windows.Forms.View.Details;
+            this.profileListView.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dashboardListViewCLick);
             // 
-            // profileNimHeader
+            // emailHeader
             // 
-            this.profileNimHeader.Text = "NIM";
-            this.profileNimHeader.Width = 117;
+            this.emailHeader.Text = "Email";
+            this.emailHeader.Width = 105;
             // 
-            // profileNameHeader
+            // passHeader
             // 
-            this.profileNameHeader.Text = "Name";
-            this.profileNameHeader.Width = 138;
+            this.passHeader.Text = "Password";
+            this.passHeader.Width = 111;
             // 
-            // profileClassHeader
+            // nameHeader
             // 
-            this.profileClassHeader.Text = "Class";
-            this.profileClassHeader.Width = 99;
+            this.nameHeader.Text = "Name";
+            this.nameHeader.Width = 110;
             // 
-            // profilePositionHeader
+            // positionHeader
             // 
-            this.profilePositionHeader.Text = "Position";
-            this.profilePositionHeader.Width = 73;
+            this.positionHeader.Text = "Positon";
+            this.positionHeader.Width = 109;
             // 
-            // profilePassHeader
+            // NIMHeader
             // 
-            this.profilePassHeader.Text = "Password";
-            this.profilePassHeader.Width = 113;
+            this.NIMHeader.Text = "NIM";
+            this.NIMHeader.Width = 102;
             // 
             // profileMonthLbl
             // 
@@ -408,6 +423,27 @@
             this.profileAbsenceBtn.UseVisualStyleBackColor = true;
             this.profileAbsenceBtn.Click += new System.EventHandler(this.profileChangeTabBtn_Click);
             // 
+            // coorCTMS
+            // 
+            this.coorCTMS.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editToolStripMenuItem,
+            this.deleteToolStripMenuItem});
+            this.coorCTMS.Name = "coorCTMS";
+            this.coorCTMS.Size = new System.Drawing.Size(153, 70);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            // 
             // profileDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -439,6 +475,7 @@
             this.Text = "profileDashboard";
             this.profileActionPanel.ResumeLayout(false);
             this.profileActionPanel.PerformLayout();
+            this.coorCTMS.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -467,15 +504,10 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox profilePositionTbox;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox profileClassTbox;
+        private System.Windows.Forms.TextBox profileEmailTbox;
         private System.Windows.Forms.TextBox profileNimTBox;
         private System.Windows.Forms.TextBox profileNameTbox;
         private System.Windows.Forms.ListView profileListView;
-        private System.Windows.Forms.ColumnHeader profileNimHeader;
-        private System.Windows.Forms.ColumnHeader profileNameHeader;
-        private System.Windows.Forms.ColumnHeader profileClassHeader;
-        private System.Windows.Forms.ColumnHeader profilePositionHeader;
-        private System.Windows.Forms.ColumnHeader profilePassHeader;
         private System.Windows.Forms.Label profileMonthLbl;
         private System.Windows.Forms.TextBox profileFeeTbox;
         private System.Windows.Forms.Label label1;
@@ -484,5 +516,13 @@
         private System.Windows.Forms.TextBox profileCashTextBox;
         private System.Windows.Forms.Label profileKasLabel;
         private System.Windows.Forms.Button profileAbsenceBtn;
+        private System.Windows.Forms.ColumnHeader emailHeader;
+        private System.Windows.Forms.ColumnHeader passHeader;
+        private System.Windows.Forms.ColumnHeader nameHeader;
+        private System.Windows.Forms.ColumnHeader positionHeader;
+        private System.Windows.Forms.ColumnHeader NIMHeader;
+        private System.Windows.Forms.ContextMenuStrip coorCTMS;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
     }
 }
