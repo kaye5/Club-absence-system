@@ -15,8 +15,9 @@ namespace Badminton_Club_System
         public profileDashboard()
         {
             InitializeComponent();
+            
         }
-
+       
         private void profileChangeFeeBtn_Click(object sender, EventArgs e)
         {
             profileUpdateFeeBtn.Show();
