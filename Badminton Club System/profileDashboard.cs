@@ -196,14 +196,15 @@ namespace Badminton_Club_System
                 db.cmd = new MySqlCommand(db.sql, db.connection);
                 db.cmd.ExecuteNonQuery();
                 db.disposeCmd();
+                clearTbox();
+                profileActionPanel.Visible = false;
+                profileUpdateCoorBtn.Visible = false;
+                coordinatorTable();
             } catch(MySqlException err)
             {
                 MessageBox.Show(err.Message, err.Number.ToString(),MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
-            clearTbox();
-            profileActionPanel.Visible = false;
-            profileUpdateCoorBtn.Visible = false;
-            coordinatorTable();
+            
         }
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
