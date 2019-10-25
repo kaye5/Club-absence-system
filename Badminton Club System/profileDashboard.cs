@@ -12,14 +12,60 @@ namespace Badminton_Club_System
 {
     public partial class profileDashboard : Form
     {
+        String month = DateTime.Now.AddMonths(0).ToString("MMMM");
+        String year = DateTime.Now.Year.ToString();
         private ListViewItem selectedItem;
         public profileDashboard()
         {
+            
             InitializeComponent();
             coordinatorTable();
+            updateData();
         }
+
+        private void updateData()
+        {
+            try
+            {
+                db.disposeCmd();
+                db.sql = $"select * from profile where year='{DateTime.Now.Year.ToString()}'";
+                db.addCMD();
+                MySqlDataReader profileReader = db.cmd.ExecuteReader();
+                if (profileReader.Read())
+                {
+                    profileCashTextBox.Text = profileReader.GetInt32(2).ToString();
+                    profileFeeTbox.Text = profileReader.GetInt32(1).ToString();
+                }
+                db.cmd.Dispose();
+                profileReader.Dispose();
+                //income data
+                db.sql = $"select * from income where id='{month + year}'";
+                db.addCMD();
+                MySqlDataReader incomeReader = db.cmd.ExecuteReader();
+                if (incomeReader.Read())                
+                    profileIncomeTbox.Text = incomeReader.GetInt32(2).ToString();                
+                incomeReader.Dispose();
+                db.disposeCmd();
+                //expense data
+                db.sql = $"select * from income where id='{month + year}'";
+                db.addCMD();
+                MySqlDataReader expenseReader = db.cmd.ExecuteReader();
+                if (expenseReader.Read())
+                    profileExpenseTbox.Text = expenseReader.GetInt32(2).ToString();
+                expenseReader.Dispose();
+                db.disposeCmd();
+            }
+            catch (MySqlException err)
+            {
+                MessageBox.Show(err.Message, err.Number.ToString(),MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+        }
+
         private void coordinatorTable()
         {
+            if (profileListView.Items.Count > 0)
+                profileListView.Items.Clear();
+            db.cmd.Dispose();
             db.sql = "select * from coordinator";
             db.cmd = new MySqlCommand(db.sql, db.connection);
             MySqlDataReader reader = db.cmd.ExecuteReader();
@@ -36,12 +82,25 @@ namespace Badminton_Club_System
 
         private void profileChangeFeeBtn_Click(object sender, EventArgs e)
         {
+            profileFeeTbox.ReadOnly = false;
             profileUpdateFeeBtn.Show();
         }
-
         private void profileUpdateFeeBtn_Click(object sender, EventArgs e)
         {
+            try
+            {
+                db.sql = $"update mydb.profile set memberfee='{Convert.ToInt32(profileFeeTbox.Text)}' where year='{DateTime.Now.Year.ToString()}'";
+                db.addCMD();
+                db.cmd.ExecuteNonQuery();
+                db.disposeCmd();
+            }
+            catch (MySqlException err)
+            {
+                MessageBox.Show(err.Message, err.Number.ToString(),MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
             profileUpdateFeeBtn.Hide();
+            profileFeeTbox.ReadOnly = true;
+            updateData();
         }
 
         private void profileNewCoorBtn_Click(object sender, EventArgs e)
@@ -60,16 +119,15 @@ namespace Badminton_Club_System
                 db.cmd.Prepare();
                 db.cmd.ExecuteNonQuery();
                 db.disposeCmd();
+                clearTbox();
+                profileAddCoorBtn.Enabled = false;
+                profileActionPanel.Hide();
+                coordinatorTable();
             }
-            catch (MySqlException ex)
+            catch (MySqlException err)
             {
-                Console.WriteLine(ex.Message);
-            }
-           
-            profileAddCoorBtn.Enabled = false;
-            profileActionPanel.Hide();
-            profileListView.Clear();
-            coordinatorTable();
+                MessageBox.Show(err.Message, err.Number.ToString(),MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }          
         }
 
         private void profileChangeTabBtn_Click(object sender, EventArgs e)
@@ -78,6 +136,19 @@ namespace Badminton_Club_System
             Home homeForm = new Home(Convert.ToInt16(viewBtn.AccessibleDescription));
             ActiveForm.Hide();
             homeForm.Show();
+        }
+
+        private void clearTbox()
+        {
+            foreach (Control control in profileActionPanel.Controls)
+            {
+                string controlType = control.GetType().ToString();
+                if (controlType == "System.Windows.Forms.TextBox")
+                {
+                    TextBox txtBox = (TextBox)control;
+                    txtBox.Text = "";
+                }
+            }
         }
 
         private void validation(object sender,EventArgs e)
@@ -117,10 +188,9 @@ namespace Badminton_Club_System
         private void profileUpdateCoorBtn_Click(object sender, EventArgs e)
         {
 
-            db.sql = "update coordinator " +
-                     $"pass = '{profilePassTbox.Text}' , name='{profileNameTbox.Text}' , position='{profilePositionTbox.Text}' , nim='{profileNimTBox.Text}' " +
-                     $"where email={profileEmailTbox.Text}";
-            Console.WriteLine(db.sql);
+            db.sql = "update mydb.coordinator set " + 
+                     $"pass = '{profilePassTbox.Text}', name = '{profileNameTbox.Text}' , position = '{profilePositionTbox.Text}' , nim = '{profileNimTBox.Text}' " +
+                     $" where email = '{profileEmailTbox.Text}'";  
             try
             {
                 db.cmd = new MySqlCommand(db.sql, db.connection);
@@ -128,11 +198,12 @@ namespace Badminton_Club_System
                 db.disposeCmd();
             } catch(MySqlException err)
             {
-                MessageBox.Show(err.Message, err.Code.ToString());
+                MessageBox.Show(err.Message, err.Number.ToString(),MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
-
+            clearTbox();
+            profileActionPanel.Visible = false;
             profileUpdateCoorBtn.Visible = false;
-            
+            coordinatorTable();
         }
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
@@ -153,6 +224,23 @@ namespace Badminton_Club_System
             {
                 MessageBox.Show("No item selected", "Warning");
             }  
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (profileListView.SelectedItems.Count > 0)
+            {
+                selectedItem = profileListView.SelectedItems[0];
+                db.sql = $"DELETE FROM mydb.coordinator WHERE id='{selectedItem.Text}' ";
+                db.addCMD();
+                db.cmd.ExecuteNonQuery();
+                db.disposeCmd();
+                coordinatorTable();
+            }
+            else
+            {
+                MessageBox.Show("No item selected", "Warning");
+            }
         }
     }
 }

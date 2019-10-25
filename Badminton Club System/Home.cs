@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using MySql.Data.MySqlClient;
 namespace Badminton_Club_System
 {
     public partial class Home : Form
@@ -16,6 +16,7 @@ namespace Badminton_Club_System
         public Home()
         {
             InitializeComponent();
+            newMonth();
             showProfileContainer(new profileDashboard());
         }
 
@@ -23,6 +24,46 @@ namespace Badminton_Club_System
         {
             InitializeComponent();
             homeTabControl.SelectTab(tabIndex);
+        }
+
+        private void newMonth()
+        {
+            String previousMonth = DateTime.Now.AddMonths(-1).ToString("MMMM");            
+            String todayMonth = DateTime.Now.AddMonths(0).ToString("MMMM");
+            String todayYear = DateTime.Today.Year.ToString();
+            String today = $"{todayMonth}{todayYear}";
+            Console.WriteLine(today);
+            db.sql = $"select id from mydb.income where id='{today}' ";
+            db.cmd = new MySqlCommand(db.sql, db.connection);
+            try
+            {
+                MySqlDataReader todayReader = db.cmd.ExecuteReader();
+                
+                if (!todayReader.Read())
+                {
+                    db.disposeCmd();
+                    db.sql = $"insert into mydb.income values('{today}','{todayMonth + " " + todayYear}',0,'{todayMonth}')";
+                    db.cmd = new MySqlCommand(db.sql, db.connection);
+                    db.cmd.ExecuteNonQuery();                    
+                }
+                db.disposeCmd();
+                todayReader.Close();
+                db.sql = $"select id from mydb.expense where id='{today}'";
+                db.addCMD();
+                todayReader = db.cmd.ExecuteReader();
+                if (!todayReader.Read())
+                {
+                    db.disposeCmd();
+                    db.sql = $"insert into mydb.expense values('{today}','{todayMonth + " " + todayYear}',0,'{todayMonth}')";
+                    db.cmd = new MySqlCommand(db.sql, db.connection);
+                    db.cmd.ExecuteNonQuery();                    
+                }
+                db.disposeCmd();
+                todayReader.Close();
+            } catch (MySqlException err)
+            {
+                MessageBox.Show(err.Message, err.Code.ToString());
+            }            
         }
 
         //TAB CONTROL

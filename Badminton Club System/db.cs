@@ -15,6 +15,10 @@ namespace Badminton_Club_System
         {
             connection.Open();
         }
+        public static void addCMD()
+        {
+            cmd = new MySqlCommand(sql, connection);
+        }
         public static void closeDB()
         {
             connection.Close();
