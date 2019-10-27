@@ -36,8 +36,8 @@
             this.inventoryNewItemIDTbox = new System.Windows.Forms.TextBox();
             this.inventoryNewItemAddBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
@@ -65,7 +65,7 @@
             this.inventoryNewItemNameTbox.Location = new System.Drawing.Point(85, 9);
             this.inventoryNewItemNameTbox.Name = "inventoryNewItemNameTbox";
             this.inventoryNewItemNameTbox.Size = new System.Drawing.Size(160, 20);
-            this.inventoryNewItemNameTbox.TabIndex = 3;
+            this.inventoryNewItemNameTbox.TabIndex = 0;
             this.inventoryNewItemNameTbox.TextChanged += new System.EventHandler(this.validate);
             // 
             // inventoryNewItemCommentTbox
@@ -73,7 +73,7 @@
             this.inventoryNewItemCommentTbox.Location = new System.Drawing.Point(85, 80);
             this.inventoryNewItemCommentTbox.Name = "inventoryNewItemCommentTbox";
             this.inventoryNewItemCommentTbox.Size = new System.Drawing.Size(160, 96);
-            this.inventoryNewItemCommentTbox.TabIndex = 4;
+            this.inventoryNewItemCommentTbox.TabIndex = 2;
             this.inventoryNewItemCommentTbox.Text = "";
             this.inventoryNewItemCommentTbox.TextChanged += new System.EventHandler(this.validate);
             // 
@@ -91,7 +91,7 @@
             this.inventoryNewItemIDTbox.Location = new System.Drawing.Point(85, 38);
             this.inventoryNewItemIDTbox.Name = "inventoryNewItemIDTbox";
             this.inventoryNewItemIDTbox.Size = new System.Drawing.Size(160, 20);
-            this.inventoryNewItemIDTbox.TabIndex = 6;
+            this.inventoryNewItemIDTbox.TabIndex = 1;
             this.inventoryNewItemIDTbox.TextChanged += new System.EventHandler(this.validate);
             // 
             // inventoryNewItemAddBtn
@@ -100,7 +100,7 @@
             this.inventoryNewItemAddBtn.Location = new System.Drawing.Point(12, 239);
             this.inventoryNewItemAddBtn.Name = "inventoryNewItemAddBtn";
             this.inventoryNewItemAddBtn.Size = new System.Drawing.Size(112, 41);
-            this.inventoryNewItemAddBtn.TabIndex = 7;
+            this.inventoryNewItemAddBtn.TabIndex = 0;
             this.inventoryNewItemAddBtn.Text = "Add";
             this.inventoryNewItemAddBtn.UseVisualStyleBackColor = true;
             this.inventoryNewItemAddBtn.Click += new System.EventHandler(this.inventoryNewItemAddBtn_Click);
@@ -120,6 +120,13 @@
             this.panel1.Size = new System.Drawing.Size(280, 221);
             this.panel1.TabIndex = 8;
             // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(85, 188);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown1.TabIndex = 3;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -128,13 +135,6 @@
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "Stock";
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(85, 188);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 8;
             // 
             // inventoryNewItem
             // 

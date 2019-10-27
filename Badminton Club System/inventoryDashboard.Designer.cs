@@ -37,13 +37,14 @@
             this.inventoryStockHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.inventoryDashboardCMS = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.invetoryDashboardIDTbox = new System.Windows.Forms.TextBox();
             this.invetoryDashboardNameTbox = new System.Windows.Forms.TextBox();
             this.inventoryDashboardUpdateBtn = new System.Windows.Forms.Button();
             this.inventoryDashboardUpdatePanel = new System.Windows.Forms.Panel();
-            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.commentHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.inventoryDashboardCMS.SuspendLayout();
             this.inventoryDashboardUpdatePanel.SuspendLayout();
             this.SuspendLayout();
@@ -69,7 +70,8 @@
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.inventoryIDHeader,
             this.inventoryItemHeader,
-            this.inventoryStockHeader});
+            this.inventoryStockHeader,
+            this.commentHeader});
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.Location = new System.Drawing.Point(199, 10);
@@ -88,12 +90,12 @@
             // inventoryItemHeader
             // 
             this.inventoryItemHeader.Text = "Item Name";
-            this.inventoryItemHeader.Width = 187;
+            this.inventoryItemHeader.Width = 158;
             // 
             // inventoryStockHeader
             // 
             this.inventoryStockHeader.Text = "Stock";
-            this.inventoryStockHeader.Width = 176;
+            this.inventoryStockHeader.Width = 105;
             // 
             // inventoryDashboardCMS
             // 
@@ -106,9 +108,16 @@
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // label2
             // 
@@ -166,12 +175,10 @@
             this.inventoryDashboardUpdatePanel.TabIndex = 11;
             this.inventoryDashboardUpdatePanel.Visible = false;
             // 
-            // deleteToolStripMenuItem
+            // commentHeader
             // 
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.deleteToolStripMenuItem.Text = "Delete";
-            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            this.commentHeader.Text = "Comment";
+            this.commentHeader.Width = 130;
             // 
             // inventoryDashboard
             // 
@@ -210,5 +217,6 @@
         private System.Windows.Forms.Button inventoryDashboardUpdateBtn;
         private System.Windows.Forms.Panel inventoryDashboardUpdatePanel;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private System.Windows.Forms.ColumnHeader commentHeader;
     }
 }

@@ -30,14 +30,12 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.inventoryActionCountTbox = new System.Windows.Forms.NumericUpDown();
-            this.inventoryActionCommentTbox = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.inventoryActionAddBtn = new System.Windows.Forms.Button();
             this.inventoryActionIDCB = new System.Windows.Forms.ComboBox();
             this.inventoryItemRemoveBtn = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.inventoryActionNameTbox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryActionCountTbox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,14 +55,6 @@
             this.inventoryActionCountTbox.Size = new System.Drawing.Size(61, 20);
             this.inventoryActionCountTbox.TabIndex = 3;
             // 
-            // inventoryActionCommentTbox
-            // 
-            this.inventoryActionCommentTbox.Location = new System.Drawing.Point(77, 78);
-            this.inventoryActionCommentTbox.Name = "inventoryActionCommentTbox";
-            this.inventoryActionCommentTbox.Size = new System.Drawing.Size(186, 96);
-            this.inventoryActionCommentTbox.TabIndex = 4;
-            this.inventoryActionCommentTbox.Text = "";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -74,23 +64,15 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Count";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 81);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Comment";
-            // 
             // inventoryActionAddBtn
             // 
-            this.inventoryActionAddBtn.Location = new System.Drawing.Point(16, 198);
+            this.inventoryActionAddBtn.Location = new System.Drawing.Point(12, 118);
             this.inventoryActionAddBtn.Name = "inventoryActionAddBtn";
             this.inventoryActionAddBtn.Size = new System.Drawing.Size(102, 23);
             this.inventoryActionAddBtn.TabIndex = 7;
             this.inventoryActionAddBtn.Text = "Add";
             this.inventoryActionAddBtn.UseVisualStyleBackColor = true;
+            this.inventoryActionAddBtn.Click += new System.EventHandler(this.inventoryActionAddBtn_Click);
             // 
             // inventoryActionIDCB
             // 
@@ -99,15 +81,25 @@
             this.inventoryActionIDCB.Name = "inventoryActionIDCB";
             this.inventoryActionIDCB.Size = new System.Drawing.Size(186, 21);
             this.inventoryActionIDCB.TabIndex = 8;
+            this.inventoryActionIDCB.SelectedValueChanged += new System.EventHandler(this.inventoryActionIDCB_SelectedValueChanged);
             // 
             // inventoryItemRemoveBtn
             // 
-            this.inventoryItemRemoveBtn.Location = new System.Drawing.Point(161, 198);
+            this.inventoryItemRemoveBtn.Location = new System.Drawing.Point(161, 118);
             this.inventoryItemRemoveBtn.Name = "inventoryItemRemoveBtn";
             this.inventoryItemRemoveBtn.Size = new System.Drawing.Size(102, 23);
             this.inventoryItemRemoveBtn.TabIndex = 9;
             this.inventoryItemRemoveBtn.Text = "Remove";
             this.inventoryItemRemoveBtn.UseVisualStyleBackColor = true;
+            this.inventoryItemRemoveBtn.Click += new System.EventHandler(this.inventoryItemRemoveBtn_Click);
+            // 
+            // inventoryActionNameTbox
+            // 
+            this.inventoryActionNameTbox.Location = new System.Drawing.Point(348, 25);
+            this.inventoryActionNameTbox.Name = "inventoryActionNameTbox";
+            this.inventoryActionNameTbox.ReadOnly = true;
+            this.inventoryActionNameTbox.Size = new System.Drawing.Size(145, 20);
+            this.inventoryActionNameTbox.TabIndex = 11;
             // 
             // label4
             // 
@@ -117,14 +109,6 @@
             this.label4.Size = new System.Drawing.Size(58, 13);
             this.label4.TabIndex = 10;
             this.label4.Text = "Item Name";
-            // 
-            // inventoryActionNameTbox
-            // 
-            this.inventoryActionNameTbox.Location = new System.Drawing.Point(348, 25);
-            this.inventoryActionNameTbox.Name = "inventoryActionNameTbox";
-            this.inventoryActionNameTbox.ReadOnly = true;
-            this.inventoryActionNameTbox.Size = new System.Drawing.Size(145, 20);
-            this.inventoryActionNameTbox.TabIndex = 11;
             // 
             // inventoryAction
             // 
@@ -136,9 +120,7 @@
             this.Controls.Add(this.inventoryItemRemoveBtn);
             this.Controls.Add(this.inventoryActionIDCB);
             this.Controls.Add(this.inventoryActionAddBtn);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.inventoryActionCommentTbox);
             this.Controls.Add(this.inventoryActionCountTbox);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -154,13 +136,11 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown inventoryActionCountTbox;
-        private System.Windows.Forms.RichTextBox inventoryActionCommentTbox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button inventoryActionAddBtn;
         private System.Windows.Forms.ComboBox inventoryActionIDCB;
         private System.Windows.Forms.Button inventoryItemRemoveBtn;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox inventoryActionNameTbox;
+        private System.Windows.Forms.Label label4;
     }
 }

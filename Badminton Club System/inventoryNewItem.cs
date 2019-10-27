@@ -80,7 +80,7 @@ namespace Badminton_Club_System
                 Console.WriteLine(DateTime.Now);
                 String currTime = DateTime.Now.ToString("yyyy-MM-dd H:mm:ss");
                 int stock = Convert.ToInt32(data[2]);
-                String tId = DateTime.Now.ToString("HH:mm:ss tt")+"A"+data[2];
+                String tId = DateTime.Now+"A"+data[2];
                 db.sql = $"insert into mydb.inventory_transaction values('{tId}','{DateTime.Now}',{stock},'Add','Add new item','{data[0]}')";
                 db.addCMD();
                 db.cmd.ExecuteNonQuery();
