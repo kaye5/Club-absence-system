@@ -47,7 +47,7 @@ namespace Badminton_Club_System
                 incomeReader.Dispose();
                 db.disposeCmd();
                 //expense data
-                db.sql = $"select * from income where id='{month + year}'";
+                db.sql = $"select * from expense where id='{month + year}'";
                 db.addCMD();
                 MySqlDataReader expenseReader = db.cmd.ExecuteReader();
                 if (expenseReader.Read())
@@ -89,7 +89,7 @@ namespace Badminton_Club_System
         {
             try
             {
-                db.sql = $"update mydb.profile set memberfee='{Convert.ToInt32(profileFeeTbox.Text)}' where year='{DateTime.Now.Year.ToString()}'";
+                db.sql = $"update mydb.profile set memberfee='{Convert.ToInt32(profileFeeTbox.Text)}' where id='001'";
                 db.addCMD();
                 db.cmd.ExecuteNonQuery();
                 db.disposeCmd();

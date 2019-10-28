@@ -88,6 +88,10 @@ namespace Badminton_Club_System
                         db.addCMD();
                         db.cmd.ExecuteNonQuery();
                         db.disposeCmd();
+                        db.sql = $"update `income` set `cash` = (select `memberfee` from `profile`) + `cash` where `id`='{thisMonth+thisYear}'";
+                        db.addCMD();
+                        db.cmd.ExecuteNonQuery();
+                        db.disposeCmd();
                     }
                     MessageBox.Show("DONE");
                     updateData();
@@ -121,6 +125,10 @@ namespace Badminton_Club_System
                         db.cmd.ExecuteNonQuery();
                         db.disposeCmd();
                         db.sql = "update `profile` set `cash` = `cash`-`memberFee` where id='001'";
+                        db.addCMD();
+                        db.cmd.ExecuteNonQuery();
+                        db.disposeCmd();
+                        db.sql = $"update `income` set `cash` = `cash` - (select `memberfee` from `profile`)  where `id`='{thisMonth + thisYear}'";
                         db.addCMD();
                         db.cmd.ExecuteNonQuery();
                         db.disposeCmd();
