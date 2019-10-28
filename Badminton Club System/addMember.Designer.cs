@@ -32,16 +32,20 @@
             this.memberPaymentFooter = new System.Windows.Forms.Panel();
             this.memberAddUserBtn = new System.Windows.Forms.Button();
             this.memberPaymentContainer = new System.Windows.Forms.Panel();
-            this.memberNimlbl = new System.Windows.Forms.Label();
-            this.memberNamelbl = new System.Windows.Forms.Label();
-            this.memberClasslbl = new System.Windows.Forms.Label();
-            this.memberEmaillbl = new System.Windows.Forms.Label();
-            this.memberNimIn = new System.Windows.Forms.TextBox();
-            this.memberNameIn = new System.Windows.Forms.TextBox();
-            this.memberClassNameIn = new System.Windows.Forms.TextBox();
             this.memberEmailIn = new System.Windows.Forms.TextBox();
+            this.memberClassNameIn = new System.Windows.Forms.TextBox();
+            this.memberNameIn = new System.Windows.Forms.TextBox();
+            this.memberNimIn = new System.Windows.Forms.TextBox();
+            this.memberEmaillbl = new System.Windows.Forms.Label();
+            this.memberClasslbl = new System.Windows.Forms.Label();
+            this.memberNamelbl = new System.Windows.Forms.Label();
+            this.memberNimlbl = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.memberPaymentFooter.SuspendLayout();
             this.memberPaymentContainer.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // memberPaymentHead
@@ -63,23 +67,18 @@
             // 
             // memberAddUserBtn
             // 
-            this.memberAddUserBtn.Location = new System.Drawing.Point(13, 10);
+            this.memberAddUserBtn.Enabled = false;
+            this.memberAddUserBtn.Location = new System.Drawing.Point(12, 6);
             this.memberAddUserBtn.Name = "memberAddUserBtn";
-            this.memberAddUserBtn.Size = new System.Drawing.Size(75, 23);
+            this.memberAddUserBtn.Size = new System.Drawing.Size(105, 33);
             this.memberAddUserBtn.TabIndex = 0;
             this.memberAddUserBtn.Text = "Add User";
             this.memberAddUserBtn.UseVisualStyleBackColor = true;
+            this.memberAddUserBtn.Click += new System.EventHandler(this.memberAddUserBtn_Click);
             // 
             // memberPaymentContainer
             // 
-            this.memberPaymentContainer.Controls.Add(this.memberEmailIn);
-            this.memberPaymentContainer.Controls.Add(this.memberClassNameIn);
-            this.memberPaymentContainer.Controls.Add(this.memberNameIn);
-            this.memberPaymentContainer.Controls.Add(this.memberNimIn);
-            this.memberPaymentContainer.Controls.Add(this.memberEmaillbl);
-            this.memberPaymentContainer.Controls.Add(this.memberClasslbl);
-            this.memberPaymentContainer.Controls.Add(this.memberNamelbl);
-            this.memberPaymentContainer.Controls.Add(this.memberNimlbl);
+            this.memberPaymentContainer.Controls.Add(this.panel1);
             this.memberPaymentContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.memberPaymentContainer.Location = new System.Drawing.Point(0, 45);
             this.memberPaymentContainer.Name = "memberPaymentContainer";
@@ -87,69 +86,107 @@
             this.memberPaymentContainer.Size = new System.Drawing.Size(724, 228);
             this.memberPaymentContainer.TabIndex = 4;
             // 
-            // memberNimlbl
+            // memberEmailIn
             // 
-            this.memberNimlbl.AutoSize = true;
-            this.memberNimlbl.Location = new System.Drawing.Point(8, 8);
-            this.memberNimlbl.Name = "memberNimlbl";
-            this.memberNimlbl.Size = new System.Drawing.Size(27, 13);
-            this.memberNimlbl.TabIndex = 0;
-            this.memberNimlbl.Text = "NIM";
+            this.memberEmailIn.Location = new System.Drawing.Point(61, 76);
+            this.memberEmailIn.Name = "memberEmailIn";
+            this.memberEmailIn.Size = new System.Drawing.Size(136, 20);
+            this.memberEmailIn.TabIndex = 7;
+            this.memberEmailIn.TextChanged += new System.EventHandler(this.validation);
             // 
-            // memberNamelbl
+            // memberClassNameIn
             // 
-            this.memberNamelbl.AutoSize = true;
-            this.memberNamelbl.Location = new System.Drawing.Point(8, 34);
-            this.memberNamelbl.Name = "memberNamelbl";
-            this.memberNamelbl.Size = new System.Drawing.Size(35, 13);
-            this.memberNamelbl.TabIndex = 1;
-            this.memberNamelbl.Text = "Name";
+            this.memberClassNameIn.Location = new System.Drawing.Point(61, 50);
+            this.memberClassNameIn.Name = "memberClassNameIn";
+            this.memberClassNameIn.Size = new System.Drawing.Size(136, 20);
+            this.memberClassNameIn.TabIndex = 6;
+            this.memberClassNameIn.TextChanged += new System.EventHandler(this.validation);
             // 
-            // memberClasslbl
+            // memberNameIn
             // 
-            this.memberClasslbl.AutoSize = true;
-            this.memberClasslbl.Location = new System.Drawing.Point(8, 60);
-            this.memberClasslbl.Name = "memberClasslbl";
-            this.memberClasslbl.Size = new System.Drawing.Size(32, 13);
-            this.memberClasslbl.TabIndex = 2;
-            this.memberClasslbl.Text = "Class";
+            this.memberNameIn.Location = new System.Drawing.Point(61, 24);
+            this.memberNameIn.Name = "memberNameIn";
+            this.memberNameIn.Size = new System.Drawing.Size(136, 20);
+            this.memberNameIn.TabIndex = 5;
+            this.memberNameIn.TextChanged += new System.EventHandler(this.validation);
+            // 
+            // memberNimIn
+            // 
+            this.memberNimIn.Location = new System.Drawing.Point(61, -2);
+            this.memberNimIn.Name = "memberNimIn";
+            this.memberNimIn.Size = new System.Drawing.Size(136, 20);
+            this.memberNimIn.TabIndex = 4;
+            this.memberNimIn.TextChanged += new System.EventHandler(this.validation);
             // 
             // memberEmaillbl
             // 
             this.memberEmaillbl.AutoSize = true;
-            this.memberEmaillbl.Location = new System.Drawing.Point(8, 86);
+            this.memberEmaillbl.Location = new System.Drawing.Point(9, 76);
             this.memberEmaillbl.Name = "memberEmaillbl";
             this.memberEmaillbl.Size = new System.Drawing.Size(32, 13);
             this.memberEmaillbl.TabIndex = 3;
             this.memberEmaillbl.Text = "Email";
             // 
-            // memberNimIn
+            // memberClasslbl
             // 
-            this.memberNimIn.Location = new System.Drawing.Point(60, 5);
-            this.memberNimIn.Name = "memberNimIn";
-            this.memberNimIn.Size = new System.Drawing.Size(136, 20);
-            this.memberNimIn.TabIndex = 4;
+            this.memberClasslbl.AutoSize = true;
+            this.memberClasslbl.Location = new System.Drawing.Point(9, 53);
+            this.memberClasslbl.Name = "memberClasslbl";
+            this.memberClasslbl.Size = new System.Drawing.Size(32, 13);
+            this.memberClasslbl.TabIndex = 2;
+            this.memberClasslbl.Text = "Class";
             // 
-            // memberNameIn
+            // memberNamelbl
             // 
-            this.memberNameIn.Location = new System.Drawing.Point(60, 31);
-            this.memberNameIn.Name = "memberNameIn";
-            this.memberNameIn.Size = new System.Drawing.Size(136, 20);
-            this.memberNameIn.TabIndex = 5;
+            this.memberNamelbl.AutoSize = true;
+            this.memberNamelbl.Location = new System.Drawing.Point(9, 27);
+            this.memberNamelbl.Name = "memberNamelbl";
+            this.memberNamelbl.Size = new System.Drawing.Size(35, 13);
+            this.memberNamelbl.TabIndex = 1;
+            this.memberNamelbl.Text = "Name";
             // 
-            // memberClassNameIn
+            // memberNimlbl
             // 
-            this.memberClassNameIn.Location = new System.Drawing.Point(60, 57);
-            this.memberClassNameIn.Name = "memberClassNameIn";
-            this.memberClassNameIn.Size = new System.Drawing.Size(136, 20);
-            this.memberClassNameIn.TabIndex = 6;
+            this.memberNimlbl.AutoSize = true;
+            this.memberNimlbl.Location = new System.Drawing.Point(9, 1);
+            this.memberNimlbl.Name = "memberNimlbl";
+            this.memberNimlbl.Size = new System.Drawing.Size(27, 13);
+            this.memberNimlbl.TabIndex = 0;
+            this.memberNimlbl.Text = "NIM";
             // 
-            // memberEmailIn
+            // panel1
             // 
-            this.memberEmailIn.Location = new System.Drawing.Point(60, 83);
-            this.memberEmailIn.Name = "memberEmailIn";
-            this.memberEmailIn.Size = new System.Drawing.Size(136, 20);
-            this.memberEmailIn.TabIndex = 7;
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.memberClassNameIn);
+            this.panel1.Controls.Add(this.memberEmailIn);
+            this.panel1.Controls.Add(this.memberNimlbl);
+            this.panel1.Controls.Add(this.memberNamelbl);
+            this.panel1.Controls.Add(this.memberNameIn);
+            this.panel1.Controls.Add(this.memberClasslbl);
+            this.panel1.Controls.Add(this.memberNimIn);
+            this.panel1.Controls.Add(this.memberEmaillbl);
+            this.panel1.Location = new System.Drawing.Point(12, 50);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(245, 130);
+            this.panel1.TabIndex = 8;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(61, 102);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(136, 20);
+            this.textBox1.TabIndex = 9;
+            this.textBox1.TextChanged += new System.EventHandler(this.validation);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(9, 102);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Intake";
             // 
             // addMember
             // 
@@ -164,7 +201,8 @@
             this.Text = "addMember";
             this.memberPaymentFooter.ResumeLayout(false);
             this.memberPaymentContainer.ResumeLayout(false);
-            this.memberPaymentContainer.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -183,5 +221,8 @@
         private System.Windows.Forms.Label memberClasslbl;
         private System.Windows.Forms.Label memberNamelbl;
         private System.Windows.Forms.Label memberNimlbl;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

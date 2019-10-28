@@ -28,7 +28,7 @@ namespace Badminton_Club_System
             try
             {
                 db.disposeCmd();
-                db.sql = $"select * from profile where year='{DateTime.Now.Year.ToString()}'";
+                db.sql = $"select * from profile where id='001'";
                 db.addCMD();
                 MySqlDataReader profileReader = db.cmd.ExecuteReader();
                 if (profileReader.Read())
@@ -232,7 +232,7 @@ namespace Badminton_Club_System
             if (profileListView.SelectedItems.Count > 0)
             {
                 selectedItem = profileListView.SelectedItems[0];
-                db.sql = $"DELETE FROM mydb.coordinator WHERE id='{selectedItem.Text}' ";
+                db.sql = $"DELETE FROM mydb.coordinator WHERE email='{selectedItem.Text}' ";
                 db.addCMD();
                 db.cmd.ExecuteNonQuery();
                 db.disposeCmd();

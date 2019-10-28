@@ -16,6 +16,9 @@ namespace Badminton_Club_System
         {
             InitializeComponent();
             db.connectDB();
+            Home home = new Home();
+            
+            home.Show();
         }
 
         private void loginButton_Click(object sender, EventArgs e)

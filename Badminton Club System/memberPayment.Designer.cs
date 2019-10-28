@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.memberPaymentHead = new System.Windows.Forms.Panel();
-            this.paymentChangeBtn = new System.Windows.Forms.Button();
-            this.memberIntakeComboBox = new System.Windows.Forms.ComboBox();
             this.memberPaymentFooter = new System.Windows.Forms.Panel();
             this.paymentCancleBtn = new System.Windows.Forms.Button();
             this.memberPayBtn = new System.Windows.Forms.Button();
@@ -39,39 +37,17 @@
             this.paymentNimHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.paymentNameHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.paymentStatusHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.memberPaymentHead.SuspendLayout();
             this.memberPaymentFooter.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // memberPaymentHead
             // 
-            this.memberPaymentHead.Controls.Add(this.paymentChangeBtn);
-            this.memberPaymentHead.Controls.Add(this.memberIntakeComboBox);
             this.memberPaymentHead.Dock = System.Windows.Forms.DockStyle.Top;
             this.memberPaymentHead.Location = new System.Drawing.Point(0, 0);
             this.memberPaymentHead.Name = "memberPaymentHead";
             this.memberPaymentHead.Size = new System.Drawing.Size(800, 49);
             this.memberPaymentHead.TabIndex = 1;
-            // 
-            // paymentChangeBtn
-            // 
-            this.paymentChangeBtn.Location = new System.Drawing.Point(139, 6);
-            this.paymentChangeBtn.Name = "paymentChangeBtn";
-            this.paymentChangeBtn.Size = new System.Drawing.Size(75, 23);
-            this.paymentChangeBtn.TabIndex = 2;
-            this.paymentChangeBtn.Text = "change";
-            this.paymentChangeBtn.UseVisualStyleBackColor = true;
-            // 
-            // memberIntakeComboBox
-            // 
-            this.memberIntakeComboBox.FormattingEnabled = true;
-            this.memberIntakeComboBox.Items.AddRange(new object[] {
-            "All"});
-            this.memberIntakeComboBox.Location = new System.Drawing.Point(12, 8);
-            this.memberIntakeComboBox.Name = "memberIntakeComboBox";
-            this.memberIntakeComboBox.Size = new System.Drawing.Size(121, 21);
-            this.memberIntakeComboBox.TabIndex = 1;
             // 
             // memberPaymentFooter
             // 
@@ -91,6 +67,7 @@
             this.paymentCancleBtn.TabIndex = 1;
             this.paymentCancleBtn.Text = "Cancle";
             this.paymentCancleBtn.UseVisualStyleBackColor = true;
+            this.paymentCancleBtn.Click += new System.EventHandler(this.paymentCancleBtn_Click);
             // 
             // memberPayBtn
             // 
@@ -100,6 +77,7 @@
             this.memberPayBtn.TabIndex = 0;
             this.memberPayBtn.Text = "Pay";
             this.memberPayBtn.UseVisualStyleBackColor = true;
+            this.memberPayBtn.Click += new System.EventHandler(this.memberPayBtn_Click);
             // 
             // panel1
             // 
@@ -118,6 +96,8 @@
             this.paymentNameHeader,
             this.paymentStatusHeader});
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView1.FullRowSelect = true;
+            this.listView1.GridLines = true;
             this.listView1.Location = new System.Drawing.Point(5, 5);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(790, 337);
@@ -128,14 +108,17 @@
             // paymentNimHeader
             // 
             this.paymentNimHeader.Text = "NIM";
+            this.paymentNimHeader.Width = 152;
             // 
             // paymentNameHeader
             // 
             this.paymentNameHeader.Text = "Name";
+            this.paymentNameHeader.Width = 121;
             // 
             // paymentStatusHeader
             // 
             this.paymentStatusHeader.Text = "Status";
+            this.paymentStatusHeader.Width = 181;
             // 
             // memberPayment
             // 
@@ -148,7 +131,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "memberPayment";
             this.Text = "memberPayment";
-            this.memberPaymentHead.ResumeLayout(false);
             this.memberPaymentFooter.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -158,8 +140,6 @@
         #endregion
         private System.Windows.Forms.Panel memberPaymentHead;
         private System.Windows.Forms.Panel memberPaymentFooter;
-        private System.Windows.Forms.ComboBox memberIntakeComboBox;
-        private System.Windows.Forms.Button paymentChangeBtn;
         private System.Windows.Forms.Button paymentCancleBtn;
         private System.Windows.Forms.Button memberPayBtn;
         private System.Windows.Forms.Panel panel1;

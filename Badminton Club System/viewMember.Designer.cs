@@ -31,16 +31,16 @@
             this.memberListView = new System.Windows.Forms.ListView();
             this.memberNimHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.memberNameHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.memberEmailHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.memberIntakeHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.memberClassHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.memberStatusHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.viewMemberHeadPanel = new System.Windows.Forms.Panel();
             this.viewMemberFooterPanel = new System.Windows.Forms.Panel();
-            this.viewMemberContainerPanel = new System.Windows.Forms.Panel();
+            this.changeStatB = new System.Windows.Forms.Button();
+            this.changeStatA = new System.Windows.Forms.Button();
             this.viewMemberDeleteBtn = new System.Windows.Forms.Button();
-            this.memberIntakeComboBox = new System.Windows.Forms.ComboBox();
-            this.memberChangeBtn = new System.Windows.Forms.Button();
-            this.viewMemberHeadPanel.SuspendLayout();
+            this.viewMemberContainerPanel = new System.Windows.Forms.Panel();
             this.viewMemberFooterPanel.SuspendLayout();
             this.viewMemberContainerPanel.SuspendLayout();
             this.SuspendLayout();
@@ -48,10 +48,10 @@
             // memberListView
             // 
             this.memberListView.BackColor = System.Drawing.SystemColors.Info;
-            this.memberListView.CheckBoxes = true;
             this.memberListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.memberNimHeader,
             this.memberNameHeader,
+            this.memberEmailHeader,
             this.memberIntakeHeader,
             this.memberClassHeader,
             this.memberStatusHeader});
@@ -68,22 +68,27 @@
             // memberNimHeader
             // 
             this.memberNimHeader.Text = "NIM";
-            this.memberNimHeader.Width = 203;
+            this.memberNimHeader.Width = 134;
             // 
             // memberNameHeader
             // 
             this.memberNameHeader.Text = "Name";
-            this.memberNameHeader.Width = 199;
+            this.memberNameHeader.Width = 129;
+            // 
+            // memberEmailHeader
+            // 
+            this.memberEmailHeader.Text = "Email";
+            this.memberEmailHeader.Width = 147;
             // 
             // memberIntakeHeader
             // 
             this.memberIntakeHeader.Text = "Intake";
-            this.memberIntakeHeader.Width = 79;
+            this.memberIntakeHeader.Width = 66;
             // 
             // memberClassHeader
             // 
             this.memberClassHeader.Text = "Class";
-            this.memberClassHeader.Width = 70;
+            this.memberClassHeader.Width = 90;
             // 
             // memberStatusHeader
             // 
@@ -92,8 +97,6 @@
             // 
             // viewMemberHeadPanel
             // 
-            this.viewMemberHeadPanel.Controls.Add(this.memberChangeBtn);
-            this.viewMemberHeadPanel.Controls.Add(this.memberIntakeComboBox);
             this.viewMemberHeadPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.viewMemberHeadPanel.Location = new System.Drawing.Point(0, 0);
             this.viewMemberHeadPanel.Name = "viewMemberHeadPanel";
@@ -102,6 +105,8 @@
             // 
             // viewMemberFooterPanel
             // 
+            this.viewMemberFooterPanel.Controls.Add(this.changeStatB);
+            this.viewMemberFooterPanel.Controls.Add(this.changeStatA);
             this.viewMemberFooterPanel.Controls.Add(this.viewMemberDeleteBtn);
             this.viewMemberFooterPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.viewMemberFooterPanel.Location = new System.Drawing.Point(0, 301);
@@ -109,15 +114,25 @@
             this.viewMemberFooterPanel.Size = new System.Drawing.Size(732, 45);
             this.viewMemberFooterPanel.TabIndex = 3;
             // 
-            // viewMemberContainerPanel
+            // changeStatB
             // 
-            this.viewMemberContainerPanel.Controls.Add(this.memberListView);
-            this.viewMemberContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.viewMemberContainerPanel.Location = new System.Drawing.Point(0, 45);
-            this.viewMemberContainerPanel.Name = "viewMemberContainerPanel";
-            this.viewMemberContainerPanel.Padding = new System.Windows.Forms.Padding(5);
-            this.viewMemberContainerPanel.Size = new System.Drawing.Size(732, 256);
-            this.viewMemberContainerPanel.TabIndex = 4;
+            this.changeStatB.Location = new System.Drawing.Point(175, 11);
+            this.changeStatB.Name = "changeStatB";
+            this.changeStatB.Size = new System.Drawing.Size(75, 23);
+            this.changeStatB.TabIndex = 2;
+            this.changeStatB.Text = "Non-Active";
+            this.changeStatB.UseVisualStyleBackColor = true;
+            this.changeStatB.Click += new System.EventHandler(this.changeStatB_Click);
+            // 
+            // changeStatA
+            // 
+            this.changeStatA.Location = new System.Drawing.Point(94, 11);
+            this.changeStatA.Name = "changeStatA";
+            this.changeStatA.Size = new System.Drawing.Size(75, 23);
+            this.changeStatA.TabIndex = 1;
+            this.changeStatA.Text = "Active User";
+            this.changeStatA.UseVisualStyleBackColor = true;
+            this.changeStatA.Click += new System.EventHandler(this.changeStatA_Click);
             // 
             // viewMemberDeleteBtn
             // 
@@ -128,25 +143,17 @@
             this.viewMemberDeleteBtn.TabIndex = 0;
             this.viewMemberDeleteBtn.Text = "Delete";
             this.viewMemberDeleteBtn.UseVisualStyleBackColor = false;
+            this.viewMemberDeleteBtn.Click += new System.EventHandler(this.viewMemberDeleteBtn_Click);
             // 
-            // memberIntakeComboBox
+            // viewMemberContainerPanel
             // 
-            this.memberIntakeComboBox.FormattingEnabled = true;
-            this.memberIntakeComboBox.Items.AddRange(new object[] {
-            "All"});
-            this.memberIntakeComboBox.Location = new System.Drawing.Point(12, 12);
-            this.memberIntakeComboBox.Name = "memberIntakeComboBox";
-            this.memberIntakeComboBox.Size = new System.Drawing.Size(121, 21);
-            this.memberIntakeComboBox.TabIndex = 0;
-            // 
-            // memberChangeBtn
-            // 
-            this.memberChangeBtn.Location = new System.Drawing.Point(140, 9);
-            this.memberChangeBtn.Name = "memberChangeBtn";
-            this.memberChangeBtn.Size = new System.Drawing.Size(75, 23);
-            this.memberChangeBtn.TabIndex = 1;
-            this.memberChangeBtn.Text = "change";
-            this.memberChangeBtn.UseVisualStyleBackColor = true;
+            this.viewMemberContainerPanel.Controls.Add(this.memberListView);
+            this.viewMemberContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.viewMemberContainerPanel.Location = new System.Drawing.Point(0, 45);
+            this.viewMemberContainerPanel.Name = "viewMemberContainerPanel";
+            this.viewMemberContainerPanel.Padding = new System.Windows.Forms.Padding(5);
+            this.viewMemberContainerPanel.Size = new System.Drawing.Size(732, 256);
+            this.viewMemberContainerPanel.TabIndex = 4;
             // 
             // viewMember
             // 
@@ -161,7 +168,6 @@
             this.MinimumSize = new System.Drawing.Size(647, 310);
             this.Name = "viewMember";
             this.Text = "viewMember";
-            this.viewMemberHeadPanel.ResumeLayout(false);
             this.viewMemberFooterPanel.ResumeLayout(false);
             this.viewMemberContainerPanel.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -180,7 +186,8 @@
         private System.Windows.Forms.Panel viewMemberFooterPanel;
         private System.Windows.Forms.Button viewMemberDeleteBtn;
         private System.Windows.Forms.Panel viewMemberContainerPanel;
-        private System.Windows.Forms.ComboBox memberIntakeComboBox;
-        private System.Windows.Forms.Button memberChangeBtn;
+        private System.Windows.Forms.ColumnHeader memberEmailHeader;
+        private System.Windows.Forms.Button changeStatB;
+        private System.Windows.Forms.Button changeStatA;
     }
 }
