@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+//using System.Globalization;
 namespace Badminton_Club_System
 {
     public partial class incomeDashboard : Form
@@ -27,12 +27,12 @@ namespace Badminton_Club_System
             while (r.Read())
             {
                 ListViewItem item = new ListViewItem(r.GetString(0));
-                item.SubItems.Add(r.GetInt32(1).ToString());
+                item.SubItems.Add(r.GetInt32(1).ToString(/*"C", CultureInfo.CreateSpecificCulture("id-ID")*/));
                 totalTransaction += r.GetInt32(1);
                 incomeTable.Items.Add(item);
             }
             db.disposeCmd();
-            incomeDashboardTotalTbox.Text = totalTransaction.ToString();
+            incomeDashboardTotalTbox.Text = totalTransaction.ToString(/*"C", CultureInfo.CreateSpecificCulture("id-ID")*/);
             incomeDashboardMonthIncome.Text = incomeTable.Items[0].SubItems[1].Text;
         }
     }
