@@ -53,9 +53,7 @@
             this.incomeContainerPanel = new System.Windows.Forms.Panel();
             this.incomeNavBarPanel = new System.Windows.Forms.Panel();
             this.incomeAddBtn = new System.Windows.Forms.Button();
-            this.incomeDatePicker = new System.Windows.Forms.DateTimePicker();
             this.incomeLastMonthBtn = new System.Windows.Forms.Button();
-            this.incomeThisMonthBtn = new System.Windows.Forms.Button();
             this.incomeHistoryBtn = new System.Windows.Forms.Button();
             this.incomeDashboardBtn = new System.Windows.Forms.Button();
             this.inventoryTab = new System.Windows.Forms.TabPage();
@@ -69,6 +67,7 @@
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.homeTabControl.SuspendLayout();
             this.profileTab.SuspendLayout();
             this.absenceTab.SuspendLayout();
@@ -317,10 +316,9 @@
             // incomeNavBarPanel
             // 
             this.incomeNavBarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.incomeNavBarPanel.Controls.Add(this.dateTimePicker1);
             this.incomeNavBarPanel.Controls.Add(this.incomeAddBtn);
-            this.incomeNavBarPanel.Controls.Add(this.incomeDatePicker);
             this.incomeNavBarPanel.Controls.Add(this.incomeLastMonthBtn);
-            this.incomeNavBarPanel.Controls.Add(this.incomeThisMonthBtn);
             this.incomeNavBarPanel.Controls.Add(this.incomeHistoryBtn);
             this.incomeNavBarPanel.Controls.Add(this.incomeDashboardBtn);
             this.incomeNavBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
@@ -339,33 +337,15 @@
             this.incomeAddBtn.UseVisualStyleBackColor = true;
             this.incomeAddBtn.Click += new System.EventHandler(this.IncomeAddBtn_Click);
             // 
-            // incomeDatePicker
-            // 
-            this.incomeDatePicker.Location = new System.Drawing.Point(8, 119);
-            this.incomeDatePicker.Name = "incomeDatePicker";
-            this.incomeDatePicker.Size = new System.Drawing.Size(113, 20);
-            this.incomeDatePicker.TabIndex = 5;
-            this.incomeDatePicker.ValueChanged += new System.EventHandler(this.incomePickDate_Click);
-            // 
             // incomeLastMonthBtn
             // 
-            this.incomeLastMonthBtn.Location = new System.Drawing.Point(8, 90);
+            this.incomeLastMonthBtn.Location = new System.Drawing.Point(8, 61);
             this.incomeLastMonthBtn.Name = "incomeLastMonthBtn";
             this.incomeLastMonthBtn.Size = new System.Drawing.Size(113, 23);
             this.incomeLastMonthBtn.TabIndex = 4;
-            this.incomeLastMonthBtn.Text = "Last Month";
+            this.incomeLastMonthBtn.Text = "Last Month History";
             this.incomeLastMonthBtn.UseVisualStyleBackColor = true;
             this.incomeLastMonthBtn.Click += new System.EventHandler(this.incomeLastMonthBtn_Click);
-            // 
-            // incomeThisMonthBtn
-            // 
-            this.incomeThisMonthBtn.Location = new System.Drawing.Point(8, 61);
-            this.incomeThisMonthBtn.Name = "incomeThisMonthBtn";
-            this.incomeThisMonthBtn.Size = new System.Drawing.Size(113, 23);
-            this.incomeThisMonthBtn.TabIndex = 3;
-            this.incomeThisMonthBtn.Text = "This Month";
-            this.incomeThisMonthBtn.UseVisualStyleBackColor = true;
-            this.incomeThisMonthBtn.Click += new System.EventHandler(this.incomeThisMonthBtn_Click);
             // 
             // incomeHistoryBtn
             // 
@@ -373,7 +353,7 @@
             this.incomeHistoryBtn.Name = "incomeHistoryBtn";
             this.incomeHistoryBtn.Size = new System.Drawing.Size(113, 23);
             this.incomeHistoryBtn.TabIndex = 1;
-            this.incomeHistoryBtn.Text = "History";
+            this.incomeHistoryBtn.Text = "This Month History";
             this.incomeHistoryBtn.UseVisualStyleBackColor = true;
             this.incomeHistoryBtn.Click += new System.EventHandler(this.IncomeHistoryBtn_Click);
             // 
@@ -487,6 +467,17 @@
             this.addToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.addToolStripMenuItem.Text = "Add";
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "MMMM yyyy";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(9, 91);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.ShowUpDown = true;
+            this.dateTimePicker1.Size = new System.Drawing.Size(112, 20);
+            this.dateTimePicker1.TabIndex = 7;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -536,9 +527,7 @@
         private System.Windows.Forms.TabPage incomeTab;
         private System.Windows.Forms.Panel incomeContainerPanel;
         private System.Windows.Forms.Panel incomeNavBarPanel;
-        private System.Windows.Forms.DateTimePicker incomeDatePicker;
         private System.Windows.Forms.Button incomeLastMonthBtn;
-        private System.Windows.Forms.Button incomeThisMonthBtn;
         private System.Windows.Forms.Button incomeHistoryBtn;
         private System.Windows.Forms.Button incomeDashboardBtn;
         private System.Windows.Forms.TabPage inventoryTab;
@@ -554,5 +543,6 @@
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
         private System.Windows.Forms.Panel profileContainerPanel;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

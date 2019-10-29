@@ -11,8 +11,7 @@ using MySql.Data.MySqlClient;
 namespace Badminton_Club_System
 {
     public partial class Home : Form
-    {
-        
+    {        
         public Home()
         {
             InitializeComponent();
@@ -24,6 +23,17 @@ namespace Badminton_Club_System
         {
             InitializeComponent();
             homeTabControl.SelectTab(tabIndex);
+        }
+
+        private string getMonth(int n)
+        {
+            // 0 current month 
+            // -1 prev month
+            return DateTime.Now.AddMonths(n).ToString("MMMM");
+        }
+        private string getYear()
+        {
+            return DateTime.Now.Year.ToString();
         }
 
         private void newMonth()
@@ -197,31 +207,29 @@ namespace Badminton_Club_System
 
         private void IncomeHistoryBtn_Click(object sender, EventArgs e)
         {
-            cashDetail detailForm = new cashDetail();
+            cashDetail detailForm = new cashDetail(getMonth(0), getYear());
             showIncomeContainer(detailForm);
         }
 
-        private void incomeThisMonthBtn_Click(object sender, EventArgs e)
-        {
-            cashDetail detailForm = new cashDetail();
-            showIncomeContainer(detailForm);
-        }
         private void incomeLastMonthBtn_Click(object sender, EventArgs e)
         {
-            cashDetail detailForm = new cashDetail();
+            cashDetail detailForm = new cashDetail(getMonth(-1), getYear());
             showIncomeContainer(detailForm);
         }
-        private void incomePickDate_Click(object sender, EventArgs e)
-        {
-            cashDetail detailForm = new cashDetail();
-            showIncomeContainer(detailForm);
-        }
+        
         private void IncomeAddBtn_Click(object sender, EventArgs e)
         {
             newCash newForm = new newCash();
             showIncomeContainer(newForm);
         }
 
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            String month = dateTimePicker1.Value.ToString("MMMM");
+            String year = dateTimePicker1.Value.ToString("yyyy");
+            cashDetail detailForm = new cashDetail(month,year);
+            showIncomeContainer(detailForm);
+        }
 
         //INVENTORY TAB
         private void inventoryDashboardButton_Click(object sender, EventArgs e)

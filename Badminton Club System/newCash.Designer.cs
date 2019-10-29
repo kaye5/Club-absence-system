@@ -31,12 +31,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.newCashAddBtn = new System.Windows.Forms.Button();
-            this.newCashCommentTbox = new System.Windows.Forms.RichTextBox();
-            this.newCashPriceTbox = new System.Windows.Forms.TextBox();
-            this.newCashTrasnNameTbxox = new System.Windows.Forms.TextBox();
+            this.priceTbox = new System.Windows.Forms.TextBox();
+            this.tNameTbox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.commentTbox = new System.Windows.Forms.TextBox();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label4
@@ -50,7 +52,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(142, 198);
+            this.dateTimePicker1.Location = new System.Drawing.Point(160, 204);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(185, 20);
             this.dateTimePicker1.TabIndex = 16;
@@ -63,28 +65,21 @@
             this.newCashAddBtn.TabIndex = 17;
             this.newCashAddBtn.Text = "Add";
             this.newCashAddBtn.UseVisualStyleBackColor = true;
+            this.newCashAddBtn.Click += new System.EventHandler(this.newCashAddBtn_Click);
             // 
-            // newCashCommentTbox
+            // priceTbox
             // 
-            this.newCashCommentTbox.Location = new System.Drawing.Point(120, 85);
-            this.newCashCommentTbox.Name = "newCashCommentTbox";
-            this.newCashCommentTbox.Size = new System.Drawing.Size(207, 107);
-            this.newCashCommentTbox.TabIndex = 15;
-            this.newCashCommentTbox.Text = "";
+            this.priceTbox.Location = new System.Drawing.Point(6, 28);
+            this.priceTbox.Name = "priceTbox";
+            this.priceTbox.Size = new System.Drawing.Size(207, 20);
+            this.priceTbox.TabIndex = 14;
             // 
-            // newCashPriceTbox
+            // tNameTbox
             // 
-            this.newCashPriceTbox.Location = new System.Drawing.Point(120, 59);
-            this.newCashPriceTbox.Name = "newCashPriceTbox";
-            this.newCashPriceTbox.Size = new System.Drawing.Size(207, 20);
-            this.newCashPriceTbox.TabIndex = 14;
-            // 
-            // newCashTrasnNameTbxox
-            // 
-            this.newCashTrasnNameTbxox.Location = new System.Drawing.Point(120, 33);
-            this.newCashTrasnNameTbxox.Name = "newCashTrasnNameTbxox";
-            this.newCashTrasnNameTbxox.Size = new System.Drawing.Size(207, 20);
-            this.newCashTrasnNameTbxox.TabIndex = 13;
+            this.tNameTbox.Location = new System.Drawing.Point(6, 2);
+            this.tNameTbox.Name = "tNameTbox";
+            this.tNameTbox.Size = new System.Drawing.Size(207, 20);
+            this.tNameTbox.TabIndex = 13;
             // 
             // label3
             // 
@@ -113,24 +108,42 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Transaction Name";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.commentTbox);
+            this.panel1.Controls.Add(this.tNameTbox);
+            this.panel1.Controls.Add(this.priceTbox);
+            this.panel1.Location = new System.Drawing.Point(142, 33);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(216, 159);
+            this.panel1.TabIndex = 18;
+            // 
+            // commentTbox
+            // 
+            this.commentTbox.Location = new System.Drawing.Point(6, 55);
+            this.commentTbox.Multiline = true;
+            this.commentTbox.Name = "commentTbox";
+            this.commentTbox.Size = new System.Drawing.Size(207, 101);
+            this.commentTbox.TabIndex = 15;
+            // 
             // newCash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.newCashAddBtn);
-            this.Controls.Add(this.newCashCommentTbox);
-            this.Controls.Add(this.newCashPriceTbox);
-            this.Controls.Add(this.newCashTrasnNameTbxox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "newCash";
             this.Text = "newCash";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,11 +154,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button newCashAddBtn;
-        private System.Windows.Forms.RichTextBox newCashCommentTbox;
-        private System.Windows.Forms.TextBox newCashPriceTbox;
-        private System.Windows.Forms.TextBox newCashTrasnNameTbxox;
+        private System.Windows.Forms.TextBox priceTbox;
+        private System.Windows.Forms.TextBox tNameTbox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox commentTbox;
     }
 }
