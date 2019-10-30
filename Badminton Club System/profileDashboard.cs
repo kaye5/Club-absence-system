@@ -134,8 +134,7 @@ namespace Badminton_Club_System
         {
             Button viewBtn = (Button)sender;
             Home homeForm = new Home(Convert.ToInt16(viewBtn.AccessibleDescription));
-            ActiveForm.Hide();
-            homeForm.Show();
+            
         }
 
         private void clearTbox()

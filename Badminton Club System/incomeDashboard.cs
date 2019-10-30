@@ -35,5 +35,10 @@ namespace Badminton_Club_System
             incomeDashboardTotalTbox.Text = totalTransaction.ToString(/*"C", CultureInfo.CreateSpecificCulture("id-ID")*/);
             incomeDashboardMonthIncome.Text = incomeTable.Items[0].SubItems[1].Text;
         }
+
+        private void viewDetailToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

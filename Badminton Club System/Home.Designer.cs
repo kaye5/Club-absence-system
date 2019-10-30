@@ -43,15 +43,14 @@
             this.expenseTab = new System.Windows.Forms.TabPage();
             this.expenseContainerPanel = new System.Windows.Forms.Panel();
             this.expenseNavBarPanel = new System.Windows.Forms.Panel();
-            this.expenseDatePicker = new System.Windows.Forms.DateTimePicker();
             this.expenseLastMonthButton = new System.Windows.Forms.Button();
             this.expenseThisMonthButton = new System.Windows.Forms.Button();
             this.expenseAddButton = new System.Windows.Forms.Button();
-            this.expenseHistoryButton = new System.Windows.Forms.Button();
             this.expenseDashboardButton = new System.Windows.Forms.Button();
             this.incomeTab = new System.Windows.Forms.TabPage();
             this.incomeContainerPanel = new System.Windows.Forms.Panel();
             this.incomeNavBarPanel = new System.Windows.Forms.Panel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.incomeAddBtn = new System.Windows.Forms.Button();
             this.incomeLastMonthBtn = new System.Windows.Forms.Button();
             this.incomeHistoryBtn = new System.Windows.Forms.Button();
@@ -67,7 +66,7 @@
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.homeTabControl.SuspendLayout();
             this.profileTab.SuspendLayout();
             this.absenceTab.SuspendLayout();
@@ -223,11 +222,10 @@
             // expenseNavBarPanel
             // 
             this.expenseNavBarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.expenseNavBarPanel.Controls.Add(this.expenseDatePicker);
+            this.expenseNavBarPanel.Controls.Add(this.dateTimePicker2);
             this.expenseNavBarPanel.Controls.Add(this.expenseLastMonthButton);
             this.expenseNavBarPanel.Controls.Add(this.expenseThisMonthButton);
             this.expenseNavBarPanel.Controls.Add(this.expenseAddButton);
-            this.expenseNavBarPanel.Controls.Add(this.expenseHistoryButton);
             this.expenseNavBarPanel.Controls.Add(this.expenseDashboardButton);
             this.expenseNavBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.expenseNavBarPanel.Location = new System.Drawing.Point(0, 0);
@@ -235,31 +233,23 @@
             this.expenseNavBarPanel.Size = new System.Drawing.Size(127, 536);
             this.expenseNavBarPanel.TabIndex = 0;
             // 
-            // expenseDatePicker
-            // 
-            this.expenseDatePicker.Location = new System.Drawing.Point(8, 119);
-            this.expenseDatePicker.Name = "expenseDatePicker";
-            this.expenseDatePicker.Size = new System.Drawing.Size(113, 20);
-            this.expenseDatePicker.TabIndex = 5;
-            this.expenseDatePicker.ValueChanged += new System.EventHandler(this.expenseDatePicker_ValueChanged);
-            // 
             // expenseLastMonthButton
             // 
-            this.expenseLastMonthButton.Location = new System.Drawing.Point(8, 90);
+            this.expenseLastMonthButton.Location = new System.Drawing.Point(8, 61);
             this.expenseLastMonthButton.Name = "expenseLastMonthButton";
             this.expenseLastMonthButton.Size = new System.Drawing.Size(113, 23);
             this.expenseLastMonthButton.TabIndex = 4;
-            this.expenseLastMonthButton.Text = "Last Month";
+            this.expenseLastMonthButton.Text = "Last Month History";
             this.expenseLastMonthButton.UseVisualStyleBackColor = true;
             this.expenseLastMonthButton.Click += new System.EventHandler(this.expenseLastMonthButton_Click);
             // 
             // expenseThisMonthButton
             // 
-            this.expenseThisMonthButton.Location = new System.Drawing.Point(8, 61);
+            this.expenseThisMonthButton.Location = new System.Drawing.Point(8, 32);
             this.expenseThisMonthButton.Name = "expenseThisMonthButton";
             this.expenseThisMonthButton.Size = new System.Drawing.Size(113, 23);
             this.expenseThisMonthButton.TabIndex = 3;
-            this.expenseThisMonthButton.Text = "This Month";
+            this.expenseThisMonthButton.Text = "This Month History";
             this.expenseThisMonthButton.UseVisualStyleBackColor = true;
             this.expenseThisMonthButton.Click += new System.EventHandler(this.expenseThisMonthButton_Click);
             // 
@@ -272,16 +262,6 @@
             this.expenseAddButton.Text = "New Expense";
             this.expenseAddButton.UseVisualStyleBackColor = true;
             this.expenseAddButton.Click += new System.EventHandler(this.ExpenseAddButton_Click);
-            // 
-            // expenseHistoryButton
-            // 
-            this.expenseHistoryButton.Location = new System.Drawing.Point(8, 32);
-            this.expenseHistoryButton.Name = "expenseHistoryButton";
-            this.expenseHistoryButton.Size = new System.Drawing.Size(113, 23);
-            this.expenseHistoryButton.TabIndex = 1;
-            this.expenseHistoryButton.Text = "History";
-            this.expenseHistoryButton.UseVisualStyleBackColor = true;
-            this.expenseHistoryButton.Click += new System.EventHandler(this.ExpenseHistoryButton_Click);
             // 
             // expenseDashboardButton
             // 
@@ -326,6 +306,17 @@
             this.incomeNavBarPanel.Name = "incomeNavBarPanel";
             this.incomeNavBarPanel.Size = new System.Drawing.Size(127, 536);
             this.incomeNavBarPanel.TabIndex = 1;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "MMMM yyyy";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(9, 91);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.ShowUpDown = true;
+            this.dateTimePicker1.Size = new System.Drawing.Size(112, 20);
+            this.dateTimePicker1.TabIndex = 7;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // incomeAddBtn
             // 
@@ -467,16 +458,16 @@
             this.addToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.addToolStripMenuItem.Text = "Add";
             // 
-            // dateTimePicker1
+            // dateTimePicker2
             // 
-            this.dateTimePicker1.CustomFormat = "MMMM yyyy";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(9, 91);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.ShowUpDown = true;
-            this.dateTimePicker1.Size = new System.Drawing.Size(112, 20);
-            this.dateTimePicker1.TabIndex = 7;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.dateTimePicker2.CustomFormat = "MMMM yyyy";
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker2.Location = new System.Drawing.Point(9, 91);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.ShowUpDown = true;
+            this.dateTimePicker2.Size = new System.Drawing.Size(112, 20);
+            this.dateTimePicker2.TabIndex = 5;
+            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
             // Home
             // 
@@ -512,11 +503,9 @@
         private System.Windows.Forms.TabPage memberTab;
         private System.Windows.Forms.Panel expenseContainerPanel;
         private System.Windows.Forms.Panel expenseNavBarPanel;
-        private System.Windows.Forms.DateTimePicker expenseDatePicker;
         private System.Windows.Forms.Button expenseLastMonthButton;
         private System.Windows.Forms.Button expenseThisMonthButton;
         private System.Windows.Forms.Button expenseAddButton;
-        private System.Windows.Forms.Button expenseHistoryButton;
         private System.Windows.Forms.Button expenseDashboardButton;
         private System.Windows.Forms.Panel absenceContainerPanel;
         private System.Windows.Forms.Panel memberContainerPanel;
@@ -544,5 +533,6 @@
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
         private System.Windows.Forms.Panel profileContainerPanel;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
     }
 }

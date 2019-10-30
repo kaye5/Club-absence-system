@@ -31,12 +31,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.newExpenseTrasnNameTbxox = new System.Windows.Forms.TextBox();
-            this.newExpensePriceTbox = new System.Windows.Forms.TextBox();
-            this.newExpenseCommentTbox = new System.Windows.Forms.RichTextBox();
+            this.nameTbox = new System.Windows.Forms.TextBox();
+            this.priceTbox = new System.Windows.Forms.TextBox();
             this.newExpenseAddBtn = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
+            this.commentTbox = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -66,27 +68,19 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Comment";
             // 
-            // newExpenseTrasnNameTbxox
+            // nameTbox
             // 
-            this.newExpenseTrasnNameTbxox.Location = new System.Drawing.Point(113, 41);
-            this.newExpenseTrasnNameTbxox.Name = "newExpenseTrasnNameTbxox";
-            this.newExpenseTrasnNameTbxox.Size = new System.Drawing.Size(207, 20);
-            this.newExpenseTrasnNameTbxox.TabIndex = 4;
+            this.nameTbox.Location = new System.Drawing.Point(24, 7);
+            this.nameTbox.Name = "nameTbox";
+            this.nameTbox.Size = new System.Drawing.Size(207, 20);
+            this.nameTbox.TabIndex = 4;
             // 
-            // newExpensePriceTbox
+            // priceTbox
             // 
-            this.newExpensePriceTbox.Location = new System.Drawing.Point(113, 67);
-            this.newExpensePriceTbox.Name = "newExpensePriceTbox";
-            this.newExpensePriceTbox.Size = new System.Drawing.Size(207, 20);
-            this.newExpensePriceTbox.TabIndex = 5;
-            // 
-            // newExpenseCommentTbox
-            // 
-            this.newExpenseCommentTbox.Location = new System.Drawing.Point(113, 93);
-            this.newExpenseCommentTbox.Name = "newExpenseCommentTbox";
-            this.newExpenseCommentTbox.Size = new System.Drawing.Size(207, 107);
-            this.newExpenseCommentTbox.TabIndex = 6;
-            this.newExpenseCommentTbox.Text = "";
+            this.priceTbox.Location = new System.Drawing.Point(24, 33);
+            this.priceTbox.Name = "priceTbox";
+            this.priceTbox.Size = new System.Drawing.Size(207, 20);
+            this.priceTbox.TabIndex = 5;
             // 
             // newExpenseAddBtn
             // 
@@ -96,10 +90,11 @@
             this.newExpenseAddBtn.TabIndex = 8;
             this.newExpenseAddBtn.Text = "Add";
             this.newExpenseAddBtn.UseVisualStyleBackColor = true;
+            this.newExpenseAddBtn.Click += new System.EventHandler(this.newExpenseAddBtn_Click);
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(135, 206);
+            this.dateTimePicker1.Location = new System.Drawing.Point(150, 206);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(185, 20);
             this.dateTimePicker1.TabIndex = 7;
@@ -113,24 +108,42 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Date";
             // 
+            // commentTbox
+            // 
+            this.commentTbox.Location = new System.Drawing.Point(24, 59);
+            this.commentTbox.Multiline = true;
+            this.commentTbox.Name = "commentTbox";
+            this.commentTbox.Size = new System.Drawing.Size(207, 101);
+            this.commentTbox.TabIndex = 16;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.commentTbox);
+            this.panel1.Controls.Add(this.nameTbox);
+            this.panel1.Controls.Add(this.priceTbox);
+            this.panel1.Location = new System.Drawing.Point(104, 28);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(276, 163);
+            this.panel1.TabIndex = 17;
+            // 
             // newExpense
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.newExpenseAddBtn);
-            this.Controls.Add(this.newExpenseCommentTbox);
-            this.Controls.Add(this.newExpensePriceTbox);
-            this.Controls.Add(this.newExpenseTrasnNameTbxox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "newExpense";
             this.Text = "newExpense";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,11 +154,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox newExpenseTrasnNameTbxox;
-        private System.Windows.Forms.TextBox newExpensePriceTbox;
-        private System.Windows.Forms.RichTextBox newExpenseCommentTbox;
+        private System.Windows.Forms.TextBox nameTbox;
+        private System.Windows.Forms.TextBox priceTbox;
         private System.Windows.Forms.Button newExpenseAddBtn;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox commentTbox;
+        private System.Windows.Forms.Panel panel1;
     }
 }

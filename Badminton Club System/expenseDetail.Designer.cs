@@ -31,13 +31,14 @@
             this.expenseDetailMonthlbl = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.expenseDetailTotalExpenseTbox = new System.Windows.Forms.TextBox();
-            this.expenseDetailTotalTransTbox = new System.Windows.Forms.TextBox();
+            this.totalExpenseTbox = new System.Windows.Forms.TextBox();
+            this.ttTbox = new System.Windows.Forms.TextBox();
             this.expenseDetailListView = new System.Windows.Forms.ListView();
             this.expenseDateHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.expenseTransactionHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.expensePriceHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.expenseCommentHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.monthTbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // expenseDetailMonthlbl
@@ -67,19 +68,23 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Total Transaction";
             // 
-            // expenseDetailTotalExpenseTbox
+            // totalExpenseTbox
             // 
-            this.expenseDetailTotalExpenseTbox.Location = new System.Drawing.Point(103, 47);
-            this.expenseDetailTotalExpenseTbox.Name = "expenseDetailTotalExpenseTbox";
-            this.expenseDetailTotalExpenseTbox.Size = new System.Drawing.Size(131, 20);
-            this.expenseDetailTotalExpenseTbox.TabIndex = 3;
+            this.totalExpenseTbox.Enabled = false;
+            this.totalExpenseTbox.Location = new System.Drawing.Point(103, 47);
+            this.totalExpenseTbox.Name = "totalExpenseTbox";
+            this.totalExpenseTbox.ReadOnly = true;
+            this.totalExpenseTbox.Size = new System.Drawing.Size(131, 20);
+            this.totalExpenseTbox.TabIndex = 3;
             // 
-            // expenseDetailTotalTransTbox
+            // ttTbox
             // 
-            this.expenseDetailTotalTransTbox.Location = new System.Drawing.Point(349, 47);
-            this.expenseDetailTotalTransTbox.Name = "expenseDetailTotalTransTbox";
-            this.expenseDetailTotalTransTbox.Size = new System.Drawing.Size(131, 20);
-            this.expenseDetailTotalTransTbox.TabIndex = 4;
+            this.ttTbox.Enabled = false;
+            this.ttTbox.Location = new System.Drawing.Point(349, 47);
+            this.ttTbox.Name = "ttTbox";
+            this.ttTbox.ReadOnly = true;
+            this.ttTbox.Size = new System.Drawing.Size(131, 20);
+            this.ttTbox.TabIndex = 4;
             // 
             // expenseDetailListView
             // 
@@ -115,15 +120,25 @@
             this.expenseCommentHeader.Text = "Comment";
             this.expenseCommentHeader.Width = 119;
             // 
+            // monthTbox
+            // 
+            this.monthTbox.Enabled = false;
+            this.monthTbox.Location = new System.Drawing.Point(103, 17);
+            this.monthTbox.Name = "monthTbox";
+            this.monthTbox.ReadOnly = true;
+            this.monthTbox.Size = new System.Drawing.Size(128, 20);
+            this.monthTbox.TabIndex = 6;
+            // 
             // expenseDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.monthTbox);
             this.Controls.Add(this.expenseDetailListView);
-            this.Controls.Add(this.expenseDetailTotalTransTbox);
-            this.Controls.Add(this.expenseDetailTotalExpenseTbox);
+            this.Controls.Add(this.ttTbox);
+            this.Controls.Add(this.totalExpenseTbox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.expenseDetailMonthlbl);
@@ -140,12 +155,13 @@
         private System.Windows.Forms.Label expenseDetailMonthlbl;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox expenseDetailTotalExpenseTbox;
-        private System.Windows.Forms.TextBox expenseDetailTotalTransTbox;
+        private System.Windows.Forms.TextBox totalExpenseTbox;
+        private System.Windows.Forms.TextBox ttTbox;
         private System.Windows.Forms.ListView expenseDetailListView;
         private System.Windows.Forms.ColumnHeader expenseTransactionHeader;
         private System.Windows.Forms.ColumnHeader expensePriceHeader;
         private System.Windows.Forms.ColumnHeader expenseCommentHeader;
         private System.Windows.Forms.ColumnHeader expenseDateHeader;
+        private System.Windows.Forms.TextBox monthTbox;
     }
 }

@@ -22,7 +22,9 @@ namespace Badminton_Club_System
         public Home(int tabIndex)
         {
             InitializeComponent();
-            homeTabControl.SelectTab(tabIndex);
+            homeTabControl.SelectedIndex = 0 ;
+            homeTabControl.SelectedIndex = tabIndex;
+            
         }
 
         private string getMonth(int n)
@@ -80,7 +82,7 @@ namespace Badminton_Club_System
         private void homeTabControl_TabIndexChanged(object sender, EventArgs e)
         {
             String tabName = homeTabControl.SelectedTab.Text;
-            if (tabName == "Profile")
+            if (tabName == "Profile") 
                 showProfileContainer(new profileDashboard());
             else if (tabName == "Absence")
                 showAbsenceContainer(new absenceDashboard());
@@ -169,26 +171,21 @@ namespace Badminton_Club_System
             showExpenseContainer(dashboard);
         }
 
-        private void ExpenseHistoryButton_Click(object sender, EventArgs e)
-        {
-            expenseDetail historyForm = new expenseDetail();
-            showExpenseContainer(historyForm);
-        }
         private void expenseThisMonthButton_Click(object sender, EventArgs e)
         {
-            expenseDetail historyForm = new expenseDetail();
+            expenseDetail historyForm = new expenseDetail(getMonth(0),getYear());
             showExpenseContainer(historyForm);
         }
 
         private void expenseLastMonthButton_Click(object sender, EventArgs e)
         {
-            expenseDetail historyForm = new expenseDetail();
+            expenseDetail historyForm = new expenseDetail(getMonth(-1), getYear());
             showExpenseContainer(historyForm);
         }
 
-        private void expenseDatePicker_ValueChanged(object sender, EventArgs e)
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
         {
-            expenseDetail historyForm = new expenseDetail();
+            expenseDetail historyForm = new expenseDetail(dateTimePicker2.Value.ToString("MMMM"), dateTimePicker2.Value.ToString("yyyy"));
             showExpenseContainer(historyForm);
         }
         private void ExpenseAddButton_Click(object sender, EventArgs e)
@@ -196,7 +193,7 @@ namespace Badminton_Club_System
             newExpense addExpenseForm = new newExpense();
             showExpenseContainer(addExpenseForm);
         }
-
+        
 
         //INCOME TAB
         private void IncomeDashboardButton_Click(object sender, EventArgs e)

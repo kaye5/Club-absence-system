@@ -31,18 +31,19 @@
             this.components = new System.ComponentModel.Container();
             this.absenceDetailMonth = new System.Windows.Forms.Label();
             this.absenceDetailListView = new System.Windows.Forms.ListView();
-            this.absenceDetailAbsenceBtn = new System.Windows.Forms.Button();
-            this.absenceDetailxAbsenceBtn = new System.Windows.Forms.Button();
             this.absenceDetailNimHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.absenceDetailNameHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.absenceDetail1Header = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.absenceDetail2Header = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.absenceDetail3Header = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.absenceDetail4Header = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.absenceDetailAbsenceBtn = new System.Windows.Forms.Button();
+            this.absenceDetailxAbsenceBtn = new System.Windows.Forms.Button();
             this.absenceDetailCB = new System.Windows.Forms.ComboBox();
             this.absenceDetailCMS = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.absenceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cancleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newMeetinBtn = new System.Windows.Forms.Button();
             this.absenceDetailCMS.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,24 +76,6 @@
             this.absenceDetailListView.View = System.Windows.Forms.View.Details;
             this.absenceDetailListView.MouseClick += new System.Windows.Forms.MouseEventHandler(this.absenceDetailListView_MouseClick);
             // 
-            // absenceDetailAbsenceBtn
-            // 
-            this.absenceDetailAbsenceBtn.Location = new System.Drawing.Point(13, 387);
-            this.absenceDetailAbsenceBtn.Name = "absenceDetailAbsenceBtn";
-            this.absenceDetailAbsenceBtn.Size = new System.Drawing.Size(117, 23);
-            this.absenceDetailAbsenceBtn.TabIndex = 4;
-            this.absenceDetailAbsenceBtn.Text = "Absence";
-            this.absenceDetailAbsenceBtn.UseVisualStyleBackColor = true;
-            // 
-            // absenceDetailxAbsenceBtn
-            // 
-            this.absenceDetailxAbsenceBtn.Location = new System.Drawing.Point(136, 387);
-            this.absenceDetailxAbsenceBtn.Name = "absenceDetailxAbsenceBtn";
-            this.absenceDetailxAbsenceBtn.Size = new System.Drawing.Size(112, 23);
-            this.absenceDetailxAbsenceBtn.TabIndex = 5;
-            this.absenceDetailxAbsenceBtn.Text = "Cancle Absence";
-            this.absenceDetailxAbsenceBtn.UseVisualStyleBackColor = true;
-            // 
             // absenceDetailNimHeader
             // 
             this.absenceDetailNimHeader.Text = "NIM";
@@ -123,6 +106,24 @@
             this.absenceDetail4Header.Text = "Meeting 4";
             this.absenceDetail4Header.Width = 102;
             // 
+            // absenceDetailAbsenceBtn
+            // 
+            this.absenceDetailAbsenceBtn.Location = new System.Drawing.Point(13, 387);
+            this.absenceDetailAbsenceBtn.Name = "absenceDetailAbsenceBtn";
+            this.absenceDetailAbsenceBtn.Size = new System.Drawing.Size(117, 23);
+            this.absenceDetailAbsenceBtn.TabIndex = 4;
+            this.absenceDetailAbsenceBtn.Text = "Absence";
+            this.absenceDetailAbsenceBtn.UseVisualStyleBackColor = true;
+            // 
+            // absenceDetailxAbsenceBtn
+            // 
+            this.absenceDetailxAbsenceBtn.Location = new System.Drawing.Point(136, 387);
+            this.absenceDetailxAbsenceBtn.Name = "absenceDetailxAbsenceBtn";
+            this.absenceDetailxAbsenceBtn.Size = new System.Drawing.Size(112, 23);
+            this.absenceDetailxAbsenceBtn.TabIndex = 5;
+            this.absenceDetailxAbsenceBtn.Text = "Cancle Absence";
+            this.absenceDetailxAbsenceBtn.UseVisualStyleBackColor = true;
+            // 
             // absenceDetailCB
             // 
             this.absenceDetailCB.FormattingEnabled = true;
@@ -142,25 +143,35 @@
             this.absenceToolStripMenuItem,
             this.cancleToolStripMenuItem});
             this.absenceDetailCMS.Name = "absenceDetailCMS";
-            this.absenceDetailCMS.Size = new System.Drawing.Size(116, 48);
+            this.absenceDetailCMS.Size = new System.Drawing.Size(120, 48);
             // 
             // absenceToolStripMenuItem
             // 
             this.absenceToolStripMenuItem.Name = "absenceToolStripMenuItem";
-            this.absenceToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.absenceToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.absenceToolStripMenuItem.Text = "Absence";
             // 
             // cancleToolStripMenuItem
             // 
             this.cancleToolStripMenuItem.Name = "cancleToolStripMenuItem";
-            this.cancleToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.cancleToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.cancleToolStripMenuItem.Text = "Cancle";
+            // 
+            // newMeetinBtn
+            // 
+            this.newMeetinBtn.Location = new System.Drawing.Point(641, 383);
+            this.newMeetinBtn.Name = "newMeetinBtn";
+            this.newMeetinBtn.Size = new System.Drawing.Size(139, 30);
+            this.newMeetinBtn.TabIndex = 7;
+            this.newMeetinBtn.Text = "Add New Meeting";
+            this.newMeetinBtn.UseVisualStyleBackColor = true;
             // 
             // absenceDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(792, 422);
+            this.Controls.Add(this.newMeetinBtn);
             this.Controls.Add(this.absenceDetailCB);
             this.Controls.Add(this.absenceDetailxAbsenceBtn);
             this.Controls.Add(this.absenceDetailAbsenceBtn);
@@ -190,5 +201,6 @@
         private System.Windows.Forms.ContextMenuStrip absenceDetailCMS;
         private System.Windows.Forms.ToolStripMenuItem absenceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cancleToolStripMenuItem;
+        private System.Windows.Forms.Button newMeetinBtn;
     }
 }
