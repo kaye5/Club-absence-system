@@ -45,7 +45,7 @@ namespace Badminton_Club_System
             String todayYear = DateTime.Today.Year.ToString();
             String today = $"{todayMonth}{todayYear}";
             Console.WriteLine(today);
-            db.sql = $"select id from mydb.income where id='{today}' ";
+            db.sql = $"select id from `income` where id='{today}' ";
             db.cmd = new MySqlCommand(db.sql, db.connection);
             try
             {
@@ -54,21 +54,37 @@ namespace Badminton_Club_System
                 if (!todayReader.Read())
                 {
                     db.disposeCmd();
-                    db.sql = $"insert into mydb.income values('{today}','{todayMonth + " " + todayYear}',0,'{todayMonth}')";
+                    db.sql = $"insert into `income` values('{today}','{todayMonth + " " + todayYear}',0,'{todayMonth}')";
                     db.cmd = new MySqlCommand(db.sql, db.connection);
                     db.cmd.ExecuteNonQuery();                    
                 }
                 db.disposeCmd();
                 todayReader.Close();
-                db.sql = $"select id from mydb.expense where id='{today}'";
+                db.sql = $"select id from `expense` where id='{today}'";
                 db.addCMD();
                 todayReader = db.cmd.ExecuteReader();
                 if (!todayReader.Read())
                 {
                     db.disposeCmd();
-                    db.sql = $"insert into mydb.expense values('{today}','{todayMonth + " " + todayYear}',0,'{todayMonth}')";
+                    db.sql = $"insert into `expense` values('{today}','{todayMonth + " " + todayYear}',0,'{todayMonth}')";
                     db.cmd = new MySqlCommand(db.sql, db.connection);
                     db.cmd.ExecuteNonQuery();                    
+                }
+                db.disposeCmd();
+                todayReader.Close();
+                db.sql = $"select id from `meeting` where id='{today+"1"}'";
+                db.addCMD();
+                todayReader = db.cmd.ExecuteReader();
+                if (!todayReader.Read())
+                {
+                    db.disposeCmd();
+                    db.sql = $"insert into `meeting` values('{today+"1"}','{todayMonth + " " + todayYear}',1)";
+                    db.cmd = new MySqlCommand(db.sql, db.connection);
+                    db.addCMD();
+                    db.cmd.ExecuteNonQuery();
+                    db.sql = $"insert into `absence`(`id`,`member_id`,`meeting_id`) select concat('{today + "1"}',m.nim) , m.nim , '{today + "1"}' from `member` m";
+                    db.addCMD();
+                    db.cmd.ExecuteNonQuery();
                 }
                 db.disposeCmd();
                 todayReader.Close();

@@ -37,6 +37,13 @@ namespace Badminton_Club_System
                 db.addCMD();
                 db.cmd.ExecuteNonQuery();
                 db.disposeCmd();
+                String month = DateTime.Now.ToString("MMMM");
+                String year = DateTime.Now.ToString("yyyy");
+                db.sql = $"insert into `absence` (`id`,`member_id`,`meeting_id`) select concat(m.id,'{data[4]}') , '{data[4]}' , m.id from `meeting` m ";
+                db.addCMD();
+                Console.WriteLine(db.sql);
+                db.cmd.ExecuteNonQuery();
+
                 MessageBox.Show("DONE");
             }
             catch (MySqlException err)

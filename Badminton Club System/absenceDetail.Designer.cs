@@ -30,13 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.absenceDetailMonth = new System.Windows.Forms.Label();
-            this.absenceDetailListView = new System.Windows.Forms.ListView();
+            this.table = new System.Windows.Forms.ListView();
             this.absenceDetailNimHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.absenceDetailNameHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.absenceDetail1Header = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.absenceDetail2Header = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.absenceDetail3Header = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.absenceDetail4Header = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.absenceDetailAbsenceBtn = new System.Windows.Forms.Button();
             this.absenceDetailxAbsenceBtn = new System.Windows.Forms.Button();
             this.absenceDetailCB = new System.Windows.Forms.ComboBox();
@@ -44,6 +40,7 @@
             this.absenceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cancleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newMeetinBtn = new System.Windows.Forms.Button();
+            this.monthTbox = new System.Windows.Forms.TextBox();
             this.absenceDetailCMS.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,25 +53,20 @@
             this.absenceDetailMonth.TabIndex = 0;
             this.absenceDetailMonth.Text = "Month";
             // 
-            // absenceDetailListView
+            // table
             // 
-            this.absenceDetailListView.CheckBoxes = true;
-            this.absenceDetailListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.table.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.absenceDetailNimHeader,
-            this.absenceDetailNameHeader,
-            this.absenceDetail1Header,
-            this.absenceDetail2Header,
-            this.absenceDetail3Header,
-            this.absenceDetail4Header});
-            this.absenceDetailListView.FullRowSelect = true;
-            this.absenceDetailListView.GridLines = true;
-            this.absenceDetailListView.Location = new System.Drawing.Point(13, 55);
-            this.absenceDetailListView.Name = "absenceDetailListView";
-            this.absenceDetailListView.Size = new System.Drawing.Size(767, 319);
-            this.absenceDetailListView.TabIndex = 3;
-            this.absenceDetailListView.UseCompatibleStateImageBehavior = false;
-            this.absenceDetailListView.View = System.Windows.Forms.View.Details;
-            this.absenceDetailListView.MouseClick += new System.Windows.Forms.MouseEventHandler(this.absenceDetailListView_MouseClick);
+            this.absenceDetailNameHeader});
+            this.table.FullRowSelect = true;
+            this.table.GridLines = true;
+            this.table.Location = new System.Drawing.Point(13, 55);
+            this.table.Name = "table";
+            this.table.Size = new System.Drawing.Size(767, 319);
+            this.table.TabIndex = 3;
+            this.table.UseCompatibleStateImageBehavior = false;
+            this.table.View = System.Windows.Forms.View.Details;
+            this.table.MouseClick += new System.Windows.Forms.MouseEventHandler(this.absenceDetailListView_MouseClick);
             // 
             // absenceDetailNimHeader
             // 
@@ -85,26 +77,6 @@
             // 
             this.absenceDetailNameHeader.Text = "Name";
             this.absenceDetailNameHeader.Width = 146;
-            // 
-            // absenceDetail1Header
-            // 
-            this.absenceDetail1Header.Text = "Meeting 1";
-            this.absenceDetail1Header.Width = 104;
-            // 
-            // absenceDetail2Header
-            // 
-            this.absenceDetail2Header.Text = "Meeting 2";
-            this.absenceDetail2Header.Width = 104;
-            // 
-            // absenceDetail3Header
-            // 
-            this.absenceDetail3Header.Text = "Meeting 3";
-            this.absenceDetail3Header.Width = 102;
-            // 
-            // absenceDetail4Header
-            // 
-            this.absenceDetail4Header.Text = "Meeting 4";
-            this.absenceDetail4Header.Width = 102;
             // 
             // absenceDetailAbsenceBtn
             // 
@@ -165,17 +137,28 @@
             this.newMeetinBtn.TabIndex = 7;
             this.newMeetinBtn.Text = "Add New Meeting";
             this.newMeetinBtn.UseVisualStyleBackColor = true;
+            this.newMeetinBtn.Click += new System.EventHandler(this.newMeetinBtn_Click);
+            // 
+            // monthTbox
+            // 
+            this.monthTbox.Enabled = false;
+            this.monthTbox.Location = new System.Drawing.Point(55, 17);
+            this.monthTbox.Name = "monthTbox";
+            this.monthTbox.ReadOnly = true;
+            this.monthTbox.Size = new System.Drawing.Size(136, 20);
+            this.monthTbox.TabIndex = 8;
             // 
             // absenceDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(792, 422);
+            this.Controls.Add(this.monthTbox);
             this.Controls.Add(this.newMeetinBtn);
             this.Controls.Add(this.absenceDetailCB);
             this.Controls.Add(this.absenceDetailxAbsenceBtn);
             this.Controls.Add(this.absenceDetailAbsenceBtn);
-            this.Controls.Add(this.absenceDetailListView);
+            this.Controls.Add(this.table);
             this.Controls.Add(this.absenceDetailMonth);
             this.Name = "absenceDetail";
             this.Text = "absenceDetail";
@@ -188,13 +171,9 @@
         #endregion
 
         private System.Windows.Forms.Label absenceDetailMonth;
-        private System.Windows.Forms.ListView absenceDetailListView;
+        private System.Windows.Forms.ListView table;
         private System.Windows.Forms.ColumnHeader absenceDetailNimHeader;
         private System.Windows.Forms.ColumnHeader absenceDetailNameHeader;
-        private System.Windows.Forms.ColumnHeader absenceDetail1Header;
-        private System.Windows.Forms.ColumnHeader absenceDetail2Header;
-        private System.Windows.Forms.ColumnHeader absenceDetail3Header;
-        private System.Windows.Forms.ColumnHeader absenceDetail4Header;
         private System.Windows.Forms.Button absenceDetailAbsenceBtn;
         private System.Windows.Forms.Button absenceDetailxAbsenceBtn;
         private System.Windows.Forms.ComboBox absenceDetailCB;
@@ -202,5 +181,6 @@
         private System.Windows.Forms.ToolStripMenuItem absenceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cancleToolStripMenuItem;
         private System.Windows.Forms.Button newMeetinBtn;
+        private System.Windows.Forms.TextBox monthTbox;
     }
 }
