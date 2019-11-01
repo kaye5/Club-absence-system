@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-//using System.Globalization;
 namespace Badminton_Club_System
 {
     public partial class incomeDashboard : Form
@@ -27,12 +19,12 @@ namespace Badminton_Club_System
             while (r.Read())
             {
                 ListViewItem item = new ListViewItem(r.GetString(0));
-                item.SubItems.Add(r.GetInt32(1).ToString(/*"C", CultureInfo.CreateSpecificCulture("id-ID")*/));
+                item.SubItems.Add(r.GetInt32(1).ToString("N"));
                 totalTransaction += r.GetInt32(1);
                 incomeTable.Items.Add(item);
             }
             db.disposeCmd();
-            incomeDashboardTotalTbox.Text = totalTransaction.ToString(/*"C", CultureInfo.CreateSpecificCulture("id-ID")*/);
+            incomeDashboardTotalTbox.Text = totalTransaction.ToString("N");
             incomeDashboardMonthIncome.Text = incomeTable.Items[0].SubItems[1].Text;
         }
 

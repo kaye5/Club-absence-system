@@ -33,8 +33,8 @@ namespace Badminton_Club_System
                 MySqlDataReader profileReader = db.cmd.ExecuteReader();
                 if (profileReader.Read())
                 {
-                    profileCashTextBox.Text = profileReader.GetInt32(2).ToString();
-                    profileFeeTbox.Text = profileReader.GetInt32(1).ToString();
+                    profileCashTextBox.Text = profileReader.GetInt32(2).ToString("N");
+                    profileFeeTbox.Text = profileReader.GetInt32(1).ToString("N");
                 }
                 db.cmd.Dispose();
                 profileReader.Dispose();
@@ -43,7 +43,7 @@ namespace Badminton_Club_System
                 db.addCMD();
                 MySqlDataReader incomeReader = db.cmd.ExecuteReader();
                 if (incomeReader.Read())                
-                    profileIncomeTbox.Text = incomeReader.GetInt32(2).ToString();                
+                    profileIncomeTbox.Text = incomeReader.GetInt32(2).ToString("N");                
                 incomeReader.Dispose();
                 db.disposeCmd();
                 //expense data
@@ -51,7 +51,7 @@ namespace Badminton_Club_System
                 db.addCMD();
                 MySqlDataReader expenseReader = db.cmd.ExecuteReader();
                 if (expenseReader.Read())
-                    profileExpenseTbox.Text = expenseReader.GetInt32(2).ToString();
+                    profileExpenseTbox.Text = expenseReader.GetInt32(2).ToString("N");
                 expenseReader.Dispose();
                 db.disposeCmd();
             }

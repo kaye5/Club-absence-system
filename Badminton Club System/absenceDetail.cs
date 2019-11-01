@@ -10,8 +10,10 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 namespace Badminton_Club_System
 {
+    
     public partial class absenceDetail : Form
     {
+        bool selectBtnCheck = false;
         String today;
         int col = 0;
         public absenceDetail(String today)
@@ -155,6 +157,49 @@ namespace Badminton_Club_System
             else
             {
                 MessageBox.Show("No item selected", "ERROR");
+            }
+        }
+
+
+        private void table_ItemChecked(object sender, ItemCheckedEventArgs e)
+        {
+            
+            if (e.Item.Checked)
+            {
+                e.Item.Selected = true;
+            } else
+            {
+                e.Item.Selected = false;
+            }
+
+        }
+
+        private void selectBtn_Click(object sender, EventArgs e)
+        {
+            bool flag = false;
+            foreach(ListViewItem item in table.Items)
+            {
+                if (!selectBtnCheck)
+                {
+                    item.Checked = true;
+                    item.Selected = true;
+                    flag = true;
+                }
+                else
+                {
+                    item.Checked = false;
+                    item.Selected = false;
+                }
+            }
+            if (flag)
+            {
+                selectBtnCheck = true;
+                selectBtn.Text = "Unselect all";
+            }
+            else
+            {
+                selectBtnCheck = false;
+                selectBtn.Text = "Select all";
             }
         }
     }

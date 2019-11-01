@@ -43,13 +43,14 @@
             this.newMeetinBtn = new System.Windows.Forms.Button();
             this.monthTbox = new System.Windows.Forms.TextBox();
             this.permissionBtn = new System.Windows.Forms.Button();
+            this.selectBtn = new System.Windows.Forms.Button();
             this.absenceDetailCMS.SuspendLayout();
             this.SuspendLayout();
             // 
             // absenceDetailMonth
             // 
             this.absenceDetailMonth.AutoSize = true;
-            this.absenceDetailMonth.Location = new System.Drawing.Point(12, 20);
+            this.absenceDetailMonth.Location = new System.Drawing.Point(584, 24);
             this.absenceDetailMonth.Name = "absenceDetailMonth";
             this.absenceDetailMonth.Size = new System.Drawing.Size(37, 13);
             this.absenceDetailMonth.TabIndex = 0;
@@ -57,6 +58,7 @@
             // 
             // table
             // 
+            this.table.CheckBoxes = true;
             this.table.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.absenceDetailNimHeader,
             this.absenceDetailNameHeader});
@@ -68,6 +70,7 @@
             this.table.TabIndex = 3;
             this.table.UseCompatibleStateImageBehavior = false;
             this.table.View = System.Windows.Forms.View.Details;
+            this.table.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.table_ItemChecked);
             this.table.MouseClick += new System.Windows.Forms.MouseEventHandler(this.absenceDetailListView_MouseClick);
             // 
             // absenceDetailNimHeader
@@ -120,7 +123,7 @@
             this.cancleToolStripMenuItem,
             this.permissionToolStripMenuItem});
             this.absenceDetailCMS.Name = "absenceDetailCMS";
-            this.absenceDetailCMS.Size = new System.Drawing.Size(153, 92);
+            this.absenceDetailCMS.Size = new System.Drawing.Size(133, 70);
             // 
             // absenceToolStripMenuItem
             // 
@@ -132,14 +135,14 @@
             // cancleToolStripMenuItem
             // 
             this.cancleToolStripMenuItem.Name = "cancleToolStripMenuItem";
-            this.cancleToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cancleToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.cancleToolStripMenuItem.Text = "Revert";
             this.cancleToolStripMenuItem.Click += new System.EventHandler(this.absenceDetailAbsenceBtn_Click);
             // 
             // permissionToolStripMenuItem
             // 
             this.permissionToolStripMenuItem.Name = "permissionToolStripMenuItem";
-            this.permissionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.permissionToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.permissionToolStripMenuItem.Text = "Permission";
             this.permissionToolStripMenuItem.Click += new System.EventHandler(this.permissionBtn_Click);
             // 
@@ -156,7 +159,7 @@
             // monthTbox
             // 
             this.monthTbox.Enabled = false;
-            this.monthTbox.Location = new System.Drawing.Point(55, 17);
+            this.monthTbox.Location = new System.Drawing.Point(644, 21);
             this.monthTbox.Name = "monthTbox";
             this.monthTbox.ReadOnly = true;
             this.monthTbox.Size = new System.Drawing.Size(136, 20);
@@ -172,11 +175,22 @@
             this.permissionBtn.UseVisualStyleBackColor = true;
             this.permissionBtn.Click += new System.EventHandler(this.permissionBtn_Click);
             // 
+            // selectBtn
+            // 
+            this.selectBtn.Location = new System.Drawing.Point(13, 18);
+            this.selectBtn.Name = "selectBtn";
+            this.selectBtn.Size = new System.Drawing.Size(105, 24);
+            this.selectBtn.TabIndex = 10;
+            this.selectBtn.Text = "Select all";
+            this.selectBtn.UseVisualStyleBackColor = true;
+            this.selectBtn.Click += new System.EventHandler(this.selectBtn_Click);
+            // 
             // absenceDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(792, 422);
+            this.Controls.Add(this.selectBtn);
             this.Controls.Add(this.permissionBtn);
             this.Controls.Add(this.monthTbox);
             this.Controls.Add(this.newMeetinBtn);
@@ -209,5 +223,6 @@
         private System.Windows.Forms.TextBox monthTbox;
         private System.Windows.Forms.Button permissionBtn;
         private System.Windows.Forms.ToolStripMenuItem permissionToolStripMenuItem;
+        private System.Windows.Forms.Button selectBtn;
     }
 }
