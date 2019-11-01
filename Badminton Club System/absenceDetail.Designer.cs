@@ -39,8 +39,10 @@
             this.absenceDetailCMS = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.absenceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cancleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.permissionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newMeetinBtn = new System.Windows.Forms.Button();
             this.monthTbox = new System.Windows.Forms.TextBox();
+            this.permissionBtn = new System.Windows.Forms.Button();
             this.absenceDetailCMS.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,15 +88,17 @@
             this.absenceDetailAbsenceBtn.TabIndex = 4;
             this.absenceDetailAbsenceBtn.Text = "Absence";
             this.absenceDetailAbsenceBtn.UseVisualStyleBackColor = true;
+            this.absenceDetailAbsenceBtn.Click += new System.EventHandler(this.absenceDetailAbsenceBtn_Click);
             // 
             // absenceDetailxAbsenceBtn
             // 
-            this.absenceDetailxAbsenceBtn.Location = new System.Drawing.Point(136, 387);
+            this.absenceDetailxAbsenceBtn.Location = new System.Drawing.Point(259, 387);
             this.absenceDetailxAbsenceBtn.Name = "absenceDetailxAbsenceBtn";
             this.absenceDetailxAbsenceBtn.Size = new System.Drawing.Size(112, 23);
             this.absenceDetailxAbsenceBtn.TabIndex = 5;
-            this.absenceDetailxAbsenceBtn.Text = "Cancle Absence";
+            this.absenceDetailxAbsenceBtn.Text = "Revert Absence";
             this.absenceDetailxAbsenceBtn.UseVisualStyleBackColor = true;
+            this.absenceDetailxAbsenceBtn.Click += new System.EventHandler(this.absenceDetailxAbsenceBtn_Click);
             // 
             // absenceDetailCB
             // 
@@ -104,7 +108,7 @@
             "Meeting 2",
             "Meeting 3",
             "Meeting 4"});
-            this.absenceDetailCB.Location = new System.Drawing.Point(254, 389);
+            this.absenceDetailCB.Location = new System.Drawing.Point(377, 387);
             this.absenceDetailCB.Name = "absenceDetailCB";
             this.absenceDetailCB.Size = new System.Drawing.Size(121, 21);
             this.absenceDetailCB.TabIndex = 6;
@@ -113,21 +117,31 @@
             // 
             this.absenceDetailCMS.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.absenceToolStripMenuItem,
-            this.cancleToolStripMenuItem});
+            this.cancleToolStripMenuItem,
+            this.permissionToolStripMenuItem});
             this.absenceDetailCMS.Name = "absenceDetailCMS";
-            this.absenceDetailCMS.Size = new System.Drawing.Size(120, 48);
+            this.absenceDetailCMS.Size = new System.Drawing.Size(153, 92);
             // 
             // absenceToolStripMenuItem
             // 
             this.absenceToolStripMenuItem.Name = "absenceToolStripMenuItem";
-            this.absenceToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.absenceToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.absenceToolStripMenuItem.Text = "Absence";
+            this.absenceToolStripMenuItem.Click += new System.EventHandler(this.absenceDetailAbsenceBtn_Click);
             // 
             // cancleToolStripMenuItem
             // 
             this.cancleToolStripMenuItem.Name = "cancleToolStripMenuItem";
-            this.cancleToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
-            this.cancleToolStripMenuItem.Text = "Cancle";
+            this.cancleToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cancleToolStripMenuItem.Text = "Revert";
+            this.cancleToolStripMenuItem.Click += new System.EventHandler(this.absenceDetailAbsenceBtn_Click);
+            // 
+            // permissionToolStripMenuItem
+            // 
+            this.permissionToolStripMenuItem.Name = "permissionToolStripMenuItem";
+            this.permissionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.permissionToolStripMenuItem.Text = "Permission";
+            this.permissionToolStripMenuItem.Click += new System.EventHandler(this.permissionBtn_Click);
             // 
             // newMeetinBtn
             // 
@@ -148,11 +162,22 @@
             this.monthTbox.Size = new System.Drawing.Size(136, 20);
             this.monthTbox.TabIndex = 8;
             // 
+            // permissionBtn
+            // 
+            this.permissionBtn.Location = new System.Drawing.Point(136, 387);
+            this.permissionBtn.Name = "permissionBtn";
+            this.permissionBtn.Size = new System.Drawing.Size(117, 23);
+            this.permissionBtn.TabIndex = 9;
+            this.permissionBtn.Text = "Permission";
+            this.permissionBtn.UseVisualStyleBackColor = true;
+            this.permissionBtn.Click += new System.EventHandler(this.permissionBtn_Click);
+            // 
             // absenceDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(792, 422);
+            this.Controls.Add(this.permissionBtn);
             this.Controls.Add(this.monthTbox);
             this.Controls.Add(this.newMeetinBtn);
             this.Controls.Add(this.absenceDetailCB);
@@ -182,5 +207,7 @@
         private System.Windows.Forms.ToolStripMenuItem cancleToolStripMenuItem;
         private System.Windows.Forms.Button newMeetinBtn;
         private System.Windows.Forms.TextBox monthTbox;
+        private System.Windows.Forms.Button permissionBtn;
+        private System.Windows.Forms.ToolStripMenuItem permissionToolStripMenuItem;
     }
 }

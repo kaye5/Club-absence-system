@@ -19,6 +19,7 @@ namespace Badminton_Club_System
             InitializeComponent();
             this.today = today;
             updateData();
+            monthTbox.Text = today;
         }
 
         private void absenceDetailListView_MouseClick(object sender, MouseEventArgs e)
@@ -43,16 +44,17 @@ namespace Badminton_Club_System
             createCol();
             r.Dispose();
             db.disposeCmd();
-
             db.sql = "select a.member_id , mem.`name` , m.meeting_count,a.`status` from `absence` a " +
                         "inner join `meeting` m on a.meeting_id = m.id " +
                         "inner join `member` mem on a.member_id = mem.nim " +
-                        "where m.`month` = 'november 2019' " +
+                       $"where m.`month` = '{today}' " +
                         "order by m.meeting_count";
             db.addCMD();
             r = db.cmd.ExecuteReader();
             while (r.Read())
             {
+                if (r.GetString(0) == "001")
+                    continue;
                 ListViewItem item = new ListViewItem(r.GetString(0));
                 item.SubItems.Add(r.GetString(1));
                 if (r.GetInt16(2) == 1)
@@ -102,6 +104,58 @@ namespace Badminton_Club_System
             Console.WriteLine(db.sql);
             db.cmd.ExecuteNonQuery();
             updateData();
+        }
+
+        private void changeStatus(String status)
+        {
+            String currentMeeting = (absenceDetailCB.SelectedIndex+1).ToString();
+            String[] date = today.Split();
+            foreach (ListViewItem item in table.SelectedItems)
+            {
+                db.sql = $"update `absence` set `status` = '{status}' where `id`='{date[0]+date[1]+currentMeeting+item.SubItems[0].Text}'";
+                Console.WriteLine(db.sql);
+                db.addCMD();
+                db.cmd.ExecuteNonQuery();
+                db.disposeCmd();
+            }
+        }
+
+        private void absenceDetailAbsenceBtn_Click(object sender, EventArgs e)
+        {
+            if (table.SelectedItems.Count > 0)
+            {
+                changeStatus("Approved");
+                updateData();
+            } else
+            {
+                MessageBox.Show("No item selected","ERROR");
+            }
+        }
+
+        private void permissionBtn_Click(object sender, EventArgs e)
+        {
+            if (table.SelectedItems.Count > 0)
+            {
+                changeStatus("Permission");
+                updateData();
+            }
+            else
+            {
+                MessageBox.Show("No item selected", "ERROR");
+            }
+        }
+
+        private void absenceDetailxAbsenceBtn_Click(object sender, EventArgs e)
+        {
+            if (table.SelectedItems.Count > 0)
+            {
+                changeStatus("None");
+                updateData();
+            }
+            else
+            {
+                MessageBox.Show("No item selected", "ERROR");
+            }
         }
     }
 }
