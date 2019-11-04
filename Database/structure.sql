@@ -26,7 +26,7 @@ CREATE TABLE `absence` (
   `ID` varchar(45) NOT NULL,
   `member_id` varchar(45) NOT NULL,
   `meeting_id` varchar(45) NOT NULL,
-  `status` varchar(45) DEFAULT 'none',
+  `status` varchar(45) DEFAULT 'None',
   PRIMARY KEY (`ID`),
   KEY `meeting_id_idx` (`meeting_id`),
   KEY `member_id_idx` (`member_id`),
@@ -222,4 +222,4 @@ CREATE TABLE `profile` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-11-01  1:23:21
+-- Dump completed on 2019-11-04 16:22:42
