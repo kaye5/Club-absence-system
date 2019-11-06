@@ -44,6 +44,9 @@ namespace Badminton_Club_System
                 Home home = new Home();
                 this.Hide();
                 home.Show();
+            }else
+            {
+                MessageBox.Show("Incorrect Password");
             }
 
         }

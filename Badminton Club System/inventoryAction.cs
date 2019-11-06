@@ -17,7 +17,13 @@ namespace Badminton_Club_System
         {
             InitializeComponent();
             updateCB();
-            inventoryActionIDCB.SelectedIndex = 0;
+            try
+            {
+                inventoryActionIDCB.SelectedIndex = 0;
+            } catch (Exception err)
+            {
+                Console.WriteLine(err);
+            }
         }
 
         private void updateCB()

@@ -17,6 +17,8 @@ namespace Badminton_Club_System
             InitializeComponent();
             newMonth();
             showProfileContainer(new profileDashboard());
+            this.Width = 1848;
+            this.Height = 1050;
         }
 
         public Home(int tabIndex)
