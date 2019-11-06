@@ -94,7 +94,7 @@
             this.homeTabControl.Location = new System.Drawing.Point(0, 0);
             this.homeTabControl.Name = "homeTabControl";
             this.homeTabControl.SelectedIndex = 0;
-            this.homeTabControl.Size = new System.Drawing.Size(842, 536);
+            this.homeTabControl.Size = new System.Drawing.Size(934, 562);
             this.homeTabControl.TabIndex = 0;
             this.homeTabControl.TabIndexChanged += new System.EventHandler(this.homeTabControl_TabIndexChanged);
             this.homeTabControl.Click += new System.EventHandler(this.homeTabControl_TabIndexChanged);
@@ -104,8 +104,8 @@
             this.profileTab.Controls.Add(this.profileContainerPanel);
             this.profileTab.Location = new System.Drawing.Point(4, 22);
             this.profileTab.Name = "profileTab";
-            this.profileTab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.profileTab.Size = new System.Drawing.Size(834, 510);
+            this.profileTab.Padding = new System.Windows.Forms.Padding(3);
+            this.profileTab.Size = new System.Drawing.Size(876, 586);
             this.profileTab.TabIndex = 0;
             this.profileTab.Text = "Profile";
             this.profileTab.UseVisualStyleBackColor = true;
@@ -115,7 +115,7 @@
             this.profileContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.profileContainerPanel.Location = new System.Drawing.Point(3, 3);
             this.profileContainerPanel.Name = "profileContainerPanel";
-            this.profileContainerPanel.Size = new System.Drawing.Size(828, 504);
+            this.profileContainerPanel.Size = new System.Drawing.Size(870, 580);
             this.profileContainerPanel.TabIndex = 0;
             // 
             // absenceTab
@@ -124,7 +124,7 @@
             this.absenceTab.Controls.Add(this.absenceContainerPanel);
             this.absenceTab.Location = new System.Drawing.Point(4, 22);
             this.absenceTab.Name = "absenceTab";
-            this.absenceTab.Size = new System.Drawing.Size(916, 536);
+            this.absenceTab.Size = new System.Drawing.Size(834, 510);
             this.absenceTab.TabIndex = 1;
             this.absenceTab.Text = "Absence";
             this.absenceTab.UseVisualStyleBackColor = true;
@@ -135,7 +135,7 @@
             this.absenceContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.absenceContainerPanel.Location = new System.Drawing.Point(0, 0);
             this.absenceContainerPanel.Name = "absenceContainerPanel";
-            this.absenceContainerPanel.Size = new System.Drawing.Size(916, 536);
+            this.absenceContainerPanel.Size = new System.Drawing.Size(834, 510);
             this.absenceContainerPanel.TabIndex = 2;
             // 
             // memberTab
@@ -144,7 +144,7 @@
             this.memberTab.Controls.Add(this.memberNavBarPanel);
             this.memberTab.Location = new System.Drawing.Point(4, 22);
             this.memberTab.Name = "memberTab";
-            this.memberTab.Size = new System.Drawing.Size(916, 536);
+            this.memberTab.Size = new System.Drawing.Size(834, 510);
             this.memberTab.TabIndex = 3;
             this.memberTab.Text = "Member";
             this.memberTab.UseVisualStyleBackColor = true;
@@ -155,7 +155,7 @@
             this.memberContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.memberContainerPanel.Location = new System.Drawing.Point(127, 0);
             this.memberContainerPanel.Name = "memberContainerPanel";
-            this.memberContainerPanel.Size = new System.Drawing.Size(789, 536);
+            this.memberContainerPanel.Size = new System.Drawing.Size(707, 510);
             this.memberContainerPanel.TabIndex = 2;
             // 
             // memberNavBarPanel
@@ -167,7 +167,7 @@
             this.memberNavBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.memberNavBarPanel.Location = new System.Drawing.Point(0, 0);
             this.memberNavBarPanel.Name = "memberNavBarPanel";
-            this.memberNavBarPanel.Size = new System.Drawing.Size(127, 536);
+            this.memberNavBarPanel.Size = new System.Drawing.Size(127, 510);
             this.memberNavBarPanel.TabIndex = 1;
             // 
             // memberPaymentButton
@@ -206,7 +206,7 @@
             this.expenseTab.Controls.Add(this.expenseNavBarPanel);
             this.expenseTab.Location = new System.Drawing.Point(4, 22);
             this.expenseTab.Name = "expenseTab";
-            this.expenseTab.Size = new System.Drawing.Size(916, 536);
+            this.expenseTab.Size = new System.Drawing.Size(834, 510);
             this.expenseTab.TabIndex = 2;
             this.expenseTab.Text = "Expense";
             this.expenseTab.UseVisualStyleBackColor = true;
@@ -217,7 +217,7 @@
             this.expenseContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.expenseContainerPanel.Location = new System.Drawing.Point(127, 0);
             this.expenseContainerPanel.Name = "expenseContainerPanel";
-            this.expenseContainerPanel.Size = new System.Drawing.Size(789, 536);
+            this.expenseContainerPanel.Size = new System.Drawing.Size(707, 510);
             this.expenseContainerPanel.TabIndex = 1;
             // 
             // expenseNavBarPanel
@@ -231,7 +231,7 @@
             this.expenseNavBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.expenseNavBarPanel.Location = new System.Drawing.Point(0, 0);
             this.expenseNavBarPanel.Name = "expenseNavBarPanel";
-            this.expenseNavBarPanel.Size = new System.Drawing.Size(127, 536);
+            this.expenseNavBarPanel.Size = new System.Drawing.Size(127, 510);
             this.expenseNavBarPanel.TabIndex = 0;
             // 
             // dateTimePicker2
@@ -291,7 +291,7 @@
             this.incomeTab.Controls.Add(this.incomeNavBarPanel);
             this.incomeTab.Location = new System.Drawing.Point(4, 22);
             this.incomeTab.Name = "incomeTab";
-            this.incomeTab.Size = new System.Drawing.Size(916, 536);
+            this.incomeTab.Size = new System.Drawing.Size(834, 510);
             this.incomeTab.TabIndex = 4;
             this.incomeTab.Text = "Income";
             this.incomeTab.UseVisualStyleBackColor = true;
@@ -302,7 +302,7 @@
             this.incomeContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.incomeContainerPanel.Location = new System.Drawing.Point(127, 0);
             this.incomeContainerPanel.Name = "incomeContainerPanel";
-            this.incomeContainerPanel.Size = new System.Drawing.Size(789, 536);
+            this.incomeContainerPanel.Size = new System.Drawing.Size(707, 510);
             this.incomeContainerPanel.TabIndex = 2;
             // 
             // incomeNavBarPanel
@@ -316,7 +316,7 @@
             this.incomeNavBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.incomeNavBarPanel.Location = new System.Drawing.Point(0, 0);
             this.incomeNavBarPanel.Name = "incomeNavBarPanel";
-            this.incomeNavBarPanel.Size = new System.Drawing.Size(127, 536);
+            this.incomeNavBarPanel.Size = new System.Drawing.Size(127, 510);
             this.incomeNavBarPanel.TabIndex = 1;
             // 
             // dateTimePicker1
@@ -376,7 +376,7 @@
             this.inventoryTab.Controls.Add(this.inventoryNavBarPanel);
             this.inventoryTab.Location = new System.Drawing.Point(4, 22);
             this.inventoryTab.Name = "inventoryTab";
-            this.inventoryTab.Size = new System.Drawing.Size(834, 510);
+            this.inventoryTab.Size = new System.Drawing.Size(926, 536);
             this.inventoryTab.TabIndex = 5;
             this.inventoryTab.Text = "Inventory";
             this.inventoryTab.UseVisualStyleBackColor = true;
@@ -387,7 +387,7 @@
             this.inventoryContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.inventoryContainerPanel.Location = new System.Drawing.Point(127, 0);
             this.inventoryContainerPanel.Name = "inventoryContainerPanel";
-            this.inventoryContainerPanel.Size = new System.Drawing.Size(707, 510);
+            this.inventoryContainerPanel.Size = new System.Drawing.Size(799, 536);
             this.inventoryContainerPanel.TabIndex = 2;
             // 
             // inventoryNavBarPanel
@@ -401,13 +401,13 @@
             this.inventoryNavBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.inventoryNavBarPanel.Location = new System.Drawing.Point(0, 0);
             this.inventoryNavBarPanel.Name = "inventoryNavBarPanel";
-            this.inventoryNavBarPanel.Size = new System.Drawing.Size(127, 510);
+            this.inventoryNavBarPanel.Size = new System.Drawing.Size(127, 536);
             this.inventoryNavBarPanel.TabIndex = 1;
             // 
             // exportBtn
             // 
             this.exportBtn.Location = new System.Drawing.Point(8, 427);
-            this.exportBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.exportBtn.Margin = new System.Windows.Forms.Padding(2);
             this.exportBtn.Name = "exportBtn";
             this.exportBtn.Size = new System.Drawing.Size(113, 32);
             this.exportBtn.TabIndex = 4;
@@ -485,11 +485,12 @@
             // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(842, 536);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(934, 562);
             this.Controls.Add(this.homeTabControl);
-            this.MinimumSize = new System.Drawing.Size(847, 543);
+            this.MaximumSize = new System.Drawing.Size(950, 600);
+            this.MinimumSize = new System.Drawing.Size(950, 600);
             this.Name = "Home";
             this.Text = "Home";
             this.homeTabControl.ResumeLayout(false);
