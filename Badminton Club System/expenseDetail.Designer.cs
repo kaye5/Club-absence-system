@@ -93,6 +93,7 @@
             this.expenseTransactionHeader,
             this.expensePriceHeader,
             this.expenseCommentHeader});
+            this.expenseDetailListView.GridLines = true;
             this.expenseDetailListView.Location = new System.Drawing.Point(12, 73);
             this.expenseDetailListView.Name = "expenseDetailListView";
             this.expenseDetailListView.Size = new System.Drawing.Size(773, 327);
@@ -133,8 +134,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(980, 610);
             this.Controls.Add(this.monthTbox);
             this.Controls.Add(this.expenseDetailListView);
             this.Controls.Add(this.ttTbox);

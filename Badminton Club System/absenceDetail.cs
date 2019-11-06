@@ -36,46 +36,53 @@ namespace Badminton_Club_System
         {
             table.Clear();
             absenceDetailCB.Items.Clear();
-            db.sql = $"select max(meeting_count) from meeting where `month` = '{today}'";
-            db.addCMD();
-            MySqlDataReader r = db.cmd.ExecuteReader();
-            while (r.Read())
+            try
             {
-                col = r.GetInt16(0);
-            }
-            createCol();
-            r.Dispose();
-            db.disposeCmd();
-            db.sql = "select a.member_id , mem.`name` , m.meeting_count,a.`status` from `absence` a " +
-                        "inner join `meeting` m on a.meeting_id = m.id " +
-                        "inner join `member` mem on a.member_id = mem.nim " +
-                       $"where m.`month` = '{today}' " +
-                        "order by m.meeting_count";
-            db.addCMD();
-            r = db.cmd.ExecuteReader();
-            while (r.Read())
-            {
-                if (r.GetString(0) == "001")
-                    continue;
-                ListViewItem item = new ListViewItem(r.GetString(0));
-                item.SubItems.Add(r.GetString(1));
-                if (r.GetInt16(2) == 1)
-                    item.SubItems.Add(r.GetString(3));
-                else
+                db.sql = $"select max(meeting_count) from meeting where `month` = '{today}'";
+                db.addCMD();
+                MySqlDataReader r = db.cmd.ExecuteReader();
+                while (r.Read())
                 {
-                    int i = 0;
-                    foreach(ListViewItem el in table.Items)
-                    {
-                        if (el.SubItems[0].Text == r.GetString(0))
-                            table.Items[i].SubItems.Add(r.GetString(3));
-                        i++;
-                    }
-                    continue;
+                    col = r.GetInt16(0);
                 }
-                table.Items.Add(item);
+                createCol();
+                r.Dispose();
+                db.disposeCmd();
+                db.sql = "select a.member_id , mem.`name` , m.meeting_count,a.`status` from `absence` a " +
+                            "inner join `meeting` m on a.meeting_id = m.id " +
+                            "inner join `member` mem on a.member_id = mem.nim " +
+                           $"where m.`month` = '{today}' " +
+                            "order by m.meeting_count";
+                db.addCMD();
+                r = db.cmd.ExecuteReader();
+                while (r.Read())
+                {
+                    if (r.GetString(0) == "001")
+                        continue;
+                    ListViewItem item = new ListViewItem(r.GetString(0));
+                    item.SubItems.Add(r.GetString(1));
+                    if (r.GetInt16(2) == 1)
+                        item.SubItems.Add(r.GetString(3));
+                    else
+                    {
+                        int i = 0;
+                        foreach (ListViewItem el in table.Items)
+                        {
+                            if (el.SubItems[0].Text == r.GetString(0))
+                                table.Items[i].SubItems.Add(r.GetString(3));
+                            i++;
+                        }
+                        continue;
+                    }
+                    table.Items.Add(item);
+                }
+                r.Dispose();
+                db.disposeCmd();
             }
-            r.Dispose();
-            db.disposeCmd();
+            catch (MySqlException err)
+            {
+                MessageBox.Show(err.Message, err.Number.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void createCol()
@@ -92,33 +99,47 @@ namespace Badminton_Club_System
 
         private void newMeetinBtn_Click(object sender, EventArgs e)
         {
-            Console.WriteLine(today);
-            String[] date = today.Split();
-            Console.WriteLine(date[0]);
-            Console.WriteLine(date[1]);
-            String count = (col + 1).ToString();
-            db.sql = $"insert into `meeting` values('{date[0]+date[1]+count}','{today}',{col+1})";
-            db.addCMD();
-            db.cmd.ExecuteNonQuery();
-            db.disposeCmd();
-            db.sql = $"insert into `absence`(`id`,`member_id`,`meeting_id`) select concat('{date[0]+date[1] + count}',m.nim) , m.nim , '{date[0]+date[1] + count}' from `member` m";
-            db.addCMD();
-            Console.WriteLine(db.sql);
-            db.cmd.ExecuteNonQuery();
-            updateData();
+            try
+            {
+                Console.WriteLine(today);
+                String[] date = today.Split();
+                Console.WriteLine(date[0]);
+                Console.WriteLine(date[1]);
+                String count = (col + 1).ToString();
+                db.sql = $"insert into `meeting` values('{date[0] + date[1] + count}','{today}',{col + 1})";
+                db.addCMD();
+                db.cmd.ExecuteNonQuery();
+                db.disposeCmd();
+                db.sql = $"insert into `absence`(`id`,`member_id`,`meeting_id`) select concat('{date[0] + date[1] + count}',m.nim) , m.nim , '{date[0] + date[1] + count}' from `member` m";
+                db.addCMD();
+                Console.WriteLine(db.sql);
+                db.cmd.ExecuteNonQuery();
+                updateData();
+            }
+            catch (MySqlException err)
+            {
+                MessageBox.Show(err.Message, err.Number.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void changeStatus(String status)
         {
-            String currentMeeting = (absenceDetailCB.SelectedIndex+1).ToString();
-            String[] date = today.Split();
-            foreach (ListViewItem item in table.SelectedItems)
+            try
             {
-                db.sql = $"update `absence` set `status` = '{status}' where `id`='{date[0]+date[1]+currentMeeting+item.SubItems[0].Text}'";
-                Console.WriteLine(db.sql);
-                db.addCMD();
-                db.cmd.ExecuteNonQuery();
-                db.disposeCmd();
+                String currentMeeting = (absenceDetailCB.SelectedIndex + 1).ToString();
+                String[] date = today.Split();
+                foreach (ListViewItem item in table.SelectedItems)
+                {
+                    db.sql = $"update `absence` set `status` = '{status}' where `id`='{date[0] + date[1] + currentMeeting + item.SubItems[0].Text}'";
+                    Console.WriteLine(db.sql);
+                    db.addCMD();
+                    db.cmd.ExecuteNonQuery();
+                    db.disposeCmd();
+                }
+            }
+            catch (MySqlException err)
+            {
+                MessageBox.Show(err.Message, err.Number.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

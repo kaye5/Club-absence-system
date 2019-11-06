@@ -31,12 +31,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.inventoryHistoryTotTrasnTbox = new System.Windows.Forms.TextBox();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.idHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.inventoryHistoryDateHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.inventoryHistoryItemHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.qtyHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.inventoryHistoryActionHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.inventoryHistoryCommentHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.qtyHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.idHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // label1
@@ -71,10 +71,15 @@
             this.listView1.Location = new System.Drawing.Point(13, 45);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(767, 365);
-            this.listView1.Sorting = System.Windows.Forms.SortOrder.Ascending;
+            this.listView1.Sorting = System.Windows.Forms.SortOrder.Descending;
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // idHeader
+            // 
+            this.idHeader.Text = "ID";
+            this.idHeader.Width = 172;
             // 
             // inventoryHistoryDateHeader
             // 
@@ -86,6 +91,11 @@
             this.inventoryHistoryItemHeader.Text = "Item Name";
             this.inventoryHistoryItemHeader.Width = 141;
             // 
+            // qtyHeader
+            // 
+            this.qtyHeader.Text = "Qty";
+            this.qtyHeader.Width = 59;
+            // 
             // inventoryHistoryActionHeader
             // 
             this.inventoryHistoryActionHeader.Text = "Action";
@@ -96,20 +106,11 @@
             this.inventoryHistoryCommentHeader.Text = "Comment";
             this.inventoryHistoryCommentHeader.Width = 176;
             // 
-            // qtyHeader
-            // 
-            this.qtyHeader.Text = "Qty";
-            this.qtyHeader.Width = 59;
-            // 
-            // idHeader
-            // 
-            this.idHeader.Text = "ID";
-            this.idHeader.Width = 172;
-            // 
             // inventoryHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(792, 422);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.inventoryHistoryTotTrasnTbox);

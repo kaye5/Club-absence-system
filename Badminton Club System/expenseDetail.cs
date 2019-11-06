@@ -45,7 +45,7 @@ namespace Badminton_Club_System
                     MessageBox.Show("NO ITEM HERE");
                 r.Dispose();
                 db.disposeCmd();
-                totalExpenseTbox.Text = allExpense.ToString();
+                totalExpenseTbox.Text = allExpense.ToString("N");
                 ttTbox.Text = tt.ToString();
                 monthTbox.Text = $"{month} {year}";
             }

@@ -46,7 +46,7 @@
             this.memberPaymentHead.Dock = System.Windows.Forms.DockStyle.Top;
             this.memberPaymentHead.Location = new System.Drawing.Point(0, 0);
             this.memberPaymentHead.Name = "memberPaymentHead";
-            this.memberPaymentHead.Size = new System.Drawing.Size(800, 49);
+            this.memberPaymentHead.Size = new System.Drawing.Size(900, 49);
             this.memberPaymentHead.TabIndex = 1;
             // 
             // memberPaymentFooter
@@ -54,9 +54,9 @@
             this.memberPaymentFooter.Controls.Add(this.paymentCancleBtn);
             this.memberPaymentFooter.Controls.Add(this.memberPayBtn);
             this.memberPaymentFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.memberPaymentFooter.Location = new System.Drawing.Point(0, 396);
+            this.memberPaymentFooter.Location = new System.Drawing.Point(0, 446);
             this.memberPaymentFooter.Name = "memberPaymentFooter";
-            this.memberPaymentFooter.Size = new System.Drawing.Size(800, 54);
+            this.memberPaymentFooter.Size = new System.Drawing.Size(900, 54);
             this.memberPaymentFooter.TabIndex = 2;
             // 
             // paymentCancleBtn
@@ -86,7 +86,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 49);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(5);
-            this.panel1.Size = new System.Drawing.Size(800, 347);
+            this.panel1.Size = new System.Drawing.Size(900, 397);
             this.panel1.TabIndex = 3;
             // 
             // listView1
@@ -100,7 +100,7 @@
             this.listView1.GridLines = true;
             this.listView1.Location = new System.Drawing.Point(5, 5);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(790, 337);
+            this.listView1.Size = new System.Drawing.Size(890, 387);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -124,7 +124,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(900, 500);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.memberPaymentFooter);
             this.Controls.Add(this.memberPaymentHead);

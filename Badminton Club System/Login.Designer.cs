@@ -64,16 +64,18 @@
             // 
             this.loginPassTextBox.Location = new System.Drawing.Point(94, 83);
             this.loginPassTextBox.Name = "loginPassTextBox";
+            this.loginPassTextBox.PasswordChar = '*';
             this.loginPassTextBox.Size = new System.Drawing.Size(155, 20);
             this.loginPassTextBox.TabIndex = 3;
             // 
             // loginButton
             // 
-            this.loginButton.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.loginButton.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginButton.Location = new System.Drawing.Point(94, 155);
+            this.loginButton.BackColor = System.Drawing.Color.Black;
+            this.loginButton.Font = new System.Drawing.Font("Maiandra GD", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginButton.ForeColor = System.Drawing.Color.White;
+            this.loginButton.Location = new System.Drawing.Point(157, 139);
             this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(75, 34);
+            this.loginButton.Size = new System.Drawing.Size(92, 41);
             this.loginButton.TabIndex = 4;
             this.loginButton.Text = "LOGIN";
             this.loginButton.UseVisualStyleBackColor = false;
@@ -83,7 +85,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(292, 272);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.loginPassTextBox);

@@ -49,8 +49,8 @@ namespace Badminton_Club_System
                     MessageBox.Show("NO ITEM HERE");
                 r.Dispose();
                 db.disposeCmd();
-                cashDetailTotalTbox.Text = allIncome.ToString();
-                cashDetailMemberIncomeTbox.Text = memberIncome.ToString();
+                cashDetailTotalTbox.Text = allIncome.ToString("N");
+                cashDetailMemberIncomeTbox.Text = memberIncome.ToString("N");
                 cashDetailTransTbox.Text = tt.ToString();
                 cashDetailOtherTbox.Text = otherIncome.ToString();
                 monthTbox.Text = $"{month} {year}";

@@ -35,6 +35,7 @@
             this.inventoryIDHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.inventoryItemHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.inventoryStockHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.commentHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.inventoryDashboardCMS = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,7 +45,6 @@
             this.invetoryDashboardNameTbox = new System.Windows.Forms.TextBox();
             this.inventoryDashboardUpdateBtn = new System.Windows.Forms.Button();
             this.inventoryDashboardUpdatePanel = new System.Windows.Forms.Panel();
-            this.commentHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.inventoryDashboardCMS.SuspendLayout();
             this.inventoryDashboardUpdatePanel.SuspendLayout();
             this.SuspendLayout();
@@ -96,6 +96,11 @@
             // 
             this.inventoryStockHeader.Text = "Stock";
             this.inventoryStockHeader.Width = 105;
+            // 
+            // commentHeader
+            // 
+            this.commentHeader.Text = "Comment";
+            this.commentHeader.Width = 130;
             // 
             // inventoryDashboardCMS
             // 
@@ -175,15 +180,11 @@
             this.inventoryDashboardUpdatePanel.TabIndex = 11;
             this.inventoryDashboardUpdatePanel.Visible = false;
             // 
-            // commentHeader
-            // 
-            this.commentHeader.Text = "Comment";
-            this.commentHeader.Width = 130;
-            // 
             // inventoryDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 546);
             this.Controls.Add(this.inventoryDashboardUpdatePanel);
             this.Controls.Add(this.listView1);

@@ -47,15 +47,15 @@ namespace Badminton_Club_System
                     String tName = nameTbox.Text;
                     int tPrice = Convert.ToInt32(priceTbox.Text);
                     String tComment = commentTbox.Text;
-                    db.sql = $"insert into `expense_transaction` values('{time + tName + tPrice.ToString()}', '{month + year}', '{time}', '{tName}', {tPrice}, '{tComment}', 'expense')";
-                    Console.WriteLine(db.sql);
-                    db.addCMD();
-                    db.cmd.ExecuteNonQuery();
-                    db.disposeCmd();
                     db.sql = $"update `profile` set `cash` = `cash` - {tPrice} where  `id` = '001'";
                     db.addCMD();
                     db.cmd.ExecuteNonQuery();
                     db.disposeCmd();
+                    db.sql = $"insert into `expense_transaction` values('{time + tName + tPrice.ToString()}', '{month + year}', '{time}', '{tName}', {tPrice}, '{tComment}', 'expense')";
+                    Console.WriteLine(db.sql);
+                    db.addCMD();
+                    db.cmd.ExecuteNonQuery();
+                    db.disposeCmd();                    
                     db.sql = $"update `expense` set `cash` = `cash` + {tPrice} where  `id` = '{month + year}'";
                     db.addCMD();
                     db.cmd.ExecuteNonQuery();
@@ -66,6 +66,9 @@ namespace Badminton_Club_System
             }
             catch (MySqlException err)
             {
+                if (err.Number.ToString() == "1690")
+                    MessageBox.Show("Expense overcome current cash");
+                else 
                 MessageBox.Show(err.Message, err.Number.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

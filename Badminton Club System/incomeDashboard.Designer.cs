@@ -30,20 +30,18 @@
         {
             this.incomeTable = new System.Windows.Forms.ListView();
             this.incomeMonthHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.incomeCashHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.incomeTransactiontHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.incomeDashboardTotalTbox = new System.Windows.Forms.TextBox();
             this.incomeDashboardMonthIncome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.incomeCashHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // incomeTable
             // 
             this.incomeTable.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.incomeMonthHeader,
-            this.incomeCashHeader,
-            this.incomeTransactiontHeader});
+            this.incomeCashHeader});
             this.incomeTable.FullRowSelect = true;
             this.incomeTable.GridLines = true;
             this.incomeTable.Location = new System.Drawing.Point(12, 95);
@@ -57,16 +55,6 @@
             // 
             this.incomeMonthHeader.Text = "Month";
             this.incomeMonthHeader.Width = 138;
-            // 
-            // incomeCashHeader
-            // 
-            this.incomeCashHeader.Text = "Income";
-            this.incomeCashHeader.Width = 137;
-            // 
-            // incomeTransactiontHeader
-            // 
-            this.incomeTransactiontHeader.Text = "Total Transaction";
-            this.incomeTransactiontHeader.Width = 131;
             // 
             // incomeDashboardTotalTbox
             // 
@@ -104,6 +92,11 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "This Month Income";
             // 
+            // incomeCashHeader
+            // 
+            this.incomeCashHeader.Text = "Income";
+            this.incomeCashHeader.Width = 168;
+            // 
             // incomeDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -126,11 +119,10 @@
         #endregion
         private System.Windows.Forms.ListView incomeTable;
         private System.Windows.Forms.ColumnHeader incomeMonthHeader;
-        private System.Windows.Forms.ColumnHeader incomeTransactiontHeader;
-        private System.Windows.Forms.ColumnHeader incomeCashHeader;
         private System.Windows.Forms.TextBox incomeDashboardTotalTbox;
         private System.Windows.Forms.TextBox incomeDashboardMonthIncome;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ColumnHeader incomeCashHeader;
     }
 }

@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.expenseListView = new System.Windows.Forms.ListView();
             this.expenseMonthHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.expenseTransactiontHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.expenseCashHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.thisExpsenselbl = new System.Windows.Forms.Label();
             this.transTboxLabel = new System.Windows.Forms.Label();
@@ -46,7 +45,6 @@
             // 
             this.expenseListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.expenseMonthHeader,
-            this.expenseTransactiontHeader,
             this.expenseCashHeader});
             this.expenseListView.GridLines = true;
             this.expenseListView.Location = new System.Drawing.Point(12, 95);
@@ -60,11 +58,6 @@
             // 
             this.expenseMonthHeader.Text = "Month";
             this.expenseMonthHeader.Width = 119;
-            // 
-            // expenseTransactiontHeader
-            // 
-            this.expenseTransactiontHeader.Text = "Total Transaction";
-            this.expenseTransactiontHeader.Width = 131;
             // 
             // expenseCashHeader
             // 
@@ -124,8 +117,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(800, 546);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(980, 610);
             this.Controls.Add(this.transTbox);
             this.Controls.Add(this.expenseTbox);
             this.Controls.Add(this.transTboxLabel);
@@ -146,7 +139,6 @@
         private System.Windows.Forms.Label thisExpsenselbl;
         private System.Windows.Forms.Label transTboxLabel;
         private System.Windows.Forms.ColumnHeader expenseMonthHeader;
-        private System.Windows.Forms.ColumnHeader expenseTransactiontHeader;
         private System.Windows.Forms.ContextMenuStrip expenseDashboardCTM;
         private System.Windows.Forms.ToolStripMenuItem viewDetailToolStripMenuItem;
         private System.Windows.Forms.ColumnHeader expenseCashHeader;

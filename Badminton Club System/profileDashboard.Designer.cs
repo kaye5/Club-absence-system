@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.profileExpenseBtn = new System.Windows.Forms.Button();
             this.profileMemberBtn = new System.Windows.Forms.Button();
             this.profileExpenseTbox = new System.Windows.Forms.TextBox();
@@ -70,15 +69,13 @@
             this.coorCTMS = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportInventoryBtn = new System.Windows.Forms.Button();
+            this.importMemberBtn = new System.Windows.Forms.Button();
+            this.exportTransactionBtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.profileActionPanel.SuspendLayout();
             this.coorCTMS.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // monthCalendar1
-            // 
-            this.monthCalendar1.Location = new System.Drawing.Point(133, 330);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 51;
             // 
             // profileExpenseBtn
             // 
@@ -94,7 +91,7 @@
             // profileMemberBtn
             // 
             this.profileMemberBtn.AccessibleDescription = "2";
-            this.profileMemberBtn.Location = new System.Drawing.Point(9, 330);
+            this.profileMemberBtn.Location = new System.Drawing.Point(9, 344);
             this.profileMemberBtn.Name = "profileMemberBtn";
             this.profileMemberBtn.Size = new System.Drawing.Size(109, 23);
             this.profileMemberBtn.TabIndex = 49;
@@ -160,9 +157,10 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(603, 24);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(599, 13);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(61, 13);
+            this.label8.Size = new System.Drawing.Size(92, 20);
             this.label8.TabIndex = 42;
             this.label8.Text = "Coordinator";
             // 
@@ -376,7 +374,7 @@
             // profileInventoryBtn
             // 
             this.profileInventoryBtn.AccessibleDescription = "5";
-            this.profileInventoryBtn.Location = new System.Drawing.Point(9, 441);
+            this.profileInventoryBtn.Location = new System.Drawing.Point(9, 455);
             this.profileInventoryBtn.Name = "profileInventoryBtn";
             this.profileInventoryBtn.Size = new System.Drawing.Size(109, 23);
             this.profileInventoryBtn.TabIndex = 35;
@@ -415,7 +413,7 @@
             // profileAbsenceBtn
             // 
             this.profileAbsenceBtn.AccessibleDescription = "1";
-            this.profileAbsenceBtn.Location = new System.Drawing.Point(9, 385);
+            this.profileAbsenceBtn.Location = new System.Drawing.Point(9, 399);
             this.profileAbsenceBtn.Name = "profileAbsenceBtn";
             this.profileAbsenceBtn.Size = new System.Drawing.Size(109, 23);
             this.profileAbsenceBtn.TabIndex = 52;
@@ -429,7 +427,7 @@
             this.editToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.coorCTMS.Name = "coorCTMS";
-            this.coorCTMS.Size = new System.Drawing.Size(153, 70);
+            this.coorCTMS.Size = new System.Drawing.Size(108, 48);
             // 
             // editToolStripMenuItem
             // 
@@ -441,17 +439,63 @@
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
+            // exportInventoryBtn
+            // 
+            this.exportInventoryBtn.AccessibleDescription = "";
+            this.exportInventoryBtn.Location = new System.Drawing.Point(143, 455);
+            this.exportInventoryBtn.Name = "exportInventoryBtn";
+            this.exportInventoryBtn.Size = new System.Drawing.Size(109, 23);
+            this.exportInventoryBtn.TabIndex = 53;
+            this.exportInventoryBtn.Text = "Export Inventory";
+            this.exportInventoryBtn.UseVisualStyleBackColor = true;
+            this.exportInventoryBtn.Click += new System.EventHandler(this.exportInventoryBtn_Click);
+            // 
+            // importMemberBtn
+            // 
+            this.importMemberBtn.AccessibleDescription = "";
+            this.importMemberBtn.Location = new System.Drawing.Point(143, 344);
+            this.importMemberBtn.Name = "importMemberBtn";
+            this.importMemberBtn.Size = new System.Drawing.Size(109, 23);
+            this.importMemberBtn.TabIndex = 54;
+            this.importMemberBtn.Text = "Import Member";
+            this.importMemberBtn.UseVisualStyleBackColor = true;
+            this.importMemberBtn.Click += new System.EventHandler(this.importMemberBtn_Click);
+            // 
+            // exportTransactionBtn
+            // 
+            this.exportTransactionBtn.AccessibleDescription = "";
+            this.exportTransactionBtn.Location = new System.Drawing.Point(143, 399);
+            this.exportTransactionBtn.Name = "exportTransactionBtn";
+            this.exportTransactionBtn.Size = new System.Drawing.Size(109, 23);
+            this.exportTransactionBtn.TabIndex = 55;
+            this.exportTransactionBtn.Text = "Export Transaction";
+            this.exportTransactionBtn.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.AccessibleDescription = "";
+            this.button1.Location = new System.Drawing.Point(56, 511);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(141, 23);
+            this.button1.TabIndex = 56;
+            this.button1.Text = "Export Monthly Income";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // profileDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(924, 546);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.exportTransactionBtn);
+            this.Controls.Add(this.importMemberBtn);
+            this.Controls.Add(this.exportInventoryBtn);
             this.Controls.Add(this.profileAbsenceBtn);
-            this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.profileExpenseBtn);
             this.Controls.Add(this.profileMemberBtn);
             this.Controls.Add(this.profileExpenseTbox);
@@ -483,8 +527,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.Button profileExpenseBtn;
         private System.Windows.Forms.Button profileMemberBtn;
         private System.Windows.Forms.TextBox profileExpenseTbox;
@@ -525,5 +567,9 @@
         private System.Windows.Forms.ContextMenuStrip coorCTMS;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private System.Windows.Forms.Button exportInventoryBtn;
+        private System.Windows.Forms.Button importMemberBtn;
+        private System.Windows.Forms.Button exportTransactionBtn;
+        private System.Windows.Forms.Button button1;
     }
 }

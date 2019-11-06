@@ -6,8 +6,10 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using CrystalDecisions.CrystalReports.Engine;
 namespace Badminton_Club_System
 {
     public partial class profileDashboard : Form
@@ -242,6 +244,55 @@ namespace Badminton_Club_System
             {
                 MessageBox.Show("No item selected", "Warning");
             }
+        }
+
+        private void exportInventoryBtn_Click(object sender, EventArgs e)
+        {
+            ReportDocument inv = new ReportDocument();
+            inv.Load(@"C:\Users\Vroxine\Documents\Visual Studio 2015\Projects\badminton-club-system\Badminton Club System\inventory.rpt");
+            inv.Refresh();
+            inv.PrintToPrinter(1, false, 0, 0);
+        }
+
+        private void importMemberBtn_Click(object sender, EventArgs e)
+        {
+            List<List<String>> csvData = new List<List<String>>();
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "CSV Files (*.csv)|*.csv";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                using (var reader = new StreamReader(dialog.FileName))
+                {
+                    
+                    while (!reader.EndOfStream)
+                    {
+                        var line = reader.ReadLine();
+                        String[] values = line.Split(',');                        
+                        csvData.Add(values.ToList<String>());
+                    }
+                }           
+            }
+            try
+            {
+                foreach (List<String> line in csvData)
+                {
+                    db.sql = "insert into `member`(`nim`,`name`,`email`,`intake`,`class`) " +
+                        $"values('{line[0]}','{line[1]}','{line[2]}','{line[3]}','{line[4]}')";
+                    Console.WriteLine(db.sql);
+                    db.addCMD();
+                    db.cmd.ExecuteNonQuery();
+                    db.disposeCmd();
+                }
+                MessageBox.Show("Done");
+            }
+            catch (MySqlException err)
+            {
+                MessageBox.Show(err.Message, err.Number.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } catch(IOException err)
+            {
+                MessageBox.Show(err.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
     }
 }

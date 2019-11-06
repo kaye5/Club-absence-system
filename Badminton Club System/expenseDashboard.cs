@@ -31,13 +31,13 @@ namespace Badminton_Club_System
                 while (r.Read())
                 {
                     ListViewItem item = new ListViewItem(r.GetString(0));
-                    item.SubItems.Add(r.GetInt32(1).ToString(/*"C", CultureInfo.CreateSpecificCulture("id-ID")*/));
+                    item.SubItems.Add(r.GetInt32(1).ToString("N"));
                     totalExpense = r.GetInt32(1);
                     totalTransaction += r.GetInt32(1);
                     expenseListView.Items.Add(item);
                 }
-                expenseTbox.Text = totalExpense.ToString();
-                transTbox.Text = totalTransaction.ToString();
+                expenseTbox.Text = totalExpense.ToString("N");
+                transTbox.Text = totalTransaction.ToString("N");
                 db.disposeCmd();
                 r.Dispose();
             }
