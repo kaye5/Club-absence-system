@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using CrystalDecisions.Shared;
+using CrystalDecisions.CrystalReports.Engine;
 namespace Badminton_Club_System
 {
     public partial class Home : Form
@@ -269,7 +271,13 @@ namespace Badminton_Club_System
         {
             showInventoryContainer(new inventoryAction());
         }
-
         
+        private void ExportBtn_Click(object sender, EventArgs e)
+        {
+            ReportDocument inv = new ReportDocument();
+            inv.Load(@"\\Mac\Home\Desktop\badminton-club-system-master\badminton-club-system-master\Badminton Club System\\inventory.rpt");
+            inv.Refresh();
+            inv.PrintToPrinter(1, false, 0, 0);
+        }
     }
 }
