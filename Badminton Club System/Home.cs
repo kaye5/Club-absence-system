@@ -22,6 +22,7 @@ namespace Badminton_Club_System
             
         }
 
+        //constructor change tab from profileDashboard button
         public Home(int tabIndex)
         {
             InitializeComponent();
@@ -29,18 +30,19 @@ namespace Badminton_Club_System
             homeTabControl.SelectedIndex = tabIndex;
             this.MaximizeBox = false;
         }
-
+        //get current month
         private string getMonth(int n)
         {
             // 0 current month 
             // -1 prev month
             return DateTime.Now.AddMonths(n).ToString("MMMM");
         }
+        //get current year
         private string getYear()
         {
             return DateTime.Now.Year.ToString();
         }
-
+        //update database every new month (add meeting,income and expense)
         private void newMonth()
         {
             String previousMonth = DateTime.Now.AddMonths(-1).ToString("MMMM");            
@@ -48,12 +50,13 @@ namespace Badminton_Club_System
             String todayYear = DateTime.Today.Year.ToString();
             String today = $"{todayMonth}{todayYear}";
             Console.WriteLine(today);
+            //checking if this month exist
             db.sql = $"select id from `income` where id='{today}' ";
             db.cmd = new MySqlCommand(db.sql, db.connection);
             try
             {
                 MySqlDataReader todayReader = db.cmd.ExecuteReader();
-                
+                //if not create new row in database
                 if (!todayReader.Read())
                 {
                     db.disposeCmd();
@@ -85,6 +88,7 @@ namespace Badminton_Club_System
                     db.cmd = new MySqlCommand(db.sql, db.connection);
                     db.addCMD();
                     db.cmd.ExecuteNonQuery();
+                    //insert into database every new month with meeting count 1
                     db.sql = $"insert into `absence`(`id`,`member_id`,`meeting_id`) select concat('{today + "1"}',m.nim) , m.nim , '{today + "1"}' from `member` m";
                     db.addCMD();
                     db.cmd.ExecuteNonQuery();
@@ -96,7 +100,7 @@ namespace Badminton_Club_System
                 MessageBox.Show(err.Message, err.Code.ToString());
             }            
         }
-
+        //change tab and select the tan button
         //TAB CONTROL
         private void homeTabControl_TabIndexChanged(object sender, EventArgs e)
         {
@@ -238,7 +242,7 @@ namespace Badminton_Club_System
             newCash newForm = new newCash();
             showIncomeContainer(newForm);
         }
-
+        //date time picker to show history
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             String month = dateTimePicker1.Value.ToString("MMMM");
