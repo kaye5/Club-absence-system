@@ -245,11 +245,16 @@ namespace Badminton_Club_System
                 MessageBox.Show("No item selected", "Warning");
             }
         }
+        private ReportDocument export(String path)
+        {
+            ReportDocument inv = new ReportDocument();
+            inv.Load(@"\\Mac\Home\Desktop\badminton-club-system-master\badminton-club-system-master\Badminton Club System\"+path);
+            return inv;
+        }
 
         private void exportInventoryBtn_Click(object sender, EventArgs e)
         {
-            ReportDocument inv = new ReportDocument();
-            inv.Load(@"C:\Users\Vroxine\Documents\Visual Studio 2015\Projects\badminton-club-system\Badminton Club System\inventory.rpt");
+            ReportDocument inv = export("inventory.rpt");
             inv.Refresh();
             inv.PrintToPrinter(1, false, 0, 0);
         }
@@ -293,6 +298,15 @@ namespace Badminton_Club_System
                 MessageBox.Show(err.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            ReportDocument inv = export("montly.rpt");
+            String month = DateTime.Now.ToString("MMMM") + " " + DateTime.Now.ToString("yyyy");
+            inv.Refresh();
+            inv.SetParameterValue("date",month);
+            inv.PrintToPrinter(1, false, 0, 0);
         }
     }
 }

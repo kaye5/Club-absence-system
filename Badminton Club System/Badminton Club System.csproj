@@ -91,12 +91,6 @@
       <DependentUpon>absenceDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="db.cs" />
-    <Compile Include="inventory.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>inventory.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="inventoryAction.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +195,12 @@
       <DependentUpon>Transaction.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="transactionRpt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>transactionRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="viewMember.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,10 +212,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="absenceDetail.resx">
       <DependentUpon>absenceDetail.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="inventory.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>inventory.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="inventoryAction.resx">
       <DependentUpon>inventoryAction.cs</DependentUpon>
@@ -278,6 +274,10 @@
     <EmbeddedResource Include="Transaction.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Transaction.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="transactionRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>transactionRpt.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="viewMember.resx">
       <DependentUpon>viewMember.cs</DependentUpon>

@@ -99,7 +99,7 @@
             this.homeTabControl.Margin = new System.Windows.Forms.Padding(0);
             this.homeTabControl.Name = "homeTabControl";
             this.homeTabControl.SelectedIndex = 0;
-            this.homeTabControl.Size = new System.Drawing.Size(964, 576);
+            this.homeTabControl.Size = new System.Drawing.Size(934, 581);
             this.homeTabControl.TabIndex = 0;
             this.homeTabControl.TabIndexChanged += new System.EventHandler(this.homeTabControl_TabIndexChanged);
             this.homeTabControl.Click += new System.EventHandler(this.homeTabControl_TabIndexChanged);
@@ -109,8 +109,8 @@
             this.profileTab.Controls.Add(this.profileContainerPanel);
             this.profileTab.Location = new System.Drawing.Point(4, 25);
             this.profileTab.Name = "profileTab";
-            this.profileTab.Padding = new System.Windows.Forms.Padding(3);
-            this.profileTab.Size = new System.Drawing.Size(956, 547);
+            this.profileTab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.profileTab.Size = new System.Drawing.Size(926, 552);
             this.profileTab.TabIndex = 0;
             this.profileTab.Text = "Profile";
             this.profileTab.UseVisualStyleBackColor = true;
@@ -121,7 +121,7 @@
             this.profileContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.profileContainerPanel.Location = new System.Drawing.Point(3, 3);
             this.profileContainerPanel.Name = "profileContainerPanel";
-            this.profileContainerPanel.Size = new System.Drawing.Size(950, 541);
+            this.profileContainerPanel.Size = new System.Drawing.Size(920, 546);
             this.profileContainerPanel.TabIndex = 0;
             // 
             // absenceTab
@@ -130,7 +130,7 @@
             this.absenceTab.Controls.Add(this.absenceContainerPanel);
             this.absenceTab.Location = new System.Drawing.Point(4, 25);
             this.absenceTab.Name = "absenceTab";
-            this.absenceTab.Size = new System.Drawing.Size(956, 547);
+            this.absenceTab.Size = new System.Drawing.Size(946, 510);
             this.absenceTab.TabIndex = 1;
             this.absenceTab.Text = "Absence";
             this.absenceTab.UseVisualStyleBackColor = true;
@@ -141,7 +141,7 @@
             this.absenceContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.absenceContainerPanel.Location = new System.Drawing.Point(0, 0);
             this.absenceContainerPanel.Name = "absenceContainerPanel";
-            this.absenceContainerPanel.Size = new System.Drawing.Size(956, 547);
+            this.absenceContainerPanel.Size = new System.Drawing.Size(946, 510);
             this.absenceContainerPanel.TabIndex = 2;
             // 
             // memberTab
@@ -150,7 +150,7 @@
             this.memberTab.Controls.Add(this.memberNavBarPanel);
             this.memberTab.Location = new System.Drawing.Point(4, 25);
             this.memberTab.Name = "memberTab";
-            this.memberTab.Size = new System.Drawing.Size(956, 547);
+            this.memberTab.Size = new System.Drawing.Size(946, 510);
             this.memberTab.TabIndex = 3;
             this.memberTab.Text = "Member";
             this.memberTab.UseVisualStyleBackColor = true;
@@ -161,7 +161,7 @@
             this.memberContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.memberContainerPanel.Location = new System.Drawing.Point(127, 0);
             this.memberContainerPanel.Name = "memberContainerPanel";
-            this.memberContainerPanel.Size = new System.Drawing.Size(829, 547);
+            this.memberContainerPanel.Size = new System.Drawing.Size(819, 510);
             this.memberContainerPanel.TabIndex = 2;
             // 
             // memberNavBarPanel
@@ -173,7 +173,7 @@
             this.memberNavBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.memberNavBarPanel.Location = new System.Drawing.Point(0, 0);
             this.memberNavBarPanel.Name = "memberNavBarPanel";
-            this.memberNavBarPanel.Size = new System.Drawing.Size(127, 547);
+            this.memberNavBarPanel.Size = new System.Drawing.Size(127, 510);
             this.memberNavBarPanel.TabIndex = 1;
             // 
             // memberPaymentButton
@@ -212,7 +212,7 @@
             this.expenseTab.Controls.Add(this.expenseNavBarPanel);
             this.expenseTab.Location = new System.Drawing.Point(4, 25);
             this.expenseTab.Name = "expenseTab";
-            this.expenseTab.Size = new System.Drawing.Size(956, 547);
+            this.expenseTab.Size = new System.Drawing.Size(946, 510);
             this.expenseTab.TabIndex = 2;
             this.expenseTab.Text = "Expense";
             this.expenseTab.UseVisualStyleBackColor = true;
@@ -223,7 +223,7 @@
             this.expenseContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.expenseContainerPanel.Location = new System.Drawing.Point(127, 0);
             this.expenseContainerPanel.Name = "expenseContainerPanel";
-            this.expenseContainerPanel.Size = new System.Drawing.Size(829, 547);
+            this.expenseContainerPanel.Size = new System.Drawing.Size(819, 510);
             this.expenseContainerPanel.TabIndex = 1;
             // 
             // expenseNavBarPanel
@@ -237,7 +237,7 @@
             this.expenseNavBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.expenseNavBarPanel.Location = new System.Drawing.Point(0, 0);
             this.expenseNavBarPanel.Name = "expenseNavBarPanel";
-            this.expenseNavBarPanel.Size = new System.Drawing.Size(127, 547);
+            this.expenseNavBarPanel.Size = new System.Drawing.Size(127, 510);
             this.expenseNavBarPanel.TabIndex = 0;
             // 
             // dateTimePicker2
@@ -297,7 +297,7 @@
             this.incomeTab.Controls.Add(this.incomeNavBarPanel);
             this.incomeTab.Location = new System.Drawing.Point(4, 25);
             this.incomeTab.Name = "incomeTab";
-            this.incomeTab.Size = new System.Drawing.Size(956, 547);
+            this.incomeTab.Size = new System.Drawing.Size(946, 510);
             this.incomeTab.TabIndex = 4;
             this.incomeTab.Text = "Income";
             this.incomeTab.UseVisualStyleBackColor = true;
@@ -308,7 +308,7 @@
             this.incomeContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.incomeContainerPanel.Location = new System.Drawing.Point(127, 0);
             this.incomeContainerPanel.Name = "incomeContainerPanel";
-            this.incomeContainerPanel.Size = new System.Drawing.Size(829, 547);
+            this.incomeContainerPanel.Size = new System.Drawing.Size(819, 510);
             this.incomeContainerPanel.TabIndex = 2;
             // 
             // incomeNavBarPanel
@@ -322,7 +322,7 @@
             this.incomeNavBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.incomeNavBarPanel.Location = new System.Drawing.Point(0, 0);
             this.incomeNavBarPanel.Name = "incomeNavBarPanel";
-            this.incomeNavBarPanel.Size = new System.Drawing.Size(127, 547);
+            this.incomeNavBarPanel.Size = new System.Drawing.Size(127, 510);
             this.incomeNavBarPanel.TabIndex = 1;
             // 
             // dateTimePicker1
@@ -382,7 +382,7 @@
             this.inventoryTab.Controls.Add(this.inventoryNavBarPanel);
             this.inventoryTab.Location = new System.Drawing.Point(4, 25);
             this.inventoryTab.Name = "inventoryTab";
-            this.inventoryTab.Size = new System.Drawing.Size(956, 547);
+            this.inventoryTab.Size = new System.Drawing.Size(946, 510);
             this.inventoryTab.TabIndex = 5;
             this.inventoryTab.Text = "Inventory";
             this.inventoryTab.UseVisualStyleBackColor = true;
@@ -393,7 +393,7 @@
             this.inventoryContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.inventoryContainerPanel.Location = new System.Drawing.Point(127, 0);
             this.inventoryContainerPanel.Name = "inventoryContainerPanel";
-            this.inventoryContainerPanel.Size = new System.Drawing.Size(829, 547);
+            this.inventoryContainerPanel.Size = new System.Drawing.Size(819, 510);
             this.inventoryContainerPanel.TabIndex = 2;
             // 
             // inventoryNavBarPanel
@@ -406,7 +406,7 @@
             this.inventoryNavBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.inventoryNavBarPanel.Location = new System.Drawing.Point(0, 0);
             this.inventoryNavBarPanel.Name = "inventoryNavBarPanel";
-            this.inventoryNavBarPanel.Size = new System.Drawing.Size(127, 547);
+            this.inventoryNavBarPanel.Size = new System.Drawing.Size(127, 510);
             this.inventoryNavBarPanel.TabIndex = 1;
             // 
             // inventoryAddButton
@@ -481,13 +481,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(964, 576);
+            this.ClientSize = new System.Drawing.Size(934, 581);
             this.Controls.Add(this.homeTabControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(980, 610);
-            this.MinimumSize = new System.Drawing.Size(950, 600);
+            this.MaximumSize = new System.Drawing.Size(950, 620);
+            this.MinimumSize = new System.Drawing.Size(847, 523);
             this.Name = "Home";
             this.Text = "Badminton Club";
             this.homeTabControl.ResumeLayout(false);

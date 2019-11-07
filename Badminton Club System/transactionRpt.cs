@@ -16,14 +16,14 @@ namespace Badminton_Club_System {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class inventory : ReportClass {
+    public class transactionRpt : ReportClass {
         
-        public inventory() {
+        public transactionRpt() {
         }
         
         public override string ResourceName {
             get {
-                return "inventory.rpt";
+                return "transactionRpt.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace Badminton_Club_System {
         
         public override string FullResourceName {
             get {
-                return "Badminton_Club_System.inventory.rpt";
+                return "Badminton_Club_System.transactionRpt.rpt";
             }
             set {
                 // Do nothing
@@ -66,7 +66,7 @@ namespace Badminton_Club_System {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section GroupHeaderSection1 {
+        public CrystalDecisions.CrystalReports.Engine.Section Section3 {
             get {
                 return this.ReportDefinition.Sections[2];
             }
@@ -74,7 +74,7 @@ namespace Badminton_Club_System {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section3 {
+        public CrystalDecisions.CrystalReports.Engine.Section Section4 {
             get {
                 return this.ReportDefinition.Sections[3];
             }
@@ -82,7 +82,7 @@ namespace Badminton_Club_System {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section GroupFooterSection1 {
+        public CrystalDecisions.CrystalReports.Engine.Section Section5 {
             get {
                 return this.ReportDefinition.Sections[4];
             }
@@ -90,25 +90,17 @@ namespace Badminton_Club_System {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section4 {
+        public CrystalDecisions.Shared.IParameterField Parameter_month {
             get {
-                return this.ReportDefinition.Sections[5];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section5 {
-            get {
-                return this.ReportDefinition.Sections[6];
+                return this.DataDefinition.ParameterFields[0];
             }
         }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class Cachedinventory : Component, ICachedReport {
+    public class CachedtransactionRpt : Component, ICachedReport {
         
-        public Cachedinventory() {
+        public CachedtransactionRpt() {
         }
         
         [Browsable(false)]
@@ -145,7 +137,7 @@ namespace Badminton_Club_System {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            inventory rpt = new inventory();
+            transactionRpt rpt = new transactionRpt();
             rpt.Site = this.Site;
             return rpt;
         }
