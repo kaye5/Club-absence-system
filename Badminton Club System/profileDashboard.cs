@@ -136,7 +136,9 @@ namespace Badminton_Club_System
         {
             Button viewBtn = (Button)sender;
             Home homeForm = new Home(Convert.ToInt16(viewBtn.AccessibleDescription));
-            this.Hide();
+            
+            Form.ActiveForm.Hide();
+            
             homeForm.Show();
         }
 
@@ -306,6 +308,15 @@ namespace Badminton_Club_System
             String month = DateTime.Now.ToString("MMMM") + " " + DateTime.Now.ToString("yyyy");
             inv.Refresh();
             inv.SetParameterValue("date",month);
+            inv.PrintToPrinter(1, false, 0, 0);
+        }
+
+        private void exportTransactionBtn_Click(object sender, EventArgs e)
+        {
+            ReportDocument inv = export("transactionReport.rpt");
+            String month = DateTime.Now.ToString("MMMM") + DateTime.Now.ToString("yyyy");
+            inv.Refresh();
+            inv.SetParameterValue("month", month);
             inv.PrintToPrinter(1, false, 0, 0);
         }
     }

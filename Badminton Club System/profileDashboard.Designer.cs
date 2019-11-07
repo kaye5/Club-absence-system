@@ -80,10 +80,9 @@
             // profileExpenseBtn
             // 
             this.profileExpenseBtn.AccessibleDescription = "3";
-            this.profileExpenseBtn.Location = new System.Drawing.Point(242, 578);
-            this.profileExpenseBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.profileExpenseBtn.Location = new System.Drawing.Point(121, 289);
             this.profileExpenseBtn.Name = "profileExpenseBtn";
-            this.profileExpenseBtn.Size = new System.Drawing.Size(262, 46);
+            this.profileExpenseBtn.Size = new System.Drawing.Size(131, 23);
             this.profileExpenseBtn.TabIndex = 50;
             this.profileExpenseBtn.Text = "View Expense";
             this.profileExpenseBtn.UseVisualStyleBackColor = true;
@@ -92,10 +91,9 @@
             // profileMemberBtn
             // 
             this.profileMemberBtn.AccessibleDescription = "2";
-            this.profileMemberBtn.Location = new System.Drawing.Point(18, 688);
-            this.profileMemberBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.profileMemberBtn.Location = new System.Drawing.Point(9, 344);
             this.profileMemberBtn.Name = "profileMemberBtn";
-            this.profileMemberBtn.Size = new System.Drawing.Size(218, 46);
+            this.profileMemberBtn.Size = new System.Drawing.Size(109, 23);
             this.profileMemberBtn.TabIndex = 49;
             this.profileMemberBtn.Text = "View Member";
             this.profileMemberBtn.UseVisualStyleBackColor = true;
@@ -103,48 +101,43 @@
             // 
             // profileExpenseTbox
             // 
-            this.profileExpenseTbox.Location = new System.Drawing.Point(242, 508);
-            this.profileExpenseTbox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.profileExpenseTbox.Location = new System.Drawing.Point(121, 254);
             this.profileExpenseTbox.Name = "profileExpenseTbox";
             this.profileExpenseTbox.ReadOnly = true;
-            this.profileExpenseTbox.Size = new System.Drawing.Size(258, 31);
+            this.profileExpenseTbox.Size = new System.Drawing.Size(131, 20);
             this.profileExpenseTbox.TabIndex = 48;
             // 
             // profileIncomeTbox
             // 
-            this.profileIncomeTbox.Location = new System.Drawing.Point(242, 350);
-            this.profileIncomeTbox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.profileIncomeTbox.Location = new System.Drawing.Point(121, 175);
             this.profileIncomeTbox.Name = "profileIncomeTbox";
             this.profileIncomeTbox.ReadOnly = true;
-            this.profileIncomeTbox.Size = new System.Drawing.Size(258, 31);
+            this.profileIncomeTbox.Size = new System.Drawing.Size(131, 20);
             this.profileIncomeTbox.TabIndex = 47;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(12, 514);
-            this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label10.Location = new System.Drawing.Point(6, 257);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(209, 25);
+            this.label10.Size = new System.Drawing.Size(104, 13);
             this.label10.TabIndex = 46;
             this.label10.Text = "This Month Expense";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 356);
-            this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label9.Location = new System.Drawing.Point(6, 178);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(194, 25);
+            this.label9.Size = new System.Drawing.Size(98, 13);
             this.label9.TabIndex = 45;
             this.label9.Text = "This Month Income";
             // 
             // profileUpdateFeeBtn
             // 
-            this.profileUpdateFeeBtn.Location = new System.Drawing.Point(516, 252);
-            this.profileUpdateFeeBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.profileUpdateFeeBtn.Location = new System.Drawing.Point(258, 126);
             this.profileUpdateFeeBtn.Name = "profileUpdateFeeBtn";
-            this.profileUpdateFeeBtn.Size = new System.Drawing.Size(188, 46);
+            this.profileUpdateFeeBtn.Size = new System.Drawing.Size(94, 23);
             this.profileUpdateFeeBtn.TabIndex = 44;
             this.profileUpdateFeeBtn.Text = "Update";
             this.profileUpdateFeeBtn.UseVisualStyleBackColor = true;
@@ -153,10 +146,9 @@
             // 
             // profileChangeFeeBtn
             // 
-            this.profileChangeFeeBtn.Location = new System.Drawing.Point(242, 252);
-            this.profileChangeFeeBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.profileChangeFeeBtn.Location = new System.Drawing.Point(121, 126);
             this.profileChangeFeeBtn.Name = "profileChangeFeeBtn";
-            this.profileChangeFeeBtn.Size = new System.Drawing.Size(262, 44);
+            this.profileChangeFeeBtn.Size = new System.Drawing.Size(131, 22);
             this.profileChangeFeeBtn.TabIndex = 43;
             this.profileChangeFeeBtn.Text = "change";
             this.profileChangeFeeBtn.UseVisualStyleBackColor = true;
@@ -166,19 +158,17 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(1198, 26);
-            this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label8.Location = new System.Drawing.Point(599, 13);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(186, 37);
+            this.label8.Size = new System.Drawing.Size(92, 20);
             this.label8.TabIndex = 42;
             this.label8.Text = "Coordinator";
             // 
             // profileNewCoorBtn
             // 
-            this.profileNewCoorBtn.Location = new System.Drawing.Point(744, 660);
-            this.profileNewCoorBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.profileNewCoorBtn.Location = new System.Drawing.Point(372, 330);
             this.profileNewCoorBtn.Name = "profileNewCoorBtn";
-            this.profileNewCoorBtn.Size = new System.Drawing.Size(240, 74);
+            this.profileNewCoorBtn.Size = new System.Drawing.Size(120, 37);
             this.profileNewCoorBtn.TabIndex = 41;
             this.profileNewCoorBtn.Text = "New Coordinator";
             this.profileNewCoorBtn.UseVisualStyleBackColor = true;
@@ -198,10 +188,9 @@
             this.profileActionPanel.Controls.Add(this.profileEmailTbox);
             this.profileActionPanel.Controls.Add(this.profileNimTBox);
             this.profileActionPanel.Controls.Add(this.profileNameTbox);
-            this.profileActionPanel.Location = new System.Drawing.Point(744, 746);
-            this.profileActionPanel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.profileActionPanel.Location = new System.Drawing.Point(372, 373);
             this.profileActionPanel.Name = "profileActionPanel";
-            this.profileActionPanel.Size = new System.Drawing.Size(1092, 320);
+            this.profileActionPanel.Size = new System.Drawing.Size(546, 160);
             this.profileActionPanel.TabIndex = 40;
             this.profileActionPanel.Visible = false;
             this.profileActionPanel.Leave += new System.EventHandler(this.validation);
@@ -209,20 +198,18 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 44);
-            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label3.Location = new System.Drawing.Point(9, 22);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 25);
+            this.label3.Size = new System.Drawing.Size(27, 13);
             this.label3.TabIndex = 8;
             this.label3.Text = "NIM";
             // 
             // profileAddCoorBtn
             // 
             this.profileAddCoorBtn.Enabled = false;
-            this.profileAddCoorBtn.Location = new System.Drawing.Point(550, 90);
-            this.profileAddCoorBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.profileAddCoorBtn.Location = new System.Drawing.Point(275, 45);
             this.profileAddCoorBtn.Name = "profileAddCoorBtn";
-            this.profileAddCoorBtn.Size = new System.Drawing.Size(170, 92);
+            this.profileAddCoorBtn.Size = new System.Drawing.Size(85, 46);
             this.profileAddCoorBtn.TabIndex = 19;
             this.profileAddCoorBtn.Text = "Add";
             this.profileAddCoorBtn.UseVisualStyleBackColor = true;
@@ -231,19 +218,17 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 96);
-            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label4.Location = new System.Drawing.Point(9, 48);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 25);
+            this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 9;
             this.label4.Text = "Name";
             // 
             // profileUpdateCoorBtn
             // 
-            this.profileUpdateCoorBtn.Location = new System.Drawing.Point(550, 194);
-            this.profileUpdateCoorBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.profileUpdateCoorBtn.Location = new System.Drawing.Point(275, 97);
             this.profileUpdateCoorBtn.Name = "profileUpdateCoorBtn";
-            this.profileUpdateCoorBtn.Size = new System.Drawing.Size(170, 92);
+            this.profileUpdateCoorBtn.Size = new System.Drawing.Size(85, 46);
             this.profileUpdateCoorBtn.TabIndex = 18;
             this.profileUpdateCoorBtn.Text = "Update";
             this.profileUpdateCoorBtn.UseVisualStyleBackColor = true;
@@ -253,75 +238,67 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(18, 148);
-            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label5.Location = new System.Drawing.Point(9, 74);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 25);
+            this.label5.Size = new System.Drawing.Size(32, 13);
             this.label5.TabIndex = 10;
             this.label5.Text = "Email";
             // 
             // profilePassTbox
             // 
-            this.profilePassTbox.Location = new System.Drawing.Point(154, 246);
-            this.profilePassTbox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.profilePassTbox.Location = new System.Drawing.Point(77, 123);
             this.profilePassTbox.Name = "profilePassTbox";
-            this.profilePassTbox.Size = new System.Drawing.Size(380, 31);
+            this.profilePassTbox.Size = new System.Drawing.Size(192, 20);
             this.profilePassTbox.TabIndex = 17;
             this.profilePassTbox.TextChanged += new System.EventHandler(this.validation);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 200);
-            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label6.Location = new System.Drawing.Point(9, 100);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 25);
+            this.label6.Size = new System.Drawing.Size(44, 13);
             this.label6.TabIndex = 11;
             this.label6.Text = "Position";
             // 
             // profilePositionTbox
             // 
-            this.profilePositionTbox.Location = new System.Drawing.Point(154, 194);
-            this.profilePositionTbox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.profilePositionTbox.Location = new System.Drawing.Point(77, 97);
             this.profilePositionTbox.Name = "profilePositionTbox";
-            this.profilePositionTbox.Size = new System.Drawing.Size(380, 31);
+            this.profilePositionTbox.Size = new System.Drawing.Size(192, 20);
             this.profilePositionTbox.TabIndex = 16;
             this.profilePositionTbox.TextChanged += new System.EventHandler(this.validation);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(18, 252);
-            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label7.Location = new System.Drawing.Point(9, 126);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(106, 25);
+            this.label7.Size = new System.Drawing.Size(53, 13);
             this.label7.TabIndex = 12;
             this.label7.Text = "Password";
             // 
             // profileEmailTbox
             // 
-            this.profileEmailTbox.Location = new System.Drawing.Point(154, 142);
-            this.profileEmailTbox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.profileEmailTbox.Location = new System.Drawing.Point(77, 71);
             this.profileEmailTbox.Name = "profileEmailTbox";
-            this.profileEmailTbox.Size = new System.Drawing.Size(380, 31);
+            this.profileEmailTbox.Size = new System.Drawing.Size(192, 20);
             this.profileEmailTbox.TabIndex = 15;
             this.profileEmailTbox.TextChanged += new System.EventHandler(this.validation);
             // 
             // profileNimTBox
             // 
-            this.profileNimTBox.Location = new System.Drawing.Point(154, 38);
-            this.profileNimTBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.profileNimTBox.Location = new System.Drawing.Point(77, 19);
             this.profileNimTBox.Name = "profileNimTBox";
-            this.profileNimTBox.Size = new System.Drawing.Size(380, 31);
+            this.profileNimTBox.Size = new System.Drawing.Size(192, 20);
             this.profileNimTBox.TabIndex = 13;
             this.profileNimTBox.TextChanged += new System.EventHandler(this.validation);
             // 
             // profileNameTbox
             // 
-            this.profileNameTbox.Location = new System.Drawing.Point(154, 90);
-            this.profileNameTbox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.profileNameTbox.Location = new System.Drawing.Point(77, 45);
             this.profileNameTbox.Name = "profileNameTbox";
-            this.profileNameTbox.Size = new System.Drawing.Size(380, 31);
+            this.profileNameTbox.Size = new System.Drawing.Size(192, 20);
             this.profileNameTbox.TabIndex = 14;
             this.profileNameTbox.TextChanged += new System.EventHandler(this.validation);
             // 
@@ -336,10 +313,9 @@
             this.profileListView.FullRowSelect = true;
             this.profileListView.GridLines = true;
             this.profileListView.HideSelection = false;
-            this.profileListView.Location = new System.Drawing.Point(744, 96);
-            this.profileListView.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.profileListView.Location = new System.Drawing.Point(372, 48);
             this.profileListView.Name = "profileListView";
-            this.profileListView.Size = new System.Drawing.Size(1084, 548);
+            this.profileListView.Size = new System.Drawing.Size(544, 276);
             this.profileListView.TabIndex = 39;
             this.profileListView.UseCompatibleStateImageBehavior = false;
             this.profileListView.View = System.Windows.Forms.View.Details;
@@ -373,39 +349,35 @@
             // profileMonthLbl
             // 
             this.profileMonthLbl.AutoSize = true;
-            this.profileMonthLbl.Location = new System.Drawing.Point(18, 26);
-            this.profileMonthLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.profileMonthLbl.Location = new System.Drawing.Point(9, 13);
             this.profileMonthLbl.Name = "profileMonthLbl";
-            this.profileMonthLbl.Size = new System.Drawing.Size(90, 25);
+            this.profileMonthLbl.Size = new System.Drawing.Size(46, 13);
             this.profileMonthLbl.TabIndex = 38;
             this.profileMonthLbl.Text = "Month : ";
             // 
             // profileFeeTbox
             // 
-            this.profileFeeTbox.Location = new System.Drawing.Point(242, 180);
-            this.profileFeeTbox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.profileFeeTbox.Location = new System.Drawing.Point(121, 90);
             this.profileFeeTbox.Name = "profileFeeTbox";
             this.profileFeeTbox.ReadOnly = true;
-            this.profileFeeTbox.Size = new System.Drawing.Size(258, 31);
+            this.profileFeeTbox.Size = new System.Drawing.Size(131, 20);
             this.profileFeeTbox.TabIndex = 37;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 186);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Location = new System.Drawing.Point(6, 93);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(173, 25);
+            this.label1.Size = new System.Drawing.Size(85, 13);
             this.label1.TabIndex = 36;
             this.label1.Text = "Membership Fee";
             // 
             // profileInventoryBtn
             // 
             this.profileInventoryBtn.AccessibleDescription = "5";
-            this.profileInventoryBtn.Location = new System.Drawing.Point(18, 910);
-            this.profileInventoryBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.profileInventoryBtn.Location = new System.Drawing.Point(9, 455);
             this.profileInventoryBtn.Name = "profileInventoryBtn";
-            this.profileInventoryBtn.Size = new System.Drawing.Size(218, 46);
+            this.profileInventoryBtn.Size = new System.Drawing.Size(109, 23);
             this.profileInventoryBtn.TabIndex = 35;
             this.profileInventoryBtn.Text = "View Inventory";
             this.profileInventoryBtn.UseVisualStyleBackColor = true;
@@ -414,10 +386,9 @@
             // profileViewIncomeButton
             // 
             this.profileViewIncomeButton.AccessibleDescription = "4";
-            this.profileViewIncomeButton.Location = new System.Drawing.Point(242, 422);
-            this.profileViewIncomeButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.profileViewIncomeButton.Location = new System.Drawing.Point(121, 211);
             this.profileViewIncomeButton.Name = "profileViewIncomeButton";
-            this.profileViewIncomeButton.Size = new System.Drawing.Size(262, 46);
+            this.profileViewIncomeButton.Size = new System.Drawing.Size(131, 23);
             this.profileViewIncomeButton.TabIndex = 34;
             this.profileViewIncomeButton.Text = "View Income";
             this.profileViewIncomeButton.UseVisualStyleBackColor = true;
@@ -425,30 +396,27 @@
             // 
             // profileCashTextBox
             // 
-            this.profileCashTextBox.Location = new System.Drawing.Point(242, 96);
-            this.profileCashTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.profileCashTextBox.Location = new System.Drawing.Point(121, 48);
             this.profileCashTextBox.Name = "profileCashTextBox";
             this.profileCashTextBox.ReadOnly = true;
-            this.profileCashTextBox.Size = new System.Drawing.Size(258, 31);
+            this.profileCashTextBox.Size = new System.Drawing.Size(131, 20);
             this.profileCashTextBox.TabIndex = 33;
             // 
             // profileKasLabel
             // 
             this.profileKasLabel.AutoSize = true;
-            this.profileKasLabel.Location = new System.Drawing.Point(12, 102);
-            this.profileKasLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.profileKasLabel.Location = new System.Drawing.Point(6, 51);
             this.profileKasLabel.Name = "profileKasLabel";
-            this.profileKasLabel.Size = new System.Drawing.Size(139, 25);
+            this.profileKasLabel.Size = new System.Drawing.Size(68, 13);
             this.profileKasLabel.TabIndex = 32;
             this.profileKasLabel.Text = "Current Cash";
             // 
             // profileAbsenceBtn
             // 
             this.profileAbsenceBtn.AccessibleDescription = "1";
-            this.profileAbsenceBtn.Location = new System.Drawing.Point(18, 798);
-            this.profileAbsenceBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.profileAbsenceBtn.Location = new System.Drawing.Point(9, 399);
             this.profileAbsenceBtn.Name = "profileAbsenceBtn";
-            this.profileAbsenceBtn.Size = new System.Drawing.Size(218, 46);
+            this.profileAbsenceBtn.Size = new System.Drawing.Size(109, 23);
             this.profileAbsenceBtn.TabIndex = 52;
             this.profileAbsenceBtn.Text = "View Absence";
             this.profileAbsenceBtn.UseVisualStyleBackColor = true;
@@ -461,29 +429,28 @@
             this.editToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.coorCTMS.Name = "coorCTMS";
-            this.coorCTMS.Size = new System.Drawing.Size(161, 80);
+            this.coorCTMS.Size = new System.Drawing.Size(108, 48);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(160, 38);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(160, 38);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // exportInventoryBtn
             // 
             this.exportInventoryBtn.AccessibleDescription = "";
-            this.exportInventoryBtn.Location = new System.Drawing.Point(286, 910);
-            this.exportInventoryBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.exportInventoryBtn.Location = new System.Drawing.Point(143, 455);
             this.exportInventoryBtn.Name = "exportInventoryBtn";
-            this.exportInventoryBtn.Size = new System.Drawing.Size(218, 46);
+            this.exportInventoryBtn.Size = new System.Drawing.Size(109, 23);
             this.exportInventoryBtn.TabIndex = 53;
             this.exportInventoryBtn.Text = "Export Inventory";
             this.exportInventoryBtn.UseVisualStyleBackColor = true;
@@ -492,10 +459,9 @@
             // importMemberBtn
             // 
             this.importMemberBtn.AccessibleDescription = "";
-            this.importMemberBtn.Location = new System.Drawing.Point(286, 688);
-            this.importMemberBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.importMemberBtn.Location = new System.Drawing.Point(143, 344);
             this.importMemberBtn.Name = "importMemberBtn";
-            this.importMemberBtn.Size = new System.Drawing.Size(218, 46);
+            this.importMemberBtn.Size = new System.Drawing.Size(109, 23);
             this.importMemberBtn.TabIndex = 54;
             this.importMemberBtn.Text = "Import Member";
             this.importMemberBtn.UseVisualStyleBackColor = true;
@@ -504,21 +470,20 @@
             // exportTransactionBtn
             // 
             this.exportTransactionBtn.AccessibleDescription = "";
-            this.exportTransactionBtn.Location = new System.Drawing.Point(286, 798);
-            this.exportTransactionBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.exportTransactionBtn.Location = new System.Drawing.Point(143, 399);
             this.exportTransactionBtn.Name = "exportTransactionBtn";
-            this.exportTransactionBtn.Size = new System.Drawing.Size(218, 46);
+            this.exportTransactionBtn.Size = new System.Drawing.Size(109, 23);
             this.exportTransactionBtn.TabIndex = 55;
             this.exportTransactionBtn.Text = "Export Transaction";
             this.exportTransactionBtn.UseVisualStyleBackColor = true;
+            this.exportTransactionBtn.Click += new System.EventHandler(this.exportTransactionBtn_Click);
             // 
             // button1
             // 
             this.button1.AccessibleDescription = "";
-            this.button1.Location = new System.Drawing.Point(112, 1022);
-            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button1.Location = new System.Drawing.Point(56, 511);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(282, 46);
+            this.button1.Size = new System.Drawing.Size(141, 23);
             this.button1.TabIndex = 56;
             this.button1.Text = "Export Monthly Report";
             this.button1.UseVisualStyleBackColor = true;
@@ -526,10 +491,10 @@
             // 
             // profileDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1848, 1092);
+            this.ClientSize = new System.Drawing.Size(950, 615);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.exportTransactionBtn);
             this.Controls.Add(this.importMemberBtn);
@@ -555,7 +520,6 @@
             this.Controls.Add(this.profileCashTextBox);
             this.Controls.Add(this.profileKasLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "profileDashboard";
             this.Text = "profileDashboard";
             this.profileActionPanel.ResumeLayout(false);

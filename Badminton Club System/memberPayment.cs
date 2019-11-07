@@ -147,6 +147,47 @@ namespace Badminton_Club_System
             }
             
         }
+
+        private void filterBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                listView1.Items.Clear();
+                db.sql = $"select `nim`,`name` from `member` where `nim`='{filterTbox.Text}'";
+                db.addCMD();
+                MySqlDataReader r = db.cmd.ExecuteReader();
+                while (r.Read())
+                {
+                    if (r.GetString(0) == "001") continue;
+                    ListViewItem item = new ListViewItem(r.GetString(0));
+                    item.SubItems.Add(r.GetString(1));
+                    db.sql = $"select id from `income_transaction` where  `id`='{thisMonth + thisYear + r.GetString(0)}'";
+                    MySqlConnection cnn = new MySqlConnection("Server=localhost;Database=mydb;Uid=root;Pwd=vroxine;");
+                    cnn.Open();
+                    MySqlCommand cmd = new MySqlCommand(db.sql, cnn);
+                    MySqlDataReader t = cmd.ExecuteReader();
+                    if (!t.Read())
+                        item.SubItems.Add("NONE");
+                    else
+                        item.SubItems.Add("DONE");
+                    cnn.Close();
+                    cmd.Dispose();
+                    t.Dispose();
+                    listView1.Items.Add(item);
+                }
+                r.Dispose();
+                db.disposeCmd();
+            }
+            catch (MySqlException err)
+            {
+                MessageBox.Show(err.Message, err.Number.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void showBtn_Click(object sender, EventArgs e)
+        {
+            updateData();
+        }
     }
     
 }

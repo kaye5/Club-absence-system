@@ -44,6 +44,10 @@
             this.monthTbox = new System.Windows.Forms.TextBox();
             this.permissionBtn = new System.Windows.Forms.Button();
             this.selectBtn = new System.Windows.Forms.Button();
+            this.showBtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.filterTbox = new System.Windows.Forms.TextBox();
+            this.filterBtn = new System.Windows.Forms.Button();
             this.absenceDetailCMS.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -185,11 +189,52 @@
             this.selectBtn.UseVisualStyleBackColor = true;
             this.selectBtn.Click += new System.EventHandler(this.selectBtn_Click);
             // 
+            // showBtn
+            // 
+            this.showBtn.Location = new System.Drawing.Point(378, 16);
+            this.showBtn.Name = "showBtn";
+            this.showBtn.Size = new System.Drawing.Size(75, 23);
+            this.showBtn.TabIndex = 14;
+            this.showBtn.Text = "Show All";
+            this.showBtn.UseVisualStyleBackColor = true;
+            this.showBtn.Click += new System.EventHandler(this.showBtn_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label1.Location = new System.Drawing.Point(133, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 18);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "NIM";
+            // 
+            // filterTbox
+            // 
+            this.filterTbox.Location = new System.Drawing.Point(190, 20);
+            this.filterTbox.Name = "filterTbox";
+            this.filterTbox.Size = new System.Drawing.Size(100, 20);
+            this.filterTbox.TabIndex = 12;
+            // 
+            // filterBtn
+            // 
+            this.filterBtn.Location = new System.Drawing.Point(296, 17);
+            this.filterBtn.Name = "filterBtn";
+            this.filterBtn.Size = new System.Drawing.Size(75, 23);
+            this.filterBtn.TabIndex = 11;
+            this.filterBtn.Text = "Filter";
+            this.filterBtn.UseVisualStyleBackColor = true;
+            this.filterBtn.Click += new System.EventHandler(this.filterBtn_Click);
+            // 
             // absenceDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(792, 422);
+            this.Controls.Add(this.showBtn);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.filterTbox);
+            this.Controls.Add(this.filterBtn);
             this.Controls.Add(this.selectBtn);
             this.Controls.Add(this.permissionBtn);
             this.Controls.Add(this.monthTbox);
@@ -224,5 +269,9 @@
         private System.Windows.Forms.Button permissionBtn;
         private System.Windows.Forms.ToolStripMenuItem permissionToolStripMenuItem;
         private System.Windows.Forms.Button selectBtn;
+        private System.Windows.Forms.Button showBtn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox filterTbox;
+        private System.Windows.Forms.Button filterBtn;
     }
 }

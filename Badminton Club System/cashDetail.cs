@@ -52,7 +52,7 @@ namespace Badminton_Club_System
                 cashDetailTotalTbox.Text = allIncome.ToString("N");
                 cashDetailMemberIncomeTbox.Text = memberIncome.ToString("N");
                 cashDetailTransTbox.Text = tt.ToString();
-                cashDetailOtherTbox.Text = otherIncome.ToString();
+                cashDetailOtherTbox.Text = otherIncome.ToString("N");
                 monthTbox.Text = $"{month} {year}";
             }
             catch (MySqlException err)

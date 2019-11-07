@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.memberPaymentHead = new System.Windows.Forms.Panel();
+            this.showBtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.filterTbox = new System.Windows.Forms.TextBox();
+            this.filterBtn = new System.Windows.Forms.Button();
             this.memberPaymentFooter = new System.Windows.Forms.Panel();
             this.paymentCancleBtn = new System.Windows.Forms.Button();
             this.memberPayBtn = new System.Windows.Forms.Button();
@@ -37,17 +41,59 @@
             this.paymentNimHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.paymentNameHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.paymentStatusHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.memberPaymentHead.SuspendLayout();
             this.memberPaymentFooter.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // memberPaymentHead
             // 
+            this.memberPaymentHead.Controls.Add(this.showBtn);
+            this.memberPaymentHead.Controls.Add(this.label1);
+            this.memberPaymentHead.Controls.Add(this.filterTbox);
+            this.memberPaymentHead.Controls.Add(this.filterBtn);
             this.memberPaymentHead.Dock = System.Windows.Forms.DockStyle.Top;
             this.memberPaymentHead.Location = new System.Drawing.Point(0, 0);
             this.memberPaymentHead.Name = "memberPaymentHead";
             this.memberPaymentHead.Size = new System.Drawing.Size(900, 49);
             this.memberPaymentHead.TabIndex = 1;
+            // 
+            // showBtn
+            // 
+            this.showBtn.Location = new System.Drawing.Point(257, 14);
+            this.showBtn.Name = "showBtn";
+            this.showBtn.Size = new System.Drawing.Size(75, 23);
+            this.showBtn.TabIndex = 7;
+            this.showBtn.Text = "Show All";
+            this.showBtn.UseVisualStyleBackColor = true;
+            this.showBtn.Click += new System.EventHandler(this.showBtn_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label1.Location = new System.Drawing.Point(12, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 18);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "NIM";
+            // 
+            // filterTbox
+            // 
+            this.filterTbox.Location = new System.Drawing.Point(69, 18);
+            this.filterTbox.Name = "filterTbox";
+            this.filterTbox.Size = new System.Drawing.Size(100, 20);
+            this.filterTbox.TabIndex = 5;
+            // 
+            // filterBtn
+            // 
+            this.filterBtn.Location = new System.Drawing.Point(175, 15);
+            this.filterBtn.Name = "filterBtn";
+            this.filterBtn.Size = new System.Drawing.Size(75, 23);
+            this.filterBtn.TabIndex = 4;
+            this.filterBtn.Text = "Filter";
+            this.filterBtn.UseVisualStyleBackColor = true;
+            this.filterBtn.Click += new System.EventHandler(this.filterBtn_Click);
             // 
             // memberPaymentFooter
             // 
@@ -132,6 +178,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "memberPayment";
             this.Text = "memberPayment";
+            this.memberPaymentHead.ResumeLayout(false);
+            this.memberPaymentHead.PerformLayout();
             this.memberPaymentFooter.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -148,5 +196,9 @@
         private System.Windows.Forms.ColumnHeader paymentNimHeader;
         private System.Windows.Forms.ColumnHeader paymentNameHeader;
         private System.Windows.Forms.ColumnHeader paymentStatusHeader;
+        private System.Windows.Forms.Button showBtn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox filterTbox;
+        private System.Windows.Forms.Button filterBtn;
     }
 }

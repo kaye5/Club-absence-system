@@ -223,5 +223,63 @@ namespace Badminton_Club_System
                 selectBtn.Text = "Select all";
             }
         }
+
+        private void filterBtn_Click(object sender, EventArgs e)
+        {
+            table.Clear();
+            absenceDetailCB.Items.Clear();
+            try
+            {
+                db.sql = $"select max(meeting_count) from meeting where `month` = '{today}'";
+                db.addCMD();
+                MySqlDataReader r = db.cmd.ExecuteReader();
+                while (r.Read())
+                {
+                    col = r.GetInt16(0);
+                }
+                createCol();
+                r.Dispose();
+                db.disposeCmd();
+                db.sql = "select a.member_id , mem.`name` , m.meeting_count,a.`status` from `absence` a " +
+                            "inner join `meeting` m on a.meeting_id = m.id " +
+                            "inner join `member` mem on a.member_id = mem.nim " +
+                           $"where m.`month` = '{today}' and mem.`nim`='{filterTbox.Text}'" +
+                            "order by m.meeting_count";
+                db.addCMD();
+                r = db.cmd.ExecuteReader();
+                while (r.Read())
+                {
+                    if (r.GetString(0) == "001")
+                        continue;
+                    ListViewItem item = new ListViewItem(r.GetString(0));
+                    item.SubItems.Add(r.GetString(1));
+                    if (r.GetInt16(2) == 1)
+                        item.SubItems.Add(r.GetString(3));
+                    else
+                    {
+                        int i = 0;
+                        foreach (ListViewItem el in table.Items)
+                        {
+                            if (el.SubItems[0].Text == r.GetString(0))
+                                table.Items[i].SubItems.Add(r.GetString(3));
+                            i++;
+                        }
+                        continue;
+                    }
+                    table.Items.Add(item);
+                }
+                r.Dispose();
+                db.disposeCmd();
+            }
+            catch (MySqlException err)
+            {
+                MessageBox.Show(err.Message, err.Number.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void showBtn_Click(object sender, EventArgs e)
+        {
+            updateData();
+        }
     }
 }
